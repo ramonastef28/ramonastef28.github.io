@@ -1,0 +1,719 @@
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  25 JUN 2014 16:03
+entering extended mode
+ \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**final_paper_NZ.tex
+(./final_paper_NZ.tex
+LaTeX2e <2011/06/27>
+Babel <v3.8m> and hyphenation patterns for english, dumylang, nohyphenation, ge
+rman-x-2012-05-30, ngerman-x-2012-05-30, afrikaans, ancientgreek, ibycus, arabi
+c, armenian, basque, bulgarian, catalan, pinyin, coptic, croatian, czech, danis
+h, dutch, ukenglish, usenglishmax, esperanto, estonian, ethiopic, farsi, finnis
+h, french, friulan, galician, german, ngerman, swissgerman, monogreek, greek, h
+ungarian, icelandic, assamese, bengali, gujarati, hindi, kannada, malayalam, ma
+rathi, oriya, panjabi, tamil, telugu, indonesian, interlingua, irish, italian, 
+kurmanji, latin, latvian, lithuanian, mongolian, mongolianlmc, bokmal, nynorsk,
+ polish, portuguese, romanian, romansh, russian, sanskrit, serbian, serbianc, s
+lovak, slovenian, spanish, swedish, turkish, turkmen, ukrainian, uppersorbian, 
+welsh, loaded.
+(/usr/local/texlive/2012/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
+(/usr/local/texlive/2012/texmf-dist/tex/latex/base/size12.clo
+File: size12.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+(/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+(/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count87
+))
+\Gin@req@height=\dimen103
+\Gin@req@width=\dimen104
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/multirow/multirow.sty
+\bigstrutjot=\dimen105
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/preprint/authblk.sty
+Package: authblk 2009/11/18 1.3 (PWD)
+\affilsep=\skip43
+\@affilsep=\skip44
+\c@Maxaffil=\count88
+\c@authors=\count89
+\c@affil=\count90
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count91
+\float@exts=\toks15
+\float@box=\box26
+\@float@everytoks=\toks16
+\@floatcapt=\box27
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/rotating/rotating.sty
+Package: rotating 2009/03/28 v2.16a rotated objects in LaTeX
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
+)
+\c@r@tfl@t=\count92
+\rotFPtop=\skip45
+\rotFPbot=\skip46
+\rot@float@box=\box28
+\rot@mess@toks=\toks17
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip10
+Package: url 2006/04/12  ver 3.3  Verb mode for urls, etc.
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/graphics/lscape.sty
+Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/tools/longtable.sty
+Package: longtable 2004/02/01 v4.11 Multi-page Table package (DPC)
+\LTleft=\skip47
+\LTright=\skip48
+\LTpre=\skip49
+\LTpost=\skip50
+\LTchunksize=\count93
+\LTcapwidth=\dimen106
+\LT@head=\box29
+\LT@firsthead=\box30
+\LT@foot=\box31
+\LT@lastfoot=\box32
+\LT@cols=\count94
+\LT@rows=\count95
+\c@LT@tables=\count96
+\c@LT@chunks=\count97
+\LT@p@ftn=\toks18
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/subfig/subfig.sty
+Package: subfig 2005/06/28 ver: 1.3 subfig package
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2012/02/19 v3.2f Customizing captions (AR)
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2012/01/12 v1.4b caption3 kernel (AR)
+\captionmargin=\dimen107
+\captionmargin@=\dimen108
+\captionwidth=\dimen109
+\caption@indent=\dimen110
+\caption@parindent=\dimen111
+\caption@hangindent=\dimen112
+)
+\c@ContinuedFloat=\count98
+Package caption Info: float package is loaded.
+Package caption Info: longtable package is loaded.
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/caption/ltcaption.sty
+Package: ltcaption 2011/09/12 v1.3 longtable captions (AR)
+)
+Package caption Info: rotating package is loaded.
+)
+\c@KVtest=\count99
+\sf@farskip=\skip51
+\sf@captopadj=\dimen113
+\sf@capskip=\skip52
+\sf@nearskip=\skip53
+\c@subfigure=\count100
+\c@subfigure@save=\count101
+\c@lofdepth=\count102
+\c@subtable=\count103
+\c@subtable@save=\count104
+\c@lotdepth=\count105
+\sf@top=\skip54
+\sf@bottom=\skip55
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/natbib/natbib.sty
+Package: natbib 2010/09/13 8.31b (PWD, AO)
+\bibhang=\skip56
+\bibsep=\skip57
+LaTeX Info: Redefining \cite on input line 694.
+\c@NAT@ctr=\count106
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/lineno/lineno.sty
+Package: lineno 2005/11/02 line numbers on paragraphs v4.41
+\linenopenalty=\count107
+\output=\toks19
+\linenoprevgraf=\count108
+\linenumbersep=\dimen114
+\linenumberwidth=\dimen115
+\c@linenumber=\count109
+\c@pagewiselinenumber=\count110
+\c@LN@truepage=\count111
+\c@internallinenumber=\count112
+\c@internallinenumbers=\count113
+\quotelinenumbersep=\dimen116
+\bframerule=\dimen117
+\bframesep=\dimen118
+\bframebox=\box33
+LaTeX Info: Redefining \\ on input line 3056.
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/anysize/anysize.sty
+Package: anysize 1994/08/13 setting margin sizes
+
+document style option `anysize' loaded
+Michael Salzenberg, Thomas Esser, Dirk Hillbrecht
+Version 1.0, Aug 13, 1994
+\@Leftmargin=\dimen119
+\@Rightmargin=\dimen120
+\@Topmargin=\dimen121
+\@Bottommargin=\dimen122
+) (./final_paper_NZ.aux)
+\openout1 = `final_paper_NZ.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+
+(/usr/local/texlive/2012/texmf-dist/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count114
+\scratchdimen=\dimen123
+\scratchbox=\box34
+\nofMPsegments=\count115
+\nofMParguments=\count116
+\everyMPshowfont=\toks20
+\MPscratchCnt=\count117
+\MPscratchDim=\dimen124
+\MPnumerator=\count118
+\makeMPintoPDFobject=\count119
+\everyMPtoPDFconversion=\toks21
+) (/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+(/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
+
+(/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+))
+(/usr/local/texlive/2012/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+
+(/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+
+(/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: subfig package v1.3 is loaded.
+Package caption Info: End \AtBeginDocument code.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <14.4> on input line 34.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 34.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <10.95> on input line 52.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 52.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 52.
+
+[1
+
+{/usr/local/texlive/2012/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+[2]
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 108.
+ [3] [4] [5] [6] [7] [8] [9] [10]
+Overfull \hbox (2.40614pt too wide) in paragraph at lines 367--376
+[]\OT1/cmr/m/n/12 Common haz-ardous geo-phys-i-cal mass flows on Mam-moth Moun-
+tain might con-tain $\OML/cmm/m/it/12 O$\OT1/cmr/m/n/12 ($10[] \OMS/cmsy/m/n/12
+ ^^@
+ []
+
+[11] [12] [13] [14] [15] [16] [17] [18] [19] [20] [21] [22] [23]
+(./final_paper_NZ.bbl [24] [25] [26] [27] [28]) [29] [30] [31
+
+]
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 903.
+ [32
+
+]
+Overfull \hbox (17.01605pt too wide) in alignment at lines 951--957
+ [] [] [] [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (17.01605pt too wide) in alignment at lines 957--963
+ [] [] [] [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (17.01605pt too wide) in alignment at lines 963--966
+ [] [] [] [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (17.01605pt too wide) in alignment at lines 966--970
+ [] [] [] [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (17.01605pt too wide) in alignment at lines 970--998
+ [] [] [] [] [] [] [] [] 
+ []
+
+[33]
+Overfull \hbox (17.01605pt too wide) in alignment at lines 998--1026
+ [] [] [] [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (17.01605pt too wide) in alignment at lines 1026--1029
+ [] [] [] [] [] [] [] [] 
+ []
+
+[34] [35] <mammothmap.pdf, id=129, 1115.34808pt x 786.24448pt>
+File: mammothmap.pdf Graphic file (type pdf)
+
+<use mammothmap.pdf>
+Package pdftex.def Info: mammothmap.pdf used on input line 1044.
+(pdftex.def)             Requested size: 375.79256pt x 264.90817pt.
+ <low_pics/Arrow.jpg, id=130, 501.875pt x 316.18124pt>
+File: low_pics/Arrow.jpg Graphic file (type jpg)
+
+<use low_pics/Arrow.jpg>
+Package pdftex.def Info: low_pics/Arrow.jpg used on input line 1058.
+(pdftex.def)             Requested size: 375.8233pt x 236.76868pt.
+
+<low_pics/Mammoth30_3.jpg, id=131, 504.88625pt x 327.2225pt>
+File: low_pics/Mammoth30_3.jpg Graphic file (type jpg)
+
+<use low_pics/Mammoth30_3.jpg>
+Package pdftex.def Info: low_pics/Mammoth30_3.jpg used on input line 1061.
+(pdftex.def)             Requested size: 375.80557pt x 243.56386pt.
+ [36 <./mammothmap.pdf>]
+Overfull \vbox (4.90251pt too high) has occurred while \output is active []
+
+
+[37 <./low_pics/Arrow.jpg> <./low_pics/Mammoth30_3.jpg>]
+<low_pics/Mammoth30_low.jpg, id=153, 500.87125pt x 313.17pt>
+File: low_pics/Mammoth30_low.jpg Graphic file (type jpg)
+
+<use low_pics/Mammoth30_low.jpg>
+Package pdftex.def Info: low_pics/Mammoth30_low.jpg used on input line 1072.
+(pdftex.def)             Requested size: 375.82063pt x 234.98204pt.
+
+<low_pics/ASTER.jpg, id=154, 493.845pt x 312.16624pt>
+File: low_pics/ASTER.jpg Graphic file (type jpg)
+ <use low_pics/ASTER.jpg>
+Package pdftex.def Info: low_pics/ASTER.jpg used on input line 1074.
+(pdftex.def)             Requested size: 375.80083pt x 237.54889pt.
+
+<low_pics/ned10_low.jpg, id=155, 500.87125pt x 323.2075pt>
+File: low_pics/ned10_low.jpg Graphic file (type jpg)
+
+<use low_pics/ned10_low.jpg>
+Package pdftex.def Info: low_pics/ned10_low.jpg used on input line 1085.
+(pdftex.def)             Requested size: 375.82063pt x 242.51352pt.
+
+<low_pics/ned30_low.jpg, id=156, 508.90125pt x 317.185pt>
+File: low_pics/ned30_low.jpg Graphic file (type jpg)
+
+<use low_pics/ned30_low.jpg>
+Package pdftex.def Info: low_pics/ned30_low.jpg used on input line 1087.
+(pdftex.def)             Requested size: 375.82004pt x 234.2389pt.
+ [38 <./low_pics/Mammoth30_low.jpg> <./low_pics/ASTER.jpg>]
+Overfull \vbox (1.3224pt too high) has occurred while \output is active []
+
+
+[39 <./low_pics/ned10_low.jpg> <./low_pics/ned30_low.jpg>]
+<low_pics/srtm30.jpg, id=163, 493.845pt x 312.16624pt>
+File: low_pics/srtm30.jpg Graphic file (type jpg)
+
+<use low_pics/srtm30.jpg>
+Package pdftex.def Info: low_pics/srtm30.jpg used on input line 1097.
+(pdftex.def)             Requested size: 375.80083pt x 237.54889pt.
+
+<low_pics/srtm90.jpg, id=164, 501.875pt x 312.16624pt>
+File: low_pics/srtm90.jpg Graphic file (type jpg)
+
+<use low_pics/srtm90.jpg>
+Package pdftex.def Info: low_pics/srtm90.jpg used on input line 1099.
+(pdftex.def)             Requested size: 375.8233pt x 233.7621pt.
+
+<High_pics/Mammoth_high.jpg, id=165, 489.83pt x 303.1325pt>
+File: High_pics/Mammoth_high.jpg Graphic file (type jpg)
+
+<use High_pics/Mammoth_high.jpg>
+Package pdftex.def Info: High_pics/Mammoth_high.jpg used on input line 1108.
+(pdftex.def)             Requested size: 375.81743pt x 232.57555pt.
+
+<High_pics/Mammoth30_3.jpg, id=166, 490.83376pt x 303.1325pt>
+File: High_pics/Mammoth30_3.jpg Graphic file (type jpg)
+
+<use High_pics/Mammoth30_3.jpg>
+Package pdftex.def Info: High_pics/Mammoth30_3.jpg used on input line 1111.
+(pdftex.def)             Requested size: 375.81613pt x 232.09912pt.
+ [40 <./low_pics/srtm30.jpg> <./low_pics/srtm90.jpg>] <High_pics/Mammoth30_high
+.jpg, id=170, 491.8375pt x 308.15125pt>
+File: High_pics/Mammoth30_high.jpg Graphic file (type jpg)
+
+<use High_pics/Mammoth30_high.jpg>
+Package pdftex.def Info: High_pics/Mammoth30_high.jpg used on input line 1121.
+(pdftex.def)             Requested size: 375.81917pt x 235.4622pt.
+
+<High_pics/ASTER.jpg, id=171, 490.83376pt x 307.1475pt>
+File: High_pics/ASTER.jpg Graphic file (type jpg)
+
+<use High_pics/ASTER.jpg>
+Package pdftex.def Info: High_pics/ASTER.jpg used on input line 1123.
+(pdftex.def)             Requested size: 375.81613pt x 235.17328pt.
+ [41 <./High_pics/Mammoth_high.jpg> <./High_pics/Mammoth30_3.jpg>] <High_pics/n
+ed10.jpg, id=175, 481.8pt x 302.12875pt>
+File: High_pics/ned10.jpg Graphic file (type jpg)
+
+<use High_pics/ned10.jpg>
+Package pdftex.def Info: High_pics/ned10.jpg used on input line 1134.
+(pdftex.def)             Requested size: 375.81718pt x 235.66869pt.
+
+<High_pics/ned30.jpg, id=176, 484.81125pt x 306.14375pt>
+File: High_pics/ned30.jpg Graphic file (type jpg)
+
+<use High_pics/ned30.jpg>
+Package pdftex.def Info: High_pics/ned30.jpg used on input line 1135.
+(pdftex.def)             Requested size: 375.821pt x 237.31967pt.
+ [42 <./High_pics/Mammoth30_high.jpg> <./High_pics/ASTER.jpg>] <High_pics/srtm3
+0.jpg, id=180, 482.80376pt x 308.15125pt>
+File: High_pics/srtm30.jpg Graphic file (type jpg)
+
+<use High_pics/srtm30.jpg>
+Package pdftex.def Info: High_pics/srtm30.jpg used on input line 1145.
+(pdftex.def)             Requested size: 375.81924pt x 239.86798pt.
+
+<High_pics/srtm90.jpg, id=181, 483.8075pt x 307.1475pt>
+File: High_pics/srtm90.jpg Graphic file (type jpg)
+
+<use High_pics/srtm90.jpg>
+Package pdftex.def Info: High_pics/srtm90.jpg used on input line 1146.
+(pdftex.def)             Requested size: 375.81805pt x 238.58987pt.
+ [43 <./High_pics/ned10.jpg> <./High_pics/ned30.jpg>]
+Overfull \vbox (3.02783pt too high) has occurred while \output is active []
+
+
+[44 <./High_pics/srtm30.jpg> <./High_pics/srtm90.jpg>]
+<plots/low_all.pdf, id=189, 361.35pt x 361.35pt>
+File: plots/low_all.pdf Graphic file (type pdf)
+ <use plots/low_all.pdf>
+Package pdftex.def Info: plots/low_all.pdf used on input line 1156.
+(pdftex.def)             Requested size: 227.62413pt x 227.62413pt.
+
+Overfull \hbox (4.74663pt too wide) in paragraph at lines 1155--1159
+[][] 
+ []
+
+<plots/low_T5_T30.pdf, id=190, 361.35pt x 361.35pt>
+File: plots/low_T5_T30.pdf Graphic file (type pdf)
+ <use plots/low_T5_T30.pdf>
+Package pdftex.def Info: plots/low_T5_T30.pdf used on input line 1163.
+(pdftex.def)             Requested size: 227.62413pt x 227.62413pt.
+
+Overfull \hbox (4.74663pt too wide) in paragraph at lines 1162--1166
+[][] 
+ []
+
+<plots/low_T5_T30_3.pdf, id=191, 361.35pt x 361.35pt>
+File: plots/low_T5_T30_3.pdf Graphic file (type pdf)
+
+<use plots/low_T5_T30_3.pdf>
+Package pdftex.def Info: plots/low_T5_T30_3.pdf used on input line 1169.
+(pdftex.def)             Requested size: 227.62413pt x 227.62413pt.
+
+Overfull \hbox (4.74663pt too wide) in paragraph at lines 1168--1172
+[][] 
+ []
+
+<plots/low_T5_A30.pdf, id=192, 361.35pt x 361.35pt>
+File: plots/low_T5_A30.pdf Graphic file (type pdf)
+ <use plots/low_T5_A30.pdf>
+Package pdftex.def Info: plots/low_T5_A30.pdf used on input line 1176.
+(pdftex.def)             Requested size: 227.62413pt x 227.62413pt.
+
+Overfull \hbox (4.74663pt too wide) in paragraph at lines 1175--1179
+[][] 
+ []
+
+
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 1154--1180
+[][] $[]$
+ []
+
+
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 1154--1180
+[] $[]$ 
+ []
+
+<plots/low_T5_N10.pdf, id=193, 361.35pt x 361.35pt>
+File: plots/low_T5_N10.pdf Graphic file (type pdf)
+ <use plots/low_T5_N10.pdf>
+Package pdftex.def Info: plots/low_T5_N10.pdf used on input line 1187.
+(pdftex.def)             Requested size: 227.62413pt x 227.62413pt.
+
+Overfull \hbox (4.74663pt too wide) in paragraph at lines 1186--1190
+[][] 
+ []
+
+<plots/low_T5_N30.pdf, id=194, 361.35pt x 361.35pt>
+File: plots/low_T5_N30.pdf Graphic file (type pdf)
+ <use plots/low_T5_N30.pdf>
+Package pdftex.def Info: plots/low_T5_N30.pdf used on input line 1194.
+(pdftex.def)             Requested size: 227.62413pt x 227.62413pt.
+
+Overfull \hbox (4.74663pt too wide) in paragraph at lines 1193--1197
+[][] 
+ []
+
+<plots/low_T5_S30.pdf, id=195, 361.35pt x 361.35pt>
+File: plots/low_T5_S30.pdf Graphic file (type pdf)
+ <use plots/low_T5_S30.pdf>
+Package pdftex.def Info: plots/low_T5_S30.pdf used on input line 1200.
+(pdftex.def)             Requested size: 227.62413pt x 227.62413pt.
+
+Overfull \hbox (4.74663pt too wide) in paragraph at lines 1199--1203
+[][] 
+ []
+
+<plots/low_T5_S90.pdf, id=196, 361.35pt x 361.35pt>
+File: plots/low_T5_S90.pdf Graphic file (type pdf)
+ <use plots/low_T5_S90.pdf>
+Package pdftex.def Info: plots/low_T5_S90.pdf used on input line 1207.
+(pdftex.def)             Requested size: 227.62413pt x 227.62413pt.
+
+Overfull \hbox (4.74663pt too wide) in paragraph at lines 1206--1210
+[][] 
+ []
+
+
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 1185--1211
+[][] $[]$
+ []
+
+
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 1185--1211
+[] $[]$ 
+ []
+
+[45 <./plots/low_all.pdf> <./plots/low_T5_T30.pdf> <./plots/low_T5_T30_3.pdf> <
+./plots/low_T5_A30.pdf>] <plots/high_all.pdf, id=213, 361.35pt x 361.35pt>
+File: plots/high_all.pdf Graphic file (type pdf)
+
+<use plots/high_all.pdf>
+Package pdftex.def Info: plots/high_all.pdf used on input line 1217.
+(pdftex.def)             Requested size: 227.62413pt x 227.62413pt.
+
+Overfull \hbox (4.74663pt too wide) in paragraph at lines 1216--1220
+[][] 
+ []
+
+<plots/high_T5_T30.pdf, id=214, 361.35pt x 361.35pt>
+File: plots/high_T5_T30.pdf Graphic file (type pdf)
+
+<use plots/high_T5_T30.pdf>
+Package pdftex.def Info: plots/high_T5_T30.pdf used on input line 1224.
+(pdftex.def)             Requested size: 227.62413pt x 227.62413pt.
+
+Overfull \hbox (4.74663pt too wide) in paragraph at lines 1223--1227
+[][] 
+ []
+
+<plots/high_T5_T30_3.pdf, id=215, 361.35pt x 361.35pt>
+File: plots/high_T5_T30_3.pdf Graphic file (type pdf)
+
+<use plots/high_T5_T30_3.pdf>
+Package pdftex.def Info: plots/high_T5_T30_3.pdf used on input line 1230.
+(pdftex.def)             Requested size: 227.62413pt x 227.62413pt.
+
+Overfull \hbox (4.74663pt too wide) in paragraph at lines 1229--1233
+[][] 
+ []
+
+<plots/high_T5_A30.pdf, id=216, 361.35pt x 361.35pt>
+File: plots/high_T5_A30.pdf Graphic file (type pdf)
+
+<use plots/high_T5_A30.pdf>
+Package pdftex.def Info: plots/high_T5_A30.pdf used on input line 1237.
+(pdftex.def)             Requested size: 227.62413pt x 227.62413pt.
+
+Overfull \hbox (4.74663pt too wide) in paragraph at lines 1236--1240
+[][] 
+ []
+
+
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 1215--1241
+[][] $[]$
+ []
+
+
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 1215--1241
+[] $[]$ 
+ []
+
+[46 <./plots/low_T5_N10.pdf> <./plots/low_T5_N30.pdf> <./plots/low_T5_S30.pdf> 
+<./plots/low_T5_S90.pdf>] <plots/high_T5_N10.pdf, id=232, 361.35pt x 361.35pt>
+File: plots/high_T5_N10.pdf Graphic file (type pdf)
+
+<use plots/high_T5_N10.pdf>
+Package pdftex.def Info: plots/high_T5_N10.pdf used on input line 1248.
+(pdftex.def)             Requested size: 227.62413pt x 227.62413pt.
+
+Overfull \hbox (4.74663pt too wide) in paragraph at lines 1247--1251
+[][] 
+ []
+
+<plots/high_T5_N30.pdf, id=233, 361.35pt x 361.35pt>
+File: plots/high_T5_N30.pdf Graphic file (type pdf)
+
+<use plots/high_T5_N30.pdf>
+Package pdftex.def Info: plots/high_T5_N30.pdf used on input line 1255.
+(pdftex.def)             Requested size: 227.62413pt x 227.62413pt.
+
+Overfull \hbox (4.74663pt too wide) in paragraph at lines 1254--1258
+[][] 
+ []
+
+<plots/high_T5_S30.pdf, id=234, 361.35pt x 361.35pt>
+File: plots/high_T5_S30.pdf Graphic file (type pdf)
+
+<use plots/high_T5_S30.pdf>
+Package pdftex.def Info: plots/high_T5_S30.pdf used on input line 1261.
+(pdftex.def)             Requested size: 227.62413pt x 227.62413pt.
+
+Overfull \hbox (4.74663pt too wide) in paragraph at lines 1260--1264
+[][] 
+ []
+
+<plots/high_T5_S90.pdf, id=235, 361.35pt x 361.35pt>
+File: plots/high_T5_S90.pdf Graphic file (type pdf)
+
+<use plots/high_T5_S90.pdf>
+Package pdftex.def Info: plots/high_T5_S90.pdf used on input line 1268.
+(pdftex.def)             Requested size: 227.62413pt x 227.62413pt.
+
+Overfull \hbox (4.74663pt too wide) in paragraph at lines 1267--1271
+[][] 
+ []
+
+
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 1246--1272
+[][] $[]$
+ []
+
+
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 1246--1272
+[] $[]$ 
+ []
+
+[47 <./plots/high_all.pdf> <./plots/high_T5_T30.pdf> <./plots/high_T5_T30_3.pdf
+> <./plots/high_T5_A30.pdf>] [48 <./plots/high_T5_N10.pdf> <./plots/high_T5_N30
+.pdf> <./plots/high_T5_S30.pdf> <./plots/high_T5_S90.pdf>]
+(./final_paper_NZ.aux) ) 
+Here is how much of TeX's memory you used:
+ 3992 strings out of 493488
+ 62255 string characters out of 3141326
+ 142347 words of memory out of 3000000
+ 7214 multiletter control sequences out of 15000+200000
+ 11380 words of font info for 39 fonts, out of 3000000 for 9000
+ 957 hyphenation exceptions out of 8191
+ 44i,18n,43p,1271b,425s stack positions out of 5000i,500n,10000p,200000b,50000s
+</usr/local/texlive/2012/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmbx10.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmbx12.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmmi10.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmmi12.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmmi6.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmmi8.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmr10.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmr12.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmr17.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+r8.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8
+.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.
+pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pf
+b></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb
+></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmti7.pfb><
+/usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb>
+Output written on final_paper_NZ.pdf (48 pages, 9647242 bytes).
+PDF statistics:
+ 320 PDF objects out of 1000 (max. 8388607)
+ 215 compressed objects within 3 object streams
+ 0 named destinations out of 1000 (max. 500000)
+ 166 words of extra memory for PDF output out of 10000 (max. 10000000)
+

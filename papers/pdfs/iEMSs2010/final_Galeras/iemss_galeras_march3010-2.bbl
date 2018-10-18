@@ -1,0 +1,145 @@
+\begin{thebibliography}{20}
+\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+
+\bibitem[Baxter and Gresham(1997)]{baxter1997}
+Baxter, P. and A.~Gresham.
+\newblock Deaths and injuries in the eruption of {G}aleras {V}olcano,
+  {C}olombia, 14 {J}anuary 1993.
+\newblock {\em Journal of Volcanology and Geothermal Research}, 77:\penalty0
+  325--338, 1997.
+
+\bibitem[Bursik et~al.(2005)Bursik, Patra, Pitman, Nichita, Macias, Saucedo,
+  and Girina]{BuPaPi05}
+Bursik, M., A.~Patra, E.~B. Pitman, C.~Nichita, J.~L. Macias, R.~Saucedo, and
+  O.~Girina.
+\newblock Advances in studies of dense volcanic granular flows.
+\newblock {\em Reports on Progress in Physics}, 68:\penalty0 271--301, 2005.
+\newblock doi:10.1088/0034-4885/68/2/R01.
+
+\bibitem[Calvache(1990)]{calvache_1990a}
+Calvache, M.
+\newblock Geology and volcanology of the recent evolution of {G}aleras
+  {V}olcano, {C}olombia.
+\newblock {\em Msc. Thesis. Louisiana State University}, page 171, 1990.
+
+\bibitem[Calvache et~al.(1997)Calvache, Cortes, and Williams]{calvache1997}
+Calvache, M., G.~Cortes, and S.~Williams.
+\newblock Stratigraphy and chronology of the {G}aleras volcanic complex,
+  {C}olombia.
+\newblock {\em Journal of Volcanology and Geothermal Research}, 77:\penalty0
+  5--19, 1997.
+
+\bibitem[Dalbey et~al.(2008)Dalbey, Patra, Pitman, Bursik, and Sheridan]{Keith}
+Dalbey, K., A.~Patra, E.~Pitman, M.~Bursik, and M.~Sheridan.
+\newblock Input uncertainty propagation methods and hazard mapping of
+  geophysical mass flow.
+\newblock {\em Journal of Geophysical Research}, 113:\penalty0 5203--5219,
+  2008.
+\newblock doi:10.1029/2006JB004471.
+
+\bibitem[Goodchild et~al.(1992)Goodchild, Sun, and Yang]{Goodchild_1992}
+Goodchild, M., G.~Sun, and S.~Yang.
+\newblock Development and test of an error model for categorical data.
+\newblock {\em International Journal of Geographical Informational Systems},
+  6:\penalty0 87--104, 1992.
+
+\bibitem[Hebeler and Purves(2008)]{Felix_Hebeler}
+Hebeler, F. and R.~Purves.
+\newblock {\em Modelling {DEM} data uncertainties for {M}onte {C}arlo
+  Simulations of Ice Sheet Models}, chapter Quality Aspects in spatial Data
+  Mining, pages 175--196.
+\newblock A.Stein, J.Shi $\&$W.Bijker, CRC Press, Boca Raton, 2008.
+
+\bibitem[Hunter and Goodchild(1997)]{Hunter_Goodchild_1997}
+Hunter, G. and M.~Goodchild.
+\newblock Modeling the uncertainty of slope and aspect estimates derived from
+  spatial databases.
+\newblock {\em Geographical Analysis}, 1:\penalty0 35--49, 1997.
+
+\bibitem[Hurtado and Cortes(1997)]{hurtado_1997}
+Hurtado, A. and G.~Cortes.
+\newblock Third version of the hazard map of {G}aleras {V}olcano, {C}olombia.
+\newblock {\em Journal of Volcanology and Geothermal Research}, 77:\penalty0
+  89--100, 1997.
+
+\bibitem[Murcia et~al.(2010)Murcia, Sheridan, Macias, and Cortes]{murcia_2010}
+Murcia, H., M.~Sheridan, J.~Macias, and G.~Cortes.
+\newblock {TITAN2D} simulations of pyroclastic flows at {C}erro {M}achin
+  {V}olcano, {C}olombia: {H}azard implications.
+\newblock {\em Journal of South American Earth Sciences}, 29:\penalty0
+  161--170, 2010.
+
+\bibitem[Narvaez et~al.(1997)Narvaez, Torres, Gomez, Cortes, Cepeda, and
+  Stix]{narvaez_1997}
+Narvaez, L., R.~Torres, D.~Gomez, G.~Cortes, H.~Cepeda, and J.~Stix.
+\newblock Tornillo-type seismic signals at {G}aleras volcano, {C}olombia,
+  1992--1993.
+\newblock {\em Journal of Volcanology and Geothermal Research}, 77:\penalty0
+  159--171, 1997.
+
+\bibitem[Ordo\~nez Villota and Jentzsch(2000)]{ordones_2000}
+Ordo\~nez Villota, M. and G.~Jentzsch.
+\newblock Mediciones {GPS} como topografia basica para el estudio de
+  microgravedad en el {V}olc\'an {G}aleras, {C}olombia.
+\newblock {\em Ingeominas Internal Report (in {S}panish)}, 2000.
+
+\bibitem[Patra et~al.(2005)Patra, Bauer, Nichita, Pitman, Sheridan, Bursik,
+  Rupp, Webber, Namikawa, and Renschler]{Patra2005}
+Patra, A., A.~Bauer, C.~Nichita, E.~Pitman, M.~F. Sheridan, M.~Bursik, B.~Rupp,
+  A.~Webber, L.~Namikawa, and C.~Renschler.
+\newblock Parallel adaptive numerical simulation of dry avalanches over natural
+  terrain.
+\newblock {\em Journal of Volcanology and Geothermal Research}, 139:\penalty0
+  1--21, 2005.
+
+\bibitem[Savage and Hutter(1989)]{Savage1989}
+Savage, S. and K.~Hutter.
+\newblock The motion of a finite mass of granular material down a rough
+  incline.
+\newblock {\em Journal of Fluid Mechanics}, 199:\penalty0 177--215, 1989.
+
+\bibitem[Sheridan et~al.(2010)Sheridan, Patra, Dalbey, and
+  Hubbard]{sheridan_2010}
+Sheridan, M., A.~Patra, K.~Dalbey, and B.~Hubbard.
+\newblock Probabilistic digital hazard maps for avalanches and massive
+  pyroclastic flows using {TITAN2D}.
+\newblock {\em in Groppelli, G., and Viereck-Goette, L., eds., Stratigraphy and
+  Geology of Volcanic Areas: Geological Society of America Special Paper},
+  464:\penalty0 In press, 2010.
+
+\bibitem[Sheridan et~al.(2005)Sheridan, Stinton, Patra, Pitman, Bauer, and
+  Nichita]{sheridan_2005}
+Sheridan, M., A.~Stinton, A.~Patra, E.~Pitman, A.~Bauer, and C.~Nichita.
+\newblock Evaluating {TITAN2D} mass-flow model using the 1963 {L}ittle {T}ahoma
+  {P}eak avalanches, {M}ount {R}ainier, {W}ashington.
+\newblock {\em Journal of Volcanology and Geothermal Research}, 139:\penalty0
+  275--308, 2005.
+
+\bibitem[Stefanescu et~al.(2010{\natexlab{a}})Stefanescu, Bursik, and
+  Patra]{stefanescu1}
+Stefanescu, E.~R., M.~Bursik, and A.~Patra.
+\newblock Effect of digital elevation model on geophysical flow model output.
+\newblock {\em Natural Hazards}, 2010{\natexlab{a}}.
+
+\bibitem[Stefanescu et~al.(2010{\natexlab{b}})Stefanescu, Bursik, Dalbey,
+  Jones, Patra, and Pitman]{stefanescu2}
+Stefanescu, E., M.~Bursik, K.~Dalbey, M.~Jones, A.~Patra, and E.~Pitman.
+\newblock {DEM} uncertainty and hazard analysis using a geophysical flow model.
+\newblock In {\em submitted to International Congress on Environmental
+  Modelling and Software}, 2010{\natexlab{b}}.
+
+\bibitem[Stinton et~al.(2006)Stinton, Sheridan, Patra, Dalbey, and
+  Namikawa]{stinton_2006}
+Stinton, A., M.~Sheridan, A.~Patra, K.~Dalbey, and L.~Namikawa.
+\newblock Incorporation of variable bed friction into {TITAN2D} mass-flow
+  model: {A}pplication to {L}ittle {T}ahoma {P}eak avalanche ({W}ashington).
+\newblock {\em Acta Vulcanologica}, 16(1-2):\penalty0 153--163, 2006.
+
+\bibitem[Wechsler and Kroll(2006)]{Wechsler2006}
+Wechsler, S. and C.~Kroll.
+\newblock Quantifying {DEM} uncertainty and its effects on topographic
+  parameters.
+\newblock {\em Photogrammetric Engineering $\&$ Remote Sensing}, 72:\penalty0
+  108--1090, 2006.
+
+\end{thebibliography}

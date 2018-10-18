@@ -1,0 +1,287 @@
+\begin{thebibliography}{43}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Abrams(2000)]{Abrams2000}
+M.~Abrams.
+\newblock The {A}dvanced {S}paceborne {T}hermal {E}mission and {R}eflection
+  {R}adiometer ({ASTER}): {D}ata {P}roducts for the {H}igh {S}patial
+  {R}esolution {I}mager on {NASA}s {T}erra {P}latform.
+\newblock \emph{International Journal of Remote Sensing}, 21\penalty0
+  (847-859), 2000.
+
+\bibitem[Bailey(1989)]{Bailey1989}
+R.A. Bailey.
+\newblock \emph{Geologic {M}ap of {L}ong {V}alley {C}aldera, {M}ono-{I}nyo
+  {C}raters {V}olcanic {C}hain and {V}icinity, {E}astern {C}alifornia}.
+\newblock Department of the Interior, Reston, VA (US), 1989.
+
+\bibitem[Barr and Davidson(1973)]{Barr1973}
+D.~Barr and T.~Davidson.
+\newblock A {K}olmogrov-{S}mirnov {T}est for {C}ensored {S}amples.
+\newblock \emph{Technometrics}, 15, 1973.
+
+\bibitem[Bates and Roo(2000)]{Bates2000}
+P.D. Bates and A.P.J.~De Roo.
+\newblock A simple raster-based model for flood inundation simulation.
+\newblock \emph{Journal of Hydrology}, 236:\penalty0 54--77, 2000.
+
+\bibitem[Binh and Thuy(2008)]{Binh2008}
+T.Q. Binh and N.T. Thuy.
+\newblock Assessment of the influence of interpolation techniques on the
+  accuracy of digital elevation model.
+\newblock \emph{VNU Journal of Science, Earth Sciences}, 24:\penalty0 176--183,
+  2008.
+
+\bibitem[Biswas et~al.(2008)Biswas, Ahmad, Molla, Hirose, and
+  Nasser]{Biswas2008}
+S.~Biswas, S.~Ahmad, M.K.I. Molla, K.~Hirose, and M.~Nasser.
+\newblock {K}olomogrov-{S}mirnov {T}est in {T}ext-{D}ependent {A}utomatic
+  {S}peaker {I}dentification.
+\newblock \emph{Engineering Letter}, 2008.
+
+\bibitem[Burkett(2007)]{Burkett2007}
+S.M. Burkett.
+\newblock Geomorphic {M}apping and {P}etrography of {M}ammoth {M}ountain,
+  {C}alifornia.
+\newblock Master's thesis, State University of New York at Buffalo, 2007.
+
+\bibitem[Capra et~al.(2011)Capra, Manea, Manea, and Norini]{Capra2011}
+L.~Capra, V.C. Manea, M.~Manea, and G.~Norini.
+\newblock The importance of digital elevation model resolution on granular flow
+  simulations: a test case for {C}olima volcano using {TITAN2D} computational
+  routine.
+\newblock \emph{Nat Hazards}, 59:\penalty0 665--680, 2011.
+
+\bibitem[Cebecauer et~al.(2002)Cebecauer, Hofierka, and Suri]{Cebecauer2002}
+T.~Cebecauer, J.~Hofierka, and Marcel Suri.
+\newblock Processing digital terrain models by regularized spline with tension:
+  tuning interpolation parameters for different input datasets.
+\newblock \emph{Proceeding of Open source GIS - GRASS users conference}, 2002.
+
+\bibitem[Chanbey et~al.(2005)Chanbey, Cotter, Costello, and
+  Soerens]{Chanbey2005}
+I.~Chanbey, A.S. Cotter, T.A. Costello, and T.S. Soerens.
+\newblock Effect of {DEM} data resolution on {SWAT} output uncertainty.
+\newblock \emph{Hydrological Processes}, 19\penalty0 (3):\penalty0 621--628,
+  2005.
+
+\bibitem[Cochrane(1999)]{Cochrane1999}
+T.A. Cochrane.
+\newblock \emph{Methodologies for watershed modeling with {GIS} and {DEM}s for
+  the parametrization of the {WEPP} model}.
+\newblock PhD thesis, Purdue University, 1999.
+
+\bibitem[Congalton(2005)]{Congalton}
+R.G. Congalton.
+\newblock {T}hematic and {P}ositional {A}ccuracy {A}ssrssment of {D}igital
+  {R}emotely {S}ensed {D}ata.
+\newblock \emph{Proceedings of the Seventh Annual Forest Inventory and Analysis
+  Symposim}, 2005.
+
+\bibitem[Desmet and Grovers(1997)]{Desmet1997}
+P.J.J. Desmet and G.~Grovers.
+\newblock Comment on modeling topographic potential for erosion and deposition
+  using {GIS}.
+\newblock \emph{International Journal of Geographical Information Systems},
+  11:\penalty0 603--610, 1997.
+
+\bibitem[Farr et~al.(2007)Farr, Rosen, Caro, Crippen, Duren, Hensley, and
+  Kobrick]{Farr2007}
+T.G. Farr, P.A. Rosen, E.~Caro, R.~Crippen, R.~Duren, S.~Hensley, and
+  M.~Kobrick.
+\newblock The {S}huttle {R}adar {T}opography {M}ission.
+\newblock Technical report, Jet Propulsion Laboratory, 2007.
+
+\bibitem[Farrar(1995)]{Farrar1995}
+C.D. Farrar.
+\newblock Forest-killing diffuse $co_2$ emission at {M}ammoth {M}ountain as a
+  sign of magmatic unrest.
+\newblock \emph{Nature}, 376:\penalty0 675, 1995.
+
+\bibitem[Fisher and Tate(2006)]{Tate}
+P.~Fisher and N.J. Tate.
+\newblock Causes and consequences of error in digital elevation models.
+\newblock \emph{Progress in Physical Geography}, 30:\penalty0 467--489, 2006.
+
+\bibitem[Florinsky(1998)]{Florinsky1998}
+I.V. Florinsky.
+\newblock Combined analysis of digital terrain models and remotely sensed data
+  in landscape investigations.
+\newblock \emph{Physical Geography}, 22, 1998.
+
+\bibitem[Fujisada et~al.(2005)Fujisada, Bailey, Kelly, Hara, and
+  Abrams]{Fujisada2005}
+H.~Fujisada, G.B. Bailey, G.G. Kelly, S.~Hara, and M.J. Abrams.
+\newblock {ASTER DEM} performance.
+\newblock \emph{IEEE Transactions on Geoscience and Remote Sensing},
+  43\penalty0 (12), 2005.
+
+\bibitem[Galas et~al.(2007)Galas, Dalbey, Kumar, Patra, and
+  Sheridan]{Galas2007}
+S.~Galas, K.~Dalbey, D.~Kumar, A.K. Patra, and M.~Sheridan.
+\newblock Benchmarking {TITAN2D} mass flow model against a sand flow experiment
+  and the 1903 {F}rank slide.
+\newblock \emph{The 2007 International Forum on Landslide Disaster Management},
+  Ho \& Li editors, 2007.
+
+\bibitem[G.Legorreta-Paulin and Bursik(2009)]{Legorreta2009}
+G.Legorreta-Paulin and M.I. Bursik.
+\newblock \emph{Assessment of {L}andslides {S}usceptibility}.
+\newblock VDM and Co. KG, Saarbrucken, Germany, 2009.
+
+\bibitem[Goncalves and Oliveira(2004)]{Goncalves2004}
+J.A. Goncalves and A.M. Oliveira.
+\newblock Accuracy {A}nalysis of {DEM}s derived from {ASTER} imagery.
+\newblock \emph{ISPRS XX}, 2004.
+\newblock Istanbul, Turkey.
+
+\bibitem[Hooper et~al.(2003)Hooper, Bursik, and Webb]{Hooper2003}
+D.M. Hooper, M.I. Bursik, and F.H. Webb.
+\newblock Application of high-resolution, interferometric {DEM}s to geomorphic
+  studies of fault scarps, {F}ish {L}ake {V}alley, {N}evada-{C}alifornia,
+  {USA}.
+\newblock \emph{Remote Sensing of Environment}, 84\penalty0 (2):\penalty0
+  255--267, 2003.
+
+\bibitem[Jenson and Dominque(1988)]{Jenson}
+S.K. Jenson and J.O. Dominque.
+\newblock {E}xtracting {T}opographic {S}tructure from {D}igital {E}levation
+  {D}ata for {G}eographic {I}nformation {S}ystem {A}nalysis.
+\newblock \emph{Photogrammetric Engineering and Remote Sensing}, 54:\penalty0
+  1593--1600, 1988.
+
+\bibitem[Kamada and Enkhbat(2009)]{Kamada2009}
+M.~Kamada and R.~Enkhbat.
+\newblock Spline {I}nterpolation in {P}iecewise {C}onstant {T}ension.
+\newblock \emph{SAMPTA}, 2009.
+
+\bibitem[Kvasov(2011)]{Kvasov20011}
+B.~Kvasov.
+\newblock Parallel mesh methods for tension splines.
+\newblock \emph{Journal of Computational and Applied Mathematics}, 2011.
+
+\bibitem[Lajeunesse et~al.(2004)Lajeunesse, Mangeney-Castelnau, and
+  Vilotte]{MangeneyCastelnauetal2004}
+E.~Lajeunesse, A.~Mangeney-Castelnau, and J.P. Vilotte.
+\newblock Spreading of a granular mass on a horizontal plane.
+\newblock \emph{Physics of Fluids}, 16:\penalty0 2371--2381, 2004.
+
+\bibitem[Lillesand and Keifer(2000)]{Lillesand2000}
+T.M. Lillesand and R.W. Keifer.
+\newblock \emph{Remote sensing and image interpretation}.
+\newblock New York, NY: Wiley, 4 edition, 2000.
+
+\bibitem[Lopes et~al.(2007)Lopes, Reid, and Hobson]{Lopes2007}
+R.H.C Lopes, I.~Reid, and P.R. Hobson.
+\newblock The two-dimensional {K}olmogrov - {S}mirnov test.
+\newblock \emph{XI International Workshop on Advanced Computing and Analysis
+  Techniques in Physics Research}, 2007.
+
+\bibitem[Lube et~al.(2005)Lube, Huppert, Stephen, Sparks, and
+  Freundt]{Lubeetal2005}
+G.~Lube, H.E. Huppert, R.~Stephen, J.~Sparks, and A.~Freundt.
+\newblock Collapses of two-dimensional granular columns.
+\newblock \emph{Physical Review}, 72, 2005.
+
+\bibitem[Mitasova and Hofierka(1993)]{Mitasova1993}
+H.~Mitasova and J.~Hofierka.
+\newblock Interpolation by {R}egularized {S}pline with {T}ension: Ii. {
+  A}pplication to {T}errain {M}odeling and {S}urface {G}eometry {A}nalysis.
+\newblock \emph{International Association for Mathematical Geology}, 25, 1993.
+
+\bibitem[Mitasova et~al.(1996)Mitasova, J.Hofierka, Zlocha, and
+  Iverson]{Mitasova1996}
+H.~Mitasova, J.Hofierka, M.~Zlocha, and L.R. Iverson.
+\newblock Modeling topographic potential for erosion and deposition using
+  {GIS}.
+\newblock \emph{International Journal of Geographical Information Systems},
+  10:\penalty0 629--641, 1996.
+
+\bibitem[Mouginis-Mark and Garbeil(2005)]{Mouginis-Mark2005}
+P.J. Mouginis-Mark and H.~Garbeil.
+\newblock Quality of {TOPSAR} topographic data for volcanology studies at
+  {K}ilauea {V}olcano, {H}awaii: {A}n assessment using airborne {L}i{DAR} data.
+\newblock \emph{Remote Sensing of Environment}, 96:\penalty0 149--164, 2005.
+
+\bibitem[Patra et~al.(2005)Patra, Bauer, Nichita, Pitman, Sheridan, Bursik,
+  Rupp, Webber, Stinton, Namikawa, and Renschler]{Patra2005}
+A.K. Patra, A.C. Bauer, C.C. Nichita, E.B. Pitman, M.F. Sheridan, M.~Bursik,
+  B.~Rupp, A.~Webber, A.J. Stinton, L.M. Namikawa, and C.S. Renschler.
+\newblock Parallel adaptive numerical simulation of dry avalanches over natural
+  terrain.
+\newblock \emph{Journal of Volcanology and Geothermal Research}, 139:\penalty0
+  1--21, 2005.
+
+\bibitem[Procter et~al.(2010)Procter, Cronin, Fuller, M.~Sheridan, Neall, and
+  Keys]{Proctor2010}
+J.N. Procter, S.J. Cronin, I.C. Fuller, M.F. M.~Sheridan, V.E. Neall, and
+  H.~Keys.
+\newblock Lahar hazard assessment using {TITAN2D} for an alluvial fan with
+  rapidly changing geomorphology: {W}hangaehu {R}iver, {M}t. {R}uapehu.
+\newblock \emph{Geomorphology}, 116(1-2):\penalty0 162--174, 2010.
+
+\bibitem[Savage and Hutter(1989)]{Savage1989}
+S.B. Savage and K.~Hutter.
+\newblock The motion of a finite mass of granular material down a rough
+  incline.
+\newblock \emph{Journal of Fluid Mechanics}, 199:\penalty0 177--215, 1989.
+
+\bibitem[Shaffer(2006)]{Shaffer2006}
+W.~J. Shaffer.
+\newblock Evaluation of the {S}huttle {R}adar {T}opography {M}ission digital
+  elevation model and application to the modeling of permanent deformation.
+\newblock Master's thesis, State University of New York at Buffalo, 2006.
+
+\bibitem[Stevens et~al.(2006)Stevens, Manville, and Heron]{Stevens}
+N.F. Stevens, V.~Manville, and D.W. Heron.
+\newblock The sensitivity of a volcanic flow model to digital elevation model
+  accuracy: experiments with digitised map contours and interferometric sar at
+  {R}uapehu and {T}aranaki volvanoes, {N}ew {Z}ealand.
+\newblock \emph{Journal of Volcanology and Geothermal Research}, 119:\penalty0
+  89--105, 2006.
+
+\bibitem[Takahashi and Tsujimoto(2000)]{Takahashi2000}
+T.~Takahashi and H.~Tsujimoto.
+\newblock A mechanical model for {M}erapi-type pyroclastic flow.
+\newblock \emph{Journal of Volcanology and Geothermal Research}, 98:\penalty0
+  91--115, 2000.
+
+\bibitem[Wise(2007)]{Wise2007}
+S.M. Wise.
+\newblock Effect of differing {DEM} creation methods on the results from a
+  hydrological model.
+\newblock \emph{Computers \& Geosciences}, 33\penalty0 (1351-1365), 2007.
+
+\bibitem[Wolock and Price(1994)]{Wolock1994}
+D.M. Wolock and C.V. Price.
+\newblock Effects of digital elevation model map scale and data resolution on a
+  topography-based watershed model.
+\newblock \emph{Water Resources Research}, 30\penalty0 (11):\penalty0
+  3041--3052, 1994.
+
+\bibitem[Xiao et~al.(2010)Xiao, Liu, and Zhao]{Xiao2010}
+L.L. Xiao, H.B. Liu, and X.G. Zhao.
+\newblock Impact of digital elevation model resolution on stream network
+  parameters.
+\newblock \emph{2nd Conference of Environmental Science and Information
+  Application Technology}, 2010.
+
+\bibitem[Zhang et~al.(2008)Zhang, Chang, and Wu]{Zhang2008}
+J.X. Zhang, K.T. Chang, and J.Q. Wu.
+\newblock Effects of {DEM} resolution and source on soil erosion modelling: a
+  case study using the {WEPP} model.
+\newblock \emph{International Journal of Geographical Information Science},
+  22\penalty0 (8):\penalty0 925--942, 2008.
+
+\bibitem[Zhang and Montgomery(1994)]{Zhang1994}
+W.H. Zhang and D.R. Montgomery.
+\newblock Digital elevation model grid size, landscape representation and
+  hydrologic simulations.
+\newblock \emph{Water Resources Research}, 30\penalty0 (4):\penalty0
+  1019--1028, 1994.
+
+\end{thebibliography}

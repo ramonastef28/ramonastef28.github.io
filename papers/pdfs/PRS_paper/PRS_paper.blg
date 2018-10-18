@@ -1,0 +1,61 @@
+This is BibTeX, Version 0.99d (Web2C 2010)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: PRS_paper.aux
+The style file: plainnat.bst
+Database file #1: mybib.bib
+I was expecting a `,' or a `}'---line 33 of file mybib.bib
+ : 
+ : @article{Smith_Mammoth,
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 45 of file mybib.bib
+ : 
+ : @article{Wes2004169,
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Warning--empty title in Smith_Galeras
+Warning--empty journal in Smith_Galeras
+Warning--empty title in Smith_Mammoth
+Warning--empty journal in Smith_Mammoth
+You've used 53 entries,
+            2773 wiz_defined-function locations,
+            929 strings with 15208 characters,
+and the built_in function-call counts, 25430 in all, are:
+= -- 2221
+> -- 1542
+< -- 36
++ -- 526
+- -- 471
+* -- 2047
+:= -- 3942
+add.period$ -- 168
+call.type$ -- 53
+change.case$ -- 311
+chr.to.int$ -- 51
+cite$ -- 110
+duplicate$ -- 1148
+empty$ -- 2031
+format.name$ -- 550
+if$ -- 5360
+int.to.chr$ -- 3
+int.to.str$ -- 1
+missing$ -- 53
+newline$ -- 282
+num.names$ -- 212
+pop$ -- 592
+preamble$ -- 1
+purify$ -- 263
+quote$ -- 0
+skip$ -- 904
+stack$ -- 0
+substring$ -- 935
+swap$ -- 125
+text.length$ -- 8
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 573
+warning$ -- 4
+while$ -- 206
+width$ -- 0
+write$ -- 701
+(There were 2 error messages)

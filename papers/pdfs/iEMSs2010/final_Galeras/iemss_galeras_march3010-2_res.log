@@ -1,0 +1,438 @@
+This is pdfTeX, Version 3.1415926-1.40.11 (TeX Live 2010) (format=pdflatex 2010.7.21)  7 OCT 2010 21:56
+entering extended mode
+ \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**iemss_galeras_march3010-2_res.tex
+(./iemss_galeras_march3010-2_res.tex
+LaTeX2e <2009/09/24>
+Babel <v3.8l> and hyphenation patterns for english, dumylang, nohyphenation, ge
+rman-x-2009-06-19, ngerman-x-2009-06-19, ancientgreek, ibycus, arabic, armenian
+, basque, bulgarian, catalan, pinyin, coptic, croatian, czech, danish, dutch, u
+kenglish, usenglishmax, esperanto, estonian, farsi, finnish, french, galician, 
+german, ngerman, swissgerman, monogreek, greek, hungarian, icelandic, assamese,
+ bengali, gujarati, hindi, kannada, malayalam, marathi, oriya, panjabi, tamil, 
+telugu, indonesian, interlingua, irish, italian, kurmanji, lao, latin, latvian,
+ lithuanian, mongolian, mongolianlmc, bokmal, nynorsk, polish, portuguese, roma
+nian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, turkish,
+ turkmen, ukrainian, uppersorbian, welsh, loaded.
+(/usr/local/texlive/2010/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
+(/usr/local/texlive/2010/texmf-dist/tex/latex/base/fleqn.clo
+File: fleqn.clo 1998/08/17 v1.1c Standard LaTeX option (flush left equations)
+\mathindent=\dimen102
+)
+(/usr/local/texlive/2010/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen103
+) (./iemss.sty
+\@bls=\dimen104
+\@eps=\dimen105
+\@blsAdd=\dimen106
+\fm@box=\box26
+\c@address=\count87
+\abstract@box=\box27
+\t@keyword=\box28
+\@tempcntc=\count88
+)
+(/usr/local/texlive/2010/texmf-dist/tex/latex/psnfss/times.sty
+Package: times 2005/04/12 PSNFSS-v9.2a (SPQR) 
+)
+(/usr/local/texlive/2010/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2010/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+(/usr/local/texlive/2010/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2010/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/usr/local/texlive/2010/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+
+(/usr/local/texlive/2010/texmf-dist/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2010/02/14 v0.04n Graphics/color for pdfTeX
+\Gread@gobject=\count89
+))
+\Gin@req@height=\dimen107
+\Gin@req@width=\dimen108
+)
+(/usr/local/texlive/2010/texmf-dist/tex/latex/natbib/natbib.sty
+Package: natbib 2009/11/07 8.31a (PWD, AO)
+\bibhang=\skip43
+\bibsep=\skip44
+LaTeX Info: Redefining \cite on input line 694.
+\c@NAT@ctr=\count90
+)
+(/usr/local/texlive/2010/texmf-dist/tex/latex/multirow/multirow.sty
+\bigstrutjot=\dimen109
+)
+(/usr/local/texlive/2010/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count91
+\float@exts=\toks15
+\float@box=\box29
+\@float@everytoks=\toks16
+\@floatcapt=\box30
+)
+(/usr/local/texlive/2010/texmf-dist/tex/latex/subfig/subfig.sty
+Package: subfig 2005/06/28 ver: 1.3 subfig package
+
+(/usr/local/texlive/2010/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2010/01/09 v3.1m Customizing captions (AR)
+
+(/usr/local/texlive/2010/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2010/01/14 v3.1m caption3 kernel (AR)
+\captionmargin=\dimen110
+\captionmargin@=\dimen111
+\captionwidth=\dimen112
+\caption@indent=\dimen113
+\caption@parindent=\dimen114
+\caption@hangindent=\dimen115
+)
+\c@ContinuedFloat=\count92
+Package caption Info: float package is loaded.
+)
+\c@KVtest=\count93
+\sf@farskip=\skip45
+\sf@captopadj=\dimen116
+\sf@capskip=\skip46
+\sf@nearskip=\skip47
+\c@subfigure=\count94
+\c@subfigure@save=\count95
+\c@lofdepth=\count96
+\c@subtable=\count97
+\c@subtable@save=\count98
+\c@lotdepth=\count99
+\sf@top=\skip48
+\sf@bottom=\skip49
+)
+(./iemss_galeras_march3010-2_res.aux)
+\openout1 = `iemss_galeras_march3010-2_res.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 32.
+
+(/usr/local/texlive/2010/texmf-dist/tex/latex/psnfss/ot1ptm.fd
+File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
+)
+(/usr/local/texlive/2010/texmf-dist/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count100
+\scratchdimen=\dimen117
+\scratchbox=\box31
+\nofMPsegments=\count101
+\nofMParguments=\count102
+\everyMPshowfont=\toks17
+\MPscratchCnt=\count103
+\MPscratchDim=\dimen118
+\MPnumerator=\count104
+\everyMPtoPDFconversion=\toks18
+) (/usr/local/texlive/2010/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2010/04/01 v0.9 Utility functions of pdfTeX for LuaTeX (HO)
+
+
+(/usr/local/texlive/2010/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/message (HO)
+)
+(/usr/local/texlive/2010/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+(/usr/local/texlive/2010/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2010/04/26 v1.7 LaTeX kernel commands for general use (HO)
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+)
+(/usr/local/texlive/2010/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+(/usr/local/texlive/2010/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2007/09/30 v1.0 Managing graphics extensions (HO)
+)
+(/usr/local/texlive/2010/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2010/02/22 v3.7 Keyval support for LaTeX options (HO)
+
+(/usr/local/texlive/2010/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2010/03/01 v1.9 Key value parser (HO)
+
+(/usr/local/texlive/2010/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2010/01/28 v1.3 Prefix for e-TeX command names (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 436.
+
+(/usr/local/texlive/2010/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+Package caption Info: Begin \AtBeginDocument code.
+Package caption3 Info: subfig package 1.2 or 1.3 is loaded.
+LaTeX Info: Redefining \subref on input line 32.
+Package caption Info: End \AtBeginDocument code.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 34.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 44.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <18> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 48.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 48.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 48.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/sc' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/sc' tried instead on input line 50.
+
+[1
+
+{/usr/local/texlive/2010/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Overfull \vbox (5.4559pt too high) has occurred while \output is active []
+
+
+[2]
+Overfull \vbox (5.4559pt too high) has occurred while \output is active []
+
+
+[3] <xfig_rot.jpg, id=22, 811.23074pt x 543.83176pt>
+File: xfig_rot.jpg Graphic file (type jpg)
+ <use xfig_rot.jpg>
+<error3_res.jpg, id=23, 562.1pt x 421.575pt>
+File: error3_res.jpg Graphic file (type jpg)
+ <use error3_res.jpg>
+Overfull \hbox (79.58075pt too wide) in paragraph at lines 294--310
+[][] $[]$ 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Overfull \vbox (5.4559pt too high) has occurred while \output is active []
+
+
+[4] <sample1_low_flow_res.jpg, id=28, 562.1pt x 421.575pt>
+File: sample1_low_flow_res.jpg Graphic file (type jpg)
+
+<use sample1_low_flow_res.jpg>
+Overfull \hbox (35.04291pt too wide) in paragraph at lines 316--320
+[][] 
+ []
+
+<all_low_flow_res.jpg, id=29, 562.1pt x 421.575pt>
+File: all_low_flow_res.jpg Graphic file (type jpg)
+ <use all_low_flow_res.jpg>
+Overfull \hbox (35.04291pt too wide) in paragraph at lines 323--327
+[][] 
+ []
+
+
+Overfull \hbox (79.58075pt too wide) in paragraph at lines 315--328
+[][] $[]$ 
+ []
+
+<sample1_high_flow_res.jpg, id=30, 562.1pt x 421.575pt>
+File: sample1_high_flow_res.jpg Graphic file (type jpg)
+
+<use sample1_high_flow_res.jpg>
+Overfull \hbox (35.04291pt too wide) in paragraph at lines 334--338
+[][] 
+ []
+
+<all_high_flow_res.jpg, id=31, 562.1pt x 421.575pt>
+File: all_high_flow_res.jpg Graphic file (type jpg)
+
+<use all_high_flow_res.jpg>
+Overfull \hbox (35.04291pt too wide) in paragraph at lines 341--345
+[][] 
+ []
+
+
+Overfull \hbox (79.58075pt too wide) in paragraph at lines 333--346
+[][] $[]$ 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Overfull \vbox (5.4559pt too high) has occurred while \output is active []
+
+
+[5 <./xfig_rot.jpg> <./error3_res.jpg> <./sample1_low_flow_res.jpg> <./all_low_
+flow_res.jpg>] <eps_vs_pile_low_vol_res.jpg, id=35, 562.1pt x 421.575pt>
+File: eps_vs_pile_low_vol_res.jpg Graphic file (type jpg)
+
+<use eps_vs_pile_low_vol_res.jpg>
+Overfull \hbox (35.04291pt too wide) in paragraph at lines 352--356
+[][] 
+ []
+
+<eps_vs_pile_high_vol_res.jpg, id=36, 562.1pt x 421.575pt>
+File: eps_vs_pile_high_vol_res.jpg Graphic file (type jpg)
+
+<use eps_vs_pile_high_vol_res.jpg>
+Overfull \hbox (35.04291pt too wide) in paragraph at lines 359--363
+[][] 
+ []
+
+
+Overfull \hbox (79.58075pt too wide) in paragraph at lines 351--364
+[][] $[]$ 
+ []
+
+<slope_profile_res.jpg, id=37, 562.1pt x 421.575pt>
+File: slope_profile_res.jpg Graphic file (type jpg)
+
+<use slope_profile_res.jpg>
+Overfull \hbox (35.04291pt too wide) in paragraph at lines 370--374
+[][] 
+ []
+
+<curvature_profile_res.jpg, id=38, 562.1pt x 421.575pt>
+File: curvature_profile_res.jpg Graphic file (type jpg)
+
+<use curvature_profile_res.jpg>
+Overfull \hbox (35.04291pt too wide) in paragraph at lines 377--381
+[][] 
+ []
+
+
+Overfull \hbox (79.58075pt too wide) in paragraph at lines 369--382
+[][] $[]$ 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Overfull \vbox (5.4559pt too high) has occurred while \output is active []
+
+
+[6 <./sample1_high_flow_res.jpg> <./all_high_flow_res.jpg> <./eps_vs_pile_low_v
+ol_res.jpg> <./eps_vs_pile_high_vol_res.jpg>]
+<slope_vs_sigma2_res.jpg, id=42, 562.1pt x 421.575pt>
+File: slope_vs_sigma2_res.jpg Graphic file (type jpg)
+
+<use slope_vs_sigma2_res.jpg>
+Overfull \hbox (35.04291pt too wide) in paragraph at lines 388--392
+[][] 
+ []
+
+<slope_vs_sigma2_high_vol_res.jpg, id=43, 562.1pt x 421.575pt>
+File: slope_vs_sigma2_high_vol_res.jpg Graphic file (type jpg)
+
+<use slope_vs_sigma2_high_vol_res.jpg>
+Overfull \hbox (35.04291pt too wide) in paragraph at lines 395--399
+[][] 
+ []
+
+
+Overfull \hbox (79.58075pt too wide) in paragraph at lines 387--400
+[][] $[]$ 
+ []
+
+<curvature_vs_sigma2_res.jpg, id=44, 564.1075pt x 421.575pt>
+File: curvature_vs_sigma2_res.jpg Graphic file (type jpg)
+
+<use curvature_vs_sigma2_res.jpg>
+Overfull \hbox (35.04504pt too wide) in paragraph at lines 405--409
+[][] 
+ []
+
+<curvature_vs_sigma2_high_vol_res.jpg, id=45, 562.1pt x 421.575pt>
+File: curvature_vs_sigma2_high_vol_res.jpg Graphic file (type jpg)
+
+<use curvature_vs_sigma2_high_vol_res.jpg>
+Overfull \hbox (35.04291pt too wide) in paragraph at lines 412--416
+[][] 
+ []
+
+
+Overfull \hbox (79.58075pt too wide) in paragraph at lines 404--417
+[][] $[]$ 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Overfull \vbox (5.4559pt too high) has occurred while \output is active []
+
+
+[7 <./slope_profile_res.jpg> <./curvature_profile_res.jpg> <./slope_vs_sigma2_r
+es.jpg> <./slope_vs_sigma2_high_vol_res.jpg>]
+(./iemss_galeras_march3010-2_res.bbl
+Overfull \vbox (5.4559pt too high) has occurred while \output is active []
+
+
+[8 <./curvature_vs_sigma2_res.jpg> <./curvature_vs_sigma2_high_vol_res.jpg>])
+Overfull \vbox (5.4559pt too high) has occurred while \output is active []
+
+
+[9] (./iemss_galeras_march3010-2_res.aux) ) 
+Here is how much of TeX's memory you used:
+ 3013 strings out of 493747
+ 47294 string characters out of 3143546
+ 110831 words of memory out of 3000000
+ 6268 multiletter control sequences out of 15000+200000
+ 15705 words of font info for 29 fonts, out of 3000000 for 9000
+ 714 hyphenation exceptions out of 8191
+ 44i,13n,42p,380b,350s stack positions out of 5000i,500n,10000p,200000b,50000s
+{/usr/local/texlive/2010/texmf-dist/
+fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2010/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmr10.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmr7.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmsy10.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmsy7.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/urw/times/utmb
+8a.pfb></usr/local/texlive/2010/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></
+usr/local/texlive/2010/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/
+texlive/2010/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/20
+10/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on iemss_galeras_march3010-2_res.pdf (9 pages, 801569 bytes).
+PDF statistics:
+ 93 PDF objects out of 1000 (max. 8388607)
+ 56 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 71 words of extra memory for PDF output out of 10000 (max. 10000000)
+

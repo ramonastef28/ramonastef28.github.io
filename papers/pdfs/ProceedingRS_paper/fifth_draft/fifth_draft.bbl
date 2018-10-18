@@ -1,0 +1,280 @@
+\begin{thebibliography}{41}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Atkinson(2002)]{Atkinson2002}
+P.M. Atkinson.
+\newblock Surface modelling: {W}hat's the point?
+\newblock \emph{Transactions in GIS}, 6:\penalty0 1--4, 2002.
+
+\bibitem[Bailey(1989)]{Bailey1989}
+R.A. Bailey.
+\newblock \emph{Geologic Map of Long Valley Caldera, Mono-Inyo Craters Volcanic
+  Chain and Vicinity, Eastern California}.
+\newblock Department of the Interior, Reston, VA (US), 1989.
+
+\bibitem[Baxter and Gresham(1997)]{baxter1997}
+P.J. Baxter and A.~Gresham.
+\newblock Deaths and injuries in the eruption of {G}aleras {V}olcano,
+  {C}olombia, 14 {J}anuary 1993.
+\newblock \emph{Journal of Volcanology and Geothermal Research}, 77:\penalty0
+  325--338, 1997.
+
+\bibitem[Bayarri et~al.(2010)Bayarri, Berger, Calder, Dalbey, Lunagomez, Patra,
+  Pitman, Spiller, and Wolper]{bayarriusc}
+M.J. Bayarri, J.O. Berger, E.~Calder, K.~Dalbey, S.~Lunagomez, A.K. Patra, E.B.
+  Pitman, E.T. Spiller, and R.L. Wolper.
+\newblock Using statistical and computer models to quantify volcanic hazards.
+\newblock \emph{to appear Technometrics}, 2010.
+
+\bibitem[Burkett(2007)]{Burkett2007}
+S.M. Burkett.
+\newblock Geomorphic mapping and petrography of mammoth mountain, california.
+\newblock Master's thesis, State University of New York at Buffalo, 2007.
+
+\bibitem[Calvache(1990)]{calvache_1990a}
+M.~Calvache.
+\newblock Geology and volcanology of the recent evolution of {G}aleras
+  {V}olcano, {C}olombia.
+\newblock \emph{Msc. Thesis. Louisiana State University}, page 171, 1990.
+
+\bibitem[Calvache et~al.(1997)Calvache, Cortes, and Williams]{calvache1997}
+M.~Calvache, G.P. Cortes, and S.N. Williams.
+\newblock Stratigraphy and chronology of the {G}aleras volcanic complex,
+  {C}olombia.
+\newblock \emph{Journal of Volcanology and Geothermal Research}, 77:\penalty0
+  5--19, 1997.
+
+\bibitem[Clarke et~al.(2005)Clarke, Griebsch, and Simpson]{simpson2}
+S.M. Clarke, J.H. Griebsch, and T.W. Simpson.
+\newblock Analysis of support vector regression for approximation of complex
+  engineering analyses.
+\newblock \emph{Journal of Mechanical Design}, 127\penalty0 (6):\penalty0
+  1077--1088, 2005.
+\newblock \doi{10.1115/1.1897403}.
+
+\bibitem[Conti and O'Hagan(2007)]{ContiOHagan}
+S.~Conti and A.~O'Hagan.
+\newblock Bayesian emulation of complex multi-output and dynamic computer
+  models.
+\newblock \emph{Research Report No. 569/07, Department of Probability and
+  Statistics, University of Sheffield. Submitted to Journal of Statistical
+  Planning and Inference}, 2007.
+
+\bibitem[Dalbey(2009)]{dalbeythesis}
+K.~Dalbey.
+\newblock Predictive simulation and model based hazard maps of geophysical mass
+  flows.
+\newblock \emph{PhD thesis, Department of Mechanical and Aerospace Engineering,
+  University at Buffalo}, 2009.
+
+\bibitem[Dalbey et~al.(2008)Dalbey, Patra, Pitman, Bursik, and Sheridan]{Keith}
+K.~Dalbey, A.K. Patra, E.B. Pitman, M.I. Bursik, and M.F. Sheridan.
+\newblock Input uncertainty propagation methods and hazard mapping of
+  geophysical mass flow.
+\newblock \emph{Journal of Geophysical Research}, 113:\penalty0 5203--5219,
+  2008.
+\newblock doi:10.1029/2006JB004471.
+
+\bibitem[Darnell et~al.(2008)Darnell, Tate, and Brunsdon]{Amii_Darnell}
+A.R. Darnell, N.J. Tate, and C.~Brunsdon.
+\newblock Improving user assessment of error implications in digital elevation
+  models.
+\newblock \emph{Computers, Environment and Urban Systems}, 32:\penalty0
+  268--277, 2008.
+
+\bibitem[Ehlschlaeger and Goodchild(1994)]{Ehlschlaeger_1994}
+C.~Ehlschlaeger and M.F. Goodchild.
+\newblock Uncertainty in spatial data: Defining, visualizing, and managing data
+  errors.
+\newblock In \emph{Proceedings GIS/LIS'94}, pages 246--253, 1994.
+
+\bibitem[Ehlschlaeger and Shortridge(1996)]{Ehlschlaeger_1996}
+C.~Ehlschlaeger and A.~Shortridge.
+\newblock Modeling elevation uncertainty in geographical analysis.
+\newblock In \emph{Proceedings of the International Symposium on Spatial Data
+  Handling, Delf, Netherlands}, pages 9B.15--9B.25, 1996.
+
+\bibitem[Fisher(1991)]{Fisher_1991}
+P.F. Fisher.
+\newblock Modeling soil map-unit inclusions by {M}onte {C}arlo simulation.
+\newblock \emph{International Journal of Geographical Information Systems},
+  5:\penalty0 193--208, 1991.
+
+\bibitem[Florinsky(1998)]{Florinsky1998}
+I.V. Florinsky.
+\newblock Accuracy of local topographic variables derived from digital
+  elevation models.
+\newblock \emph{International Journal of Geographical Information Science},
+  12:1:\penalty0 47--61, 1998.
+
+\bibitem[Goldstein(2007)]{blm1tutor}
+M.~Goldstein.
+\newblock Bayes linear methods {I} adjusting beliefs: Concepts and properties.
+\newblock \emph{Part 1 of 3 of online tutorial, website:}, 2007.
+
+\bibitem[Goodchild et~al.(1992)Goodchild, Sun, and Yang]{Goodchild_1992}
+M.F. Goodchild, G.~Sun, and S.~Yang.
+\newblock Development and test of an error model for categorical data.
+\newblock \emph{International Journal of Geographical Informational Systems},
+  6:\penalty0 87--104, 1992.
+
+\bibitem[Hebeler and Purves(2008)]{Felix_Hebeler}
+F.~Hebeler and R.S. Purves.
+\newblock \emph{Modelling {DEM} data uncertainties for {M}onte {C}arlo
+  Simulations of Ice Sheet Models}, chapter Quality Aspects in spatial Data
+  Mining, pages 175--196.
+\newblock A.Stein, J.Shi $\&$W.Bijker, CRC Press, Boca Raton, 2008.
+
+\bibitem[Heuvelink et~al.(1989)Heuvelink, Burrough, and
+  Leenaers]{Heuvelink1989}
+G.B.M. Heuvelink, P.A. Burrough, and H.~Leenaers.
+\newblock Propagation of errors in spatial modelling with {GIS}.
+\newblock \emph{International Journal of Geographical Information Systems},
+  3:4\penalty0 (303-322), 1989.
+
+\bibitem[Heuvelink et~al.(1990)Heuvelink, Burrough, and
+  Leenaers]{Heuvelink1990}
+G.B.M. Heuvelink, P.A. Burrough, and H.~Leenaers.
+\newblock Error propagation in spatial modelling with {GIS}.
+\newblock In \emph{EGIS’90 Proceedings - First European Conference on
+  Geographical Information Systems (EGIS Foundation: Utrecht, The
+  Netherlands)}, pages 453--462, 1990.
+\newblock In Harts J, HFL Ottens $\&$ HJ Scholten (eds.).
+
+\bibitem[Hunter and Goodchild(1997)]{Hunter_Goodchild_1997}
+G.J. Hunter and M.F. Goodchild.
+\newblock Modeling the uncertainty of slope and aspect estimates derived from
+  spatial databases.
+\newblock \emph{Geographical Analysis}, 1:\penalty0 35--49, 1997.
+
+\bibitem[Hurtado and Cortes(1997)]{hurtado_1997}
+A.~Hurtado and G.P. Cortes.
+\newblock Third version of the hazard map of {G}aleras {V}olcano, {C}olombia.
+\newblock \emph{Journal of Volcanology and Geothermal Research}, 77:\penalty0
+  89--100, 1997.
+
+\bibitem[Kennedy and O'Hagan(2001)]{kennedy2001bcc}
+M.C. Kennedy and A.~O'Hagan.
+\newblock Bayesian calibration of computer models.
+\newblock \emph{Journal of the Royal Statistical Society: Series B (Statistical
+  Methodology}, 63\penalty0 (3):\penalty0 425--464, 2001.
+
+\bibitem[Mitasova et~al.(1996)Mitasova, J.Hofierka, Zlocha, and
+  Iverson]{Mitasova1996}
+H.~Mitasova, J.Hofierka, M.~Zlocha, and L.R. Iverson.
+\newblock Modeling topographic potential for errosion and deposition using
+  {GIS}.
+\newblock \emph{International Journal of Geographical Information Systems},
+  10:\penalty0 629--641, 1996.
+
+\bibitem[Murcia et~al.(2010)Murcia, Sheridan, Macias, and Cortes]{murcia_2010}
+H.F. Murcia, M.F. Sheridan, J.L. Macias, and G.P. Cortes.
+\newblock {TITAN2D} simulations of pyroclastic flows at {C}erro {M}achin
+  {V}olcano, {C}olombia: {H}azard implications.
+\newblock \emph{Journal of South American Earth Sciences}, 29:\penalty0
+  161--170, 2010.
+
+\bibitem[Narvaez et~al.(1997)Narvaez, Torres, Gomez, Cortes, Cepeda, and
+  Stix]{narvaez_1997}
+L.~Narvaez, R.~Torres, D.~Gomez, G.P. Cortes, H.~Cepeda, and J.~Stix.
+\newblock Tornillo-type seismic signals at {G}aleras volcano, {C}olombia,
+  1992--1993.
+\newblock \emph{Journal of Volcanology and Geothermal Research}, 77:\penalty0
+  159--171, 1997.
+
+\bibitem[O'Hagan(2006)]{ohagan2006bac}
+A.~O'Hagan.
+\newblock Bayesian analysis of computer code outputs: A tutorial.
+\newblock \emph{Reliability Engineering and System Safety}, 91\penalty0
+  (10-11):\penalty0 1290--1300, 2006.
+
+\bibitem[Oksanen(2006)]{Oksanen2006}
+J.~Oksanen.
+\newblock \emph{{D}igital {E}levation {Model} error in terrain analysis}.
+\newblock PhD thesis, Faculty of Science, University of Helsinki, 2006.
+
+\bibitem[Ordo\~nez Villota and Jentzsch(2000)]{ordones_2000}
+M.~Ordo\~nez Villota and G.~Jentzsch.
+\newblock Mediciones {GPS} como topografia basica para el estudio de
+  microgravedad en el {V}olc\'an {G}aleras, {C}olombia.
+\newblock \emph{Ingeominas Internal Report (in {S}panish)}, 2000.
+
+\bibitem[Patra et~al.(2005)Patra, Bauer, Nichita, Pitman, Sheridan, Bursik,
+  Rupp, Webber, Namikawa, and Renschler]{Patra2005}
+A.K. Patra, A.C. Bauer, C.~Nichita, E.B. Pitman, M.~F. Sheridan, M.~Bursik,
+  B.~Rupp, A.~Webber, L.~Namikawa, and C.~Renschler.
+\newblock Parallel adaptive numerical simulation of dry avalanches over natural
+  terrain.
+\newblock \emph{Journal of Volcanology and Geothermal Research}, 139:\penalty0
+  1--21, 2005.
+
+\bibitem[Savage and Hutter(1989)]{Savage1989}
+S.B. Savage and K.~Hutter.
+\newblock The motion of a finite mass of granular material down a rough
+  incline.
+\newblock \emph{Journal of Fluid Mechanics}, 199:\penalty0 177--215, 1989.
+
+\bibitem[Sheridan et~al.(2005)Sheridan, Stinton, Patra, Pitman, Bauer, and
+  Nichita]{sheridan_2005}
+M.F. Sheridan, A.J. Stinton, A.~Patra, E.B. Pitman, A.~Bauer, and C.C. Nichita.
+\newblock Evaluating {TITAN2D} mass-flow model using the 1963 {L}ittle {T}ahoma
+  {P}eak avalanches, {M}ount {R}ainier, {W}ashington.
+\newblock \emph{Journal of Volcanology and Geothermal Research}, 139:\penalty0
+  275--308, 2005.
+
+\bibitem[Shortridge(2001)]{Shortridge2001}
+A.~Shortridge.
+\newblock Characterizing uncertainty in digital elevation models.
+\newblock \emph{Spatial Uncertainty in Ecology: Implications for Remote Sensing
+  and GIS Applications (Springer: New York, NY)}, pages 238--257, 2001.
+\newblock In Hunsaker CT, MF Goodchild, MA Friedl $\&$ TJ Case (eds).
+
+\bibitem[Simpson et~al.(2001)Simpson, Poplinski, Koch, and Allen]{simpson1}
+T.W Simpson, J.D. Poplinski, P.N Koch, and J.K Allen.
+\newblock Metamodels for computer-based engineering design: Survey and
+  recommendations.
+\newblock \emph{Engineering with Computers}, 17\penalty0 (2), 2001.
+
+\bibitem[Stefanescu et~al.(2010)Stefanescu, Bursik, and Patra]{stefanescu1}
+E.R. Stefanescu, M.~Bursik, and A.K. Patra.
+\newblock Effect of digital elevation model on geophysical flow model output.
+\newblock \emph{Natural Hazards}, 2010.
+\newblock submitted.
+
+\bibitem[Stinton et~al.(2006)Stinton, Sheridan, Patra, Dalbey, and
+  Namikawa]{stinton_2006}
+A.J. Stinton, M.F. Sheridan, A.~Patra, K.~Dalbey, and L.~Namikawa.
+\newblock Incorporation of variable bed friction into {TITAN2D} mass-flow
+  model: {A}pplication to {L}ittle {T}ahoma {P}eak avalanche ({W}ashington).
+\newblock \emph{Acta Vulcanologica}, 16(1-2):\penalty0 153--163, 2006.
+
+\bibitem[Takahashi and Tsujimoto(2000)]{Takahashi2000}
+T.~Takahashi and H.~Tsujimoto.
+\newblock A mechanical model for {M}erapi-type pyroclastic flow.
+\newblock \emph{Journal of Volcanology and Geothermal Research}, 98:\penalty0
+  91--115, 2000.
+
+\bibitem[Van~Niel et~al.(2004)Van~Niel, Laffan, and Less]{VanNiel2004}
+K.P. Van~Niel, S.W. Laffan, and B.G. Less.
+\newblock Effect of error in the dem on environmental variables for predictive
+  vegetation modelling.
+\newblock \emph{Journal of Vegetation Science}, 15:6:\penalty0 747--756, 2004.
+
+\bibitem[Wechsler and Kroll(2006)]{Wechsler2006}
+S.~Wechsler and C.~Kroll.
+\newblock Quantifying {DEM} uncertainty and its effects on topographic
+  parameters.
+\newblock \emph{Photogrammetric Engineering $\&$ Remote Sensing}, 72:\penalty0
+  108--1090, 2006.
+
+\bibitem[Weng(2002)]{Qihao_Weng}
+Q.~Weng.
+\newblock Quantifying uncertainty of digital elevation models derived from
+  topographic maps.
+\newblock \emph{In: Advances in Spatial Data Handling}, pages 403--418, 2002.
+
+\end{thebibliography}

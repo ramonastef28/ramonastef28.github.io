@@ -1,0 +1,66 @@
+\begin{thebibliography}{10}
+
+\bibitem{Bailey1989}
+{\sc R.~Bailey}, {\em Geologic Map of Long Valley Caldera, Mono-Inyo Craters
+  Volcanic Chain and Vicinity, Eastern California}, Department of the Interior,
+  Reston, VA (US), 1989.
+
+\bibitem{Burkett2007}
+{\sc S.~Burkett}, {\em Geomorphic mapping and petrography of mammoth mountain,
+  california}, Master's thesis, State University of New York at Buffalo, 2007.
+
+\bibitem{Keith}
+{\sc K.~Dalbey, A.~Patra, E.~Pitman, M.~Bursik, and M.~Sheridan}, {\em Input
+  uncertainty propagation methods and hazard mapping of geophysical mass flow},
+  Journal of Geophysical Research, 113 (2008), pp.~5203--5219.
+\newblock doi:10.1029/2006JB004471.
+
+\bibitem{ganapathysubramanian2007sparse}
+{\sc B.~Ganapathysubramanian and N.~Zabaras}, {\em Sparse grid collocation
+  schemes for stochastic natural convection problems}, Journal of Computational
+  Physics, 225 (2007), pp.~652--685.
+
+\bibitem{garcke2000computation}
+{\sc J.~Garcke and M.~Griebel}, {\em On the computation of the eigenproblems of
+  hydrogen and helium in strong magnetic and electric fields with the sparse
+  grid combination technique}, Journal of Computational Physics, 165 (2000),
+  pp.~694--716.
+
+\bibitem{griebel1998adaptive}
+{\sc M.~Griebel}, {\em Adaptive sparse grid multilevel methods for elliptic
+  pdes based on finite differences}, Computing, 61 (1998), pp.~151--179.
+
+\bibitem{ma2009adaptive}
+{\sc X.~Ma and N.~Zabaras}, {\em An adaptive hierarchical sparse grid
+  collocation algorithm for the solution of stochastic differential equations},
+  Journal of Computational Physics, 228 (2009), pp.~3084--3113.
+
+\bibitem{Matthies2008}
+{\sc H.~Matthies}, {\em Stochastic finite elements: {C}omputational approaches
+  to stochastic partial differential equations}, Z.Angew.Math.Mech.88, 11
+  (2008), pp.~849--873.
+\newblock doi: 10.1002/zamm.200800095.
+
+\bibitem{murcia_2010}
+{\sc H.~Murcia, M.~Sheridan, J.~Macias, and G.~Cortes}, {\em {TITAN2D}
+  simulations of pyroclastic flows at {C}erro {M}achin {V}olcano, {C}olombia:
+  {H}azard implications}, Journal of South American Earth Sciences, 29 (2010),
+  pp.~161--170.
+
+\bibitem{nobile2008sparse}
+{\sc F.~Nobile, R.~Tempone, and C.~G. Webster}, {\em A sparse grid stochastic
+  collocation method for partial differential equations with random input
+  data}, SIAM Journal on Numerical Analysis, 46 (2008), pp.~2309--2345.
+
+\bibitem{Patra2005}
+{\sc A.~Patra, A.~Bauer, C.~Nichita, E.~Pitman, M.~F. Sheridan, M.~Bursik,
+  B.~Rupp, A.~Webber, L.~Namikawa, and C.~Renschler}, {\em Parallel adaptive
+  numerical simulation of dry avalanches over natural terrain}, Journal of
+  Volcanology and Geothermal Research, 139 (2005), pp.~1--21.
+
+\bibitem{Savage1989}
+{\sc S.~Savage and K.~Hutter}, {\em The motion of a finite mass of granular
+  material down a rough incline}, Journal of Fluid Mechanics, 199 (1989),
+  pp.~177--215.
+
+\end{thebibliography}

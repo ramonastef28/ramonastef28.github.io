@@ -1,0 +1,173 @@
+%\documentclass[a4paper]{article}
+\documentclass{article}
+%\documentclass[journal]{IEEEtran}
+%\documentclass{report}
+%\documentclass{ActaOulu}
+
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{authblk}
+\usepackage{float}
+\usepackage{rotating}
+\usepackage{url}
+\usepackage{lscape}
+\usepackage{longtable}
+\usepackage{subfig}
+\usepackage{natbib}
+\usepackage{lineno}
+\usepackage{amsmath}
+\usepackage{epsfig}
+\usepackage{caption}
+\usepackage{latexsym}
+\usepackage[a4paper]{geometry}
+%\setlength{\captionmargin}{20pt}
+%\usepackage{graphicx}
+%\usepackage[all,knot]{xy}
+%\xyoption{arc}
+%\usepackage{url}
+%\usepackage{multimedia}
+%\usepackage{hyperref}
+\linespread{1.6}
+%\linespread{1.2}
+
+\begin{document}
+
+\title{Numerical implementation of a sparse grid for a hyperbolic geophysical mass flow model}
+\author[1]{ E. R. Stefanescu }
+\author[2]{K.R. Dalbey}
+\author[1]{A.K. Patra}
+\author[3]{M. Bursik}
+\affil[1]{Department of Mechanical and Aerospace Engineering, University at Buffalo}
+\affil[2]{Sandia National Labs, Albuquerque}
+\affil[3]{Department of Geology, University at Buffalo}
+
+
+%\date{\today}
+
+
+\maketitle
+
+\begin{abstract}
+To come soon...
+\end{abstract}
+
+
+%\chapter{First Chapter}
+
+\section{Introduction}
+This paper describes the development of sparse grid based methodology for the propagation of input 
+parameter uncertainties through a shallow-water like hyperbolic system model of 
+geophysical mass flows. We apply the sparse grid based 
+methodology first to the straightforward analysis of  UQ in the output of 
+the model and then to the more complex construction of hazard maps based on the 
+outcomes of ensembles of model runs. The results are interesting in that they show that the sparse grid 
+method is quite successful in the first type of analysis where the uncertainty in a number of flow outcomes are successfully 
+captured but the results from the hazard map construction that requires a more extensive exploration of the 
+full parameter space to construct a response surface is not as successful.
+
+\subsection{Background} 
+\subsubsection{Need} In geophysical mass flow problems (e.g. landslides, volcanic debris flows called lahars), many flow characteristics like
+material properties, the size and location of failing mass, the terrain over which the 
+flow occurs at every point in the domain are difficult if not impossible to characterize. There is also much that is unknown about the
+exact physics. Thus, useful outputs from the model equations governing mass flow must account for 
+the variable or poorly characterized aspects of the model as well as the uncertainty of the 
+parameters used in the equations (keithuncert). 
+Most of the numerical models of real-world systems are characterized by large number of input
+variables. In this case, to obtain a reliable numerical 
+solution, one has to include uncertainty quantification due to the uncertainty in the input data. (babuska). Furthermore, 
+in many use situations of geophysical mass flows, one is concerned with flow over an entire jurisdiction (hazard analysis). 
+This introduces additional complexity in the propagation of the uncertainty.
+
+\subsubsection{Uncertainty Quantification Methods} Quantification of uncertainty means to be in some way able to attach a measure
+to something which may be poorly defined or vague \citep{Matthies2008} -- in this case the outcomes of models 
+with uncertain inputs. 
+To quantify the uncertainties in the result of a simulation, one must understand 
+both the sources of these uncertainties, and how uncertainties propagate through the simulation. 
+%The recent literature on such uncertainty propagation is extensive \cite{revpap1,revpap2}.
+% is there has been intensively studied the impact of errors, or uncertainty ,
+%in ``data" such as parameter values, initial and boundary conditions. It came an important issue
+%due to mathematical models that serve as simplified and reduced representations of the true physics.
+Uncertainty quantification thus involves two steps: determination of the uncertainty sources, and 
+analysis of their propagation through the simulation. In the past few years there have been 
+extensive studies in the propagation of uncertainty. The common stochastic methods can be
+categorized in sampling and non-sampling methods (cfdsppitt). Widely used sampling methods
+are: Monte-Carlo(MC), quasi-Monte Carlo (QMC), Latin Hypercube sampling (LHS), while as 
+non-sampling methods intensively used are:  Polynomial Chaos Expansion (PCE), Stochastic Galerkin (SG),
+Non-Intrusive Spectral Projection (NISP), Polynomial Chaos Quadrature (PCQ) etc. 
+
+MC methods have been applied to many applications and their implementation is straightforward.
+Although the convergence rate is relatively slow, it is independent of the dimensionality of the random space and
+independent of the number of random variables used to characterized the random inputs (xiuhesthaven). 
+To accelerate convergence in MC, several techniques have been developed as LHS and QMC.
+The PCE method uses the Wiener-Askey scheme, in which Hermite, Legendre, Laguerre, Jacobi, and generalized Laguerre
+orthogonal polynomials are used for modeling the effect of uncertain variable described by normal, uniform, exponential, beta, 
+and gamma distributions, respectively (eldredSandia and Xiu). These orthogonal polynomial selections are optimal for these
+distribution type since the inner product weighting function and its corresponding support range correspond to the probability density 
+functions for these continuous distributions. 
+PCQ is a based on the PCE in general and on SG in particular. The main idea is that in addition to 
+calculating the coefficients in the expansion of chaos polynomials, PCQ achieves a more accurate computation of statistical 
+moments when the governing system of equations is non-polynomial, by calculating the moments directly rather than
+through the intermediate coefficients.
+These concepts has been used successfully in many engineering approaches over the past two decades. 
+%In most of the cases it involves generation of samples of input parameter followed by the application of the
+%simulation model to generate the corresponding set of stochastic responses. 
+All methods have positive and negative features, and no single technique is optimum for all situations.
+
+Recently, a stochastic collocation scheme has been introduced in which simulations are performed
+at specific collocation points in the stochastic space (citation). Stochastic collocation methods for 
+sPDEs have been first proposed in [XiuHesthaven and Babuska]by using numerical quadrature 
+for the approximate evaluation of the stochastic integrals. 
+These technique combine the exponential convergence rate of the PCE scheme with the
+decoupled nature of MC techniques (sandiego). The selection of computational nodes is 
+the key ingredient in all stochastic colocation methods. Choices of collocation points include
+tensor product of zeros of orthogonal polynomials (citation), sparse grid (SP) methods (citation),
+and probabilistic collocation(cfdsppitt).
+
+
+This paper presents an approach to characterize the effect of the input uncertainty on the output 
+of a geophysical mass flow model. We use the concept of stochastic collocation to account for 
+uncertainties in a non-linear hyperbolic system of PDEs used in modeling geophysical mass 
+flow. Neglecting the model uncertainty we focus on the input parameter uncertainty, modeled as 
+random variables. Geological flow models are dealing with high dimensional input. There are large 
+uncertainties associated with the construction of the DEMs and many other parameters that characterize 
+the flow.
+
+We first discuss sparse grid algorithms as an improvement of the MC, LHS and PCQ methods. 
+The sparse grid scheme are chosen based on their efficiency which in most of the cases
+results in a number reduction of collocation points needed to obtain a given level of approximation. 
+Further, a stochastic space is defined for each problem depending on the uncertainty in
+parameters. Computational points are identified in this stochastic space and simulations 
+of the geophysical flow model are performed. Our goal is to compute the statistics of the 
+output in form of mass velocity, maximum height of the pile over time, momentum etc and
+compare the convergence for the above mentioned methods. 
+ 
+
+Sparse grid schemes have been successfully implemented for parabolic and elliptic sPDEs.
+(Borziaustria) proposed a framework combining space-time multigrid methods with sparse grid
+collocation techniques to solve a nonlinear parabolic system with random coefficients, while
+(Babuskanobile) proposed a stochastic collocation method to solve elliptic partial differential
+equations with random coefficients and forcing terms. In the paper of (cfdspitt) a numerical 
+simulations is done for an incompressible and slightly compressible single and the two-phase 
+flow in porous media. The stochastic domain is represented using collocation at the zeros of 
+tensor product Hermite polynomials. It was observed that the stochastic collocation converges
+much faster (to the mean and variance) than the standard MC approach with a significantly 
+reduced number of simulations. In the paper (Melosh07) a comparison of the accuracy and 
+efficiency of the sparse grid collocation approach to MC and GPCE is performed, when used 
+to solve a natural convection problem.
+
+\subsection{Hazard Analysis} Determining the risk associated with geophysical flows has been a effort of a large scientific
+community (citation). In areas of flood hazards the delineation of  regions into zones of high and low risk
+is usually based on the probability of a critical threshold for some parameter associated with 
+the hazard map being exceeded.
+In the paper, we also propose to investigate the use of sparse grid design (SPD) for hazard 
+map construction. Sparse grids provide sampling points which avoid the curse of dimensionality.
+A Bayes Linear Model (BLM) is used to fit the data and construct a hazard map. 
+
+
+The paper is organized as follows: we first give a brief description of the non-linear hyperbolic systems
+used in modeling geophysical mass flows. Then we proceed to discuss sparse grid schemes 
+in section 3 and details of numerical implementation in section 4. Finally discussions and conclusions
+are presented in section 5.
+
+
+\end{document}

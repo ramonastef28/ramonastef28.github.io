@@ -1,0 +1,57 @@
+This is BibTeX, Version 0.99d (TeX Live 2012)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: third_draft.aux
+The style file: siam.bst
+Database file #1: mybib.bib
+I was expecting a `,' or a `}'---line 67 of file mybib.bib
+ : 
+ : @article{Smith_Mammoth,
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 73 of file mybib.bib
+ : 
+ : @article{Wes2004169,
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You've used 12 entries,
+            2030 wiz_defined-function locations,
+            586 strings with 6168 characters,
+and the built_in function-call counts, 4799 in all, are:
+= -- 478
+> -- 202
+< -- 0
++ -- 83
+- -- 68
+* -- 367
+:= -- 728
+add.period$ -- 14
+call.type$ -- 12
+change.case$ -- 69
+chr.to.int$ -- 0
+cite$ -- 12
+duplicate$ -- 215
+empty$ -- 334
+format.name$ -- 68
+if$ -- 1041
+int.to.chr$ -- 0
+int.to.str$ -- 12
+missing$ -- 12
+newline$ -- 41
+num.names$ -- 24
+pop$ -- 51
+preamble$ -- 1
+purify$ -- 58
+quote$ -- 0
+skip$ -- 207
+stack$ -- 0
+substring$ -- 374
+swap$ -- 106
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 46
+warning$ -- 0
+while$ -- 49
+width$ -- 14
+write$ -- 113
+(There were 2 error messages)

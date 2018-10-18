@@ -1,0 +1,12 @@
+Line Question
+
+all Use natbib, citep, citet
+various	define conditional and unconditional simulation somewhere. 
+81 take out "the"
+142-3 spatial autocorrelation between elevation points
+156  etc.
+184 normally distributed factor, epsilon
+186 take out epsilon
+217 dont need to define epsilon again
+220 "the realization of the lower quality DEM"
+

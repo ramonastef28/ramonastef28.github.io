@@ -1,0 +1,90 @@
+%\documentclass[a4paper]{article}
+\documentclass{article}
+%\documentclass[journal]{IEEEtran}
+%\documentclass{report}
+%\documentclass{ActaOulu}
+
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{authblk}
+\usepackage{float}
+\usepackage{rotating}
+\usepackage{url}
+\usepackage{lscape}
+\usepackage{longtable}
+\usepackage{subfig}
+\usepackage{natbib}
+\usepackage{lineno}
+\usepackage{amsmath}
+\usepackage{epsfig}
+\usepackage{caption}
+\usepackage{latexsym}
+\usepackage[a4paper]{geometry}
+%\setlength{\captionmargin}{20pt}
+%\usepackage{graphicx}
+%\usepackage[all,knot]{xy}
+%\xyoption{arc}
+%\usepackage{url}
+%\usepackage{multimedia}
+%\usepackage{hyperref}
+\linespread{1.6}
+%\linespread{1.2}
+
+\begin{document}
+\section{Basic model}
+\subsection{Governing equations}
+The geophysical mass flow code - TITAN2D combines numerical simulations of the flow with
+digital data of the natural terrain. It is based on a depth-averaged
+model for an incompressible granular material, governed by
+Coulomb-type friction interactions \citep{Savage1989}.  The
+governing equations are obtained by applying conservation laws to the
+incompressible continuum, providing appropriate constitutive modeling
+assumtions, and then taking advantage of the shallowness of the flows
+(flows are much longer and wider than they are deep) to obtain simpler
+depth-averaged representations \citep{Patra2005}. The motion of the
+material is considered to be gravitationally driven and resisted by
+both internal and bed friction forces. The stress boundary conditions
+are: no stress at the upper free-surface and a Coulomb-like friction law
+imposed at the interface between the material and the basal
+surface. The resulting hyperbolic system of equations is solved using a
+finite-volume scheme -- with a second-order -- Godunov solver. Even if many
+real geophysical flows such as debris flow are fluidized, in this
+study we deal only with granular material that has not been fluidized.
+
+\begin{align} \nonumber
+&\frac{\partial{h}}{\partial{t}} + \frac{\partial{(V_x \cdot h)}}{\partial{x}} + \frac{\partial{(V_y \cdot h)}}{\partial{y}} &= 0 \\ 
+&\frac{\partial{hV_x}}{\partial{t}} + \frac{\partial{(V_x \cdot hV_x + 0.5 k_{ap}g_zh^2)}}{\partial{x}} + \frac{\partial{(V_y \cdot hV_x)}}{\partial{y}} &={S_x} \\  \nonumber
+&\frac{\partial{hV_y}}{\partial{t}} + \frac{\partial{(V_x \cdot hV_y)}}{\partial{x}} + \frac{\partial{(V_y \cdot hV_y + 0.5 k_{ap}g_zh^2)}}{\partial{y}} &= S_y \\ \nonumber
+\label{eqn1}
+\end{align}
+where 
+\begin{align} \nonumber
+&k_{ap} = 2\frac{1\mp \sqrt{1-cos^2(\phi_{int})(1+\tan^2(\phi_{bed}))}}{\cos^2} -  1  \\ \nonumber
+\end{align}
+The source terms are defined as:
+\begin{align} 
+&S_x = g_xh -\frac{V_x}{\sqrt{V_x^2+V_y^2}}\max{\left(g_z + \frac{V_x^2}{r_x}, 0 \right)} h \tan((\phi_{bed}) - 
+-  sgn \left( \frac{\partial{V_x}}{\partial{y}} \right )h k_{ap} \frac{\partial{(g_xh)}}{\partial{y}} \sin((\phi_{int}) \\
+&S_y = g_yh -\frac{V_y}{\sqrt{V_x^2+V_y^2}}\max{\left(g_z + \frac{V_y^2}{r_y}, 0 \right)} h \tan((\phi_{bed}) -  \nonumber
+-  sgn \left( \frac{\partial{V_y}}{\partial{x}} \right )h k_{ap} \frac{\partial{(g_yh)}}{\partial{x}} \sin((\phi_{int}) \\  \nonumber
+\end{align}
+
+where, $h$ is the height of the flow, $hV_x, hV_y$ are moments in $x$ and $y$ directions, $g = \{g_x,g_y,g_z\}$ are
+components of the gravity along the three axes. $\phi_{int}$ and $\phi_{bed}$ are the internal and basal friction angles,
+respectively, and $r_x$ and $r_y$ are the radii of curvature of terrain in the $x$ and $y$ directions.
+
+\subsection{Parameters uncertainty}
+TITAN2D was developed for modeling dry geophysical granular flows,
+such as debris avalanches and block and ash flows.  Given a digital
+elevation map specifying the topography of a volcano and the values of
+input parameters, including the initial volume of erupted material and
+the friction angles, TITAN2D calculates the flow depth and velocity at
+any location throughout the duration of an event. There is uncertainty 
+in all of the input parameters. It was found by (Keith) that the flow is fairly
+insensitive to internal friction angle, but bed friction angle and the size of the
+initial flowing mass are important. The degree of sensitivity to initial location
+highly depends on the local terrain features in the neighborhood of the
+starting location. The combination of uncertainty and sensitivity to these
+inputs dictates which ones need to be represented as random variables.
+
+\end{document}

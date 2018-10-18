@@ -1,0 +1,9 @@
+\begin{thebibliography}{1}
+\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+
+\bibitem[Author and Author(1992)]{hanke:dfwudc}
+Author, A. and B.~Author.
+\newblock Random thoughts.
+\newblock {\em Some Journal}, 9:\penalty0 275--308, 1992.
+
+\end{thebibliography}

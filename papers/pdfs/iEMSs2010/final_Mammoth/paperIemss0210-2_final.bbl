@@ -1,0 +1,172 @@
+\begin{thebibliography}{26}
+\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+
+\bibitem[Bailey(1989)]{Bailey1989}
+Bailey, R.
+\newblock {\em Geologic Map of Long Valley Caldera, Mono-Inyo Craters Volcanic
+  Chain and Vicinity, Eastern California}.
+\newblock Department of the Interior, Reston, VA (US), 1989.
+
+\bibitem[Bayarri et~al.(2010)Bayarri, Berger, Calder, Dalbey, Lunagomez, Patra,
+  Pitman, Spiller, and Wolper]{bayarriusc}
+Bayarri, M., J.~Berger, E.~Calder, K.~Dalbey, S.~Lunagomez, A.~Patra,
+  E.~Pitman, E.~Spiller, and R.~Wolper.
+\newblock Using statistical and computer models to quantify volcanic hazards.
+\newblock {\em to appear Technometrics}, 2010.
+
+\bibitem[Clarke et~al.(2005)Clarke, Griebsch, and Simpson]{simpson2}
+Clarke, S., J.~Griebsch, and T.~Simpson.
+\newblock Analysis of support vector regression for approximation of complex
+  engineering analyses.
+\newblock {\em Journal of Mechanical Design}, 127\penalty0 (6):\penalty0
+  1077--1088, 2005.
+
+\bibitem[Conti and O'Hagan(2007)]{ContiOHagan}
+Conti, S. and A.~O'Hagan.
+\newblock Bayesian emulation of complex multi-output and dynamic computer
+  models.
+\newblock {\em Research Report No. 569/07, Department of Probability and
+  Statistics, University of Sheffield. Submitted to Journal of Statistical
+  Planning and Inference}, 2007.
+
+\bibitem[Dalbey(2009)]{dalbeythesis}
+Dalbey, K.
+\newblock Predictive simulation and model based hazard maps of geophysical mass
+  flows.
+\newblock {\em PhD thesis, Department of Mechanical and Aerospace Engineering,
+  University at Buffalo}, 2009.
+
+\bibitem[Dalbey et~al.(2010)Dalbey, Jones, Pitman, Calder, Bursik, and
+  Patra]{dableyetalemulator}
+Dalbey, K., M.~Jones, E.~Pitman, E.~Calder, M.~Bursik, and A.~Patra.
+\newblock Hazard risk analysis using computer models of physical phenomena and
+  surrogate statistical models.
+\newblock {\em submitted to Comp. Meth. App. Mech. and Eng.}, 2010.
+
+\bibitem[Dalbey et~al.(2006)Dalbey, Patra, Pitman, Bursik, and
+  Sheridan]{dalbeyjgr}
+Dalbey, K., A.~Patra, E.~Pitman, M.~Bursik, and M.~Sheridan.
+\newblock Input uncertainty propagation methods and hazard mapping of
+  geophysical mass flows.
+\newblock {\em Journal od Geophysical Research}, 113, 2006.
+
+\bibitem[Dalbey et~al.(2008)Dalbey, Patra, Pitman, Bursik, and Sheridan]{Keith}
+Dalbey, K., A.~Patra, E.~Pitman, M.~Bursik, and M.~Sheridan.
+\newblock Input uncertainty propagation methods and hazard mapping of
+  geophysical mass flow.
+\newblock {\em Journal of Geophysical Research}, 113, 2008.
+
+\bibitem[Darnell et~al.(2008)Darnell, Tate, and Brunsdon]{Amii_Darnell}
+Darnell, A., N.~Tate, and C.~Brunsdon.
+\newblock Improving user assessment of error implications in digital elevation
+  models.
+\newblock {\em Computers, Environment and Urban Systems}, 32:\penalty0
+  268--277, 2008.
+
+\bibitem[Ehlschlaeger and Shortridge(1996)]{Ehlschlaeger_1996}
+Ehlschlaeger, C. and A.~Shortridge.
+\newblock Modeling elevation uncertainty in geographical analysis.
+\newblock In {\em Proceedings of the International Symposium on Spatial Data
+  Handling, Delf, Netherlands}, pages 9B.15--9B.25, 1996.
+
+\bibitem[Fisher(1991)]{Fisher_1991}
+Fisher, P.
+\newblock Modeling soil map-unit inclusions by monte carlo simulation.
+\newblock {\em International Journal of Geographical Information Systems},
+  5:\penalty0 193--208, 1991.
+
+\bibitem[Goldstein(2007)]{blm1tutor}
+Goldstein, M.
+\newblock Bayes linear methods {I} adjusting beliefs: Concepts and properties.
+\newblock {\em Part 1 of 3 of online tutorial, website:}, 2007.
+
+\bibitem[Goodchild et~al.(1994)Goodchild, Buttenfield, and
+  Wood]{Goodchild_1994}
+Goodchild, M., B.~Buttenfield, and J.~Wood.
+\newblock Introduction to visualizing data quality.
+\newblock {\em In: Hearshaw HM, Unwin DJ (eds) Visualisation in Geographic
+  Information Systems}, pages 141--149, 1994.
+
+\bibitem[Goodchild et~al.(1992)Goodchild, Sun, and Yang]{Goodchild_1992}
+Goodchild, M., G.~Sun, and S.~Yang.
+\newblock Development and test of an error model for categorical data.
+\newblock {\em International Journal of Geographical Informational Systems},
+  6:\penalty0 87--104, 1992.
+
+\bibitem[Hebeler and Purves(2008)]{Felix_Hebeler}
+Hebeler, F. and R.~Purves.
+\newblock {\em Modelling {DEM} data uncertainties for {M}onte {C}arlo
+  {S}imulations of {I}ce {S}heet {M}odels}, chapter Quality Aspects in spatial
+  Data Mining, pages 175--196.
+\newblock A.Stein, J.Shi $\&$W.Bijker, CRC Press, Boca Raton, 2008.
+
+\bibitem[Hunter and Goodchild(1997)]{Hunter_Goodchild_1997}
+Hunter, G. and M.~Goodchild.
+\newblock Modeling the uncertainty of slope and aspect estimates derived from
+  spatial databases.
+\newblock {\em Geographical Analysis}, 1:\penalty0 35--49, 1997.
+
+\bibitem[Hunter et~al.(1995)Hunter, Caetano, and Goodchild]{Hunter_1995}
+Hunter, G., M.~Caetano, and M.~Goodchild.
+\newblock A methodology for reporting uncertainty in spatial database products.
+\newblock {\em Journal of the Urban and Regional Information Systems
+  Associations}, 7:\penalty0 11--21, 1995.
+
+\bibitem[Kennedy and O'Hagan(2001)]{kennedy2001bcc}
+Kennedy, M. and A.~O'Hagan.
+\newblock Bayesian calibration of computer models.
+\newblock {\em Journal of the Royal Statistical Society: Series B (Statistical
+  Methodology}, 63\penalty0 (3):\penalty0 425--464, 2001.
+
+\bibitem[O'Hagan(2006)]{ohagan2006bac}
+O'Hagan, A.
+\newblock Bayesian analysis of computer code outputs: A tutorial.
+\newblock {\em Reliability Engineering and System Safety}, 91\penalty0
+  (10-11):\penalty0 1290--1300, 2006.
+
+\bibitem[Patra et~al.(2005)Patra, Bauer, Nichita, Pitman, Sheridan, Bursik,
+  Rupp, Webber, Stinton, Namikawa, and Renschler]{Patra2005}
+Patra, A., A.~Bauer, C.~Nichita, E.~Pitman, M.~Sheridan, M.~Bursik, B.~Rupp,
+  A.~Webber, A.~Stinton, L.~Namikawa, and C.~Renschler.
+\newblock Parallel adaptive numerical simulation of dry avalanches over natural
+  terrain.
+\newblock {\em Journal of Volcanology and Geothermal Research}, 139:\penalty0
+  1--21, 2005.
+
+\bibitem[Savage and Hutter(1989)]{Savage1989}
+Savage, S. and K.~Hutter.
+\newblock The motion of a finite mass of granular material down a rough
+  incline.
+\newblock {\em Journal of Fluid Mechanics}, 199:\penalty0 177--215, 1989.
+
+\bibitem[Shearer(1990)]{Shearer_1990}
+Shearer, J.
+\newblock The accuracy of digital terrain models.
+\newblock {\em In: Petrie, G., Kennie, T.J.M. (Eds.) Terrain Modelling in
+  Surveying and Civil Engineering}, pages 315--336, 1990.
+
+\bibitem[Simpson et~al.(2001)Simpson, Poplinski, Koch, and Allen]{simpson1}
+Simpson, T., J.~Poplinski, P.~Koch, and J.~Allen.
+\newblock Metamodels for computer-based engineering design: Survey and
+  recommendations.
+\newblock {\em Engineering with Computers}, 17\penalty0 (2), 2001.
+
+\bibitem[Stefanescu et~al.(2010)Stefanescu, Bursik, and Patra]{stefanescu1}
+Stefanescu, E., M.~Bursik, and A.~Patra.
+\newblock Effect of digital elevation model on geophysical flow model output.
+\newblock In {\em submitted to Natural Hazards}, 2010.
+
+\bibitem[Wechsler and Kroll(2006)]{Suzanne_Wechsler}
+Wechsler, S. and C.~Kroll.
+\newblock Quantifying {DEM} uncertainty and its effects on topographic
+  parameters.
+\newblock {\em Photogrammetric Engineering $\&$ Remote Sensing}, 72:\penalty0
+  108--1090, 2006.
+
+\bibitem[Weng(2002)]{Qihao_Weng}
+Weng, Q.
+\newblock Quantifying uncertainty of digital elevation models derived from
+  topographic maps.
+\newblock {\em In: Advances in Spatial Data Handling}, pages 403--418, 2002.
+
+\end{thebibliography}

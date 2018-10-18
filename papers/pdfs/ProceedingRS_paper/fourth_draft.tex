@@ -1,0 +1,1128 @@
+%\documentclass[12pt]{article}
+\documentclass{article}
+%\documentclass[journal]{IEEEtran}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{authblk}
+\usepackage{float}
+\usepackage{rotating}
+\usepackage{url}
+\usepackage{lscape}
+\usepackage{longtable}
+\usepackage{subfig}
+\usepackage{natbib}
+\usepackage{lineno}
+\usepackage{amsmath}
+\usepackage{epsfig}
+\usepackage{caption}
+\usepackage{latexsym}
+%\setlength{\captionmargin}{20pt}
+%\usepackage{graphicx}
+%\usepackage[all,knot]{xy}
+%\xyoption{arc}
+%\usepackage{url}
+%\usepackage{multimedia}
+%\usepackage{hyperref}
+%\linespread{1.6}
+\linespread{1.2}
+
+\newcommand{\Deg}{$^{\circ}$}
+\newcommand{\Pic}[2][0.85]{\begin{center}\includegraphics[width=0.8\textwidth,height=#1\textheight,keepaspectratio]{#2}
+ \end{center} }
+%\newcommand{\captionfonts}{\small}
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Different font in captions
+\newcommand{\captionfonts}{\small}
+
+\makeatletter  % Allow the use of @ in command names
+\long\def\@makecaption#1#2{%
+ \vskip\abovecaptionskip
+ \sbox\@tempboxa{{\captionfonts #1: #2}}%
+ \ifdim \wd\@tempboxa >\hsize
+   {\captionfonts #1: #2\par}
+ \else
+   \hbox to\hsize{\hfil\box\@tempboxa\hfil}%
+ \fi
+ \vskip\belowcaptionskip}
+\makeatother   % Cancel the effect of \makeatletter
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\title{Digital Elevation Model (DEM) uncertainty and hazard analysis using a geophysical flow model}
+\author[1]{ E. R. Stefanescu }
+\author[2]{M. Bursik}
+\author[3]{G. Cordoba}
+\author[4]{K.Dalbey}
+\author[5]{M. Jones}
+\author[1]{A.K. Patra}
+\author[6]{D.C. Pieri}
+\author[1]{E.B. Pitman}
+\author[2]{M.F. Sheridan}
+\affil[1]{Department of Mechanical and Aerospace Engineering, University at Buffalo}
+\affil[2]{Department of Geology, University at Buffalo }
+\affil[3]{Universidad de Nari\~{n}o, Colombia}
+\affil[4]{Sandia National Laboratories, Albuquerque, NM}
+\affil[5]{Center for Computational Research, University at Buffalo}
+\affil[6]{Jet Propulsion Laboratory, Caltech, Pasadena, CA, 91109 USA}
+
+
+\date{\today}
+
+
+\begin{document}
+\linenumbers
+\maketitle
+
+\begin{abstract}
+To come soon...
+%In this paper we introduce a careful procedure for analyzing the impact of 
+%error and uncertainty in model inputs in volcanic mass flow hazard analysis.
+%In particular we focus on uncertainty in elevation maps that are
+%crucial to flow simulations. Our early results establish the soundness
+%of the approach and the usefulness of the methodology for constructing
+%probabilistic hazard maps.
+\end{abstract}
+
+\section{Introduction}
+%The aim of this paper is to investigate the effect of Digital Elevation Model (DEM)
+%uncertainty on hazard analysis using a geophysical flow model. 
+
+
+
+%The calculation of the topographic attributes as slope, aspect and curvature 
+%is typically based on numerical approximation of the first and the second
+%partial derivatives of the DEM heights. 
+
+%\subsection{Error modeling and error propagation}
+
+Numerous workers have explored the use of computational fluid dynamics
+to produce volcanic hazards maps for a variety of phenomena at a
+number of volcanoes \citep{baxter1997, calvache1997, sheridan_2005}.  
+Hazards maps for ground-hugging flows, such as pyroclastic density 
+currents and lava flows are constructed using a digital representation 
+of the terrain \citep{Takahashi2000, Keith}.
+Usually these terrain representations are digital elevation models
+(DEMs).  For this type of study, elevation is rightly recognized as
+the most essential and fundamental of variables in geographic
+information analysis \citep{Atkinson2002}.
+
+However, a digital representation of a terrain surface is an
+approximation of reality and is subject to some degree of error. The
+error usually is not known in terms of both magnitude and spatial
+distribution.  There are in fact large uncertainties associated with
+the construction of DEMs. In \citep{Wechsler2006} it was shown that
+DEMs contain errors derived from a variety of sources: sampling,
+measurement and interpolation, and these errors cannot always be well
+estimated.
+
+The most important part of DEM error propagation analysis is the
+appropriate characterization of the error within the DEM itself,
+including information about its distribution and spatial structure
+\citep{Shortridge2001}.  DEM vendors generally provide users with a
+measure of vertical accuracy in the form of the root mean squared
+error (RMSE) statistic. However many papers have reported on the
+limitations of a single value of accuracy, stressing that DEM error is
+spatially variable and autocorrelated \citep{Wechsler2006,
+  Amii_Darnell}. Also the magnitude of the DEM error is closely
+related to the characteristics of the terrain surface. For example,
+slope will influence interpolation procedures.
+
+
+DEM error propagation analysis was introduced to the GIS community in
+the early 1990s.  In the work of \citet{Heuvelink1990}, error
+propagation in calculating slope and aspect was represented using
+Monte Carlo simulation and Taylor series approximation. It was shown
+that standard deviations of slope and aspect were higher than
+expected.  The effect of error in the DEMs on the erosion models was
+emphasized.  A method used by \citet{Qihao_Weng} in quantification of
+the uncertainty of DEMs was to create various DEMs using different
+interpolation methods and to examine the RMSE from the source map,
+sampling and measurement error, and the interpolation process. It was
+concluded that RMSE can be used as a general indicator of DEM
+uncertainty.  In recent literature, DEM error without spatial
+autocorrelation was considered to be a worst-case scenario
+\citep{Heuvelink1989, VanNiel2004, Oksanen2006}, but no analysis based
+on terrain morphology and the effect of different DEMs was done.
+\citet{Wechsler2006} developed four different methods for representing
+the spatial dependence of error through random fields to assess the
+effect on topographic parameters of the DEM uncertainty. The study
+showed that uncertainty in the DEM is manifested at higher elevations
+in local steeper slopes, on both slope and elevation maps.
+\citet{Florinsky1998} showed that the effect of DEM uncertainty on the
+accuracy of slope and aspect estimation cannot be determined by using
+data from topographic maps or field surveys, because accurate
+derivatives cannot be determined.
+
+One key feature of spatial data is the autocorrelation of observations
+in space.  Generally, spatial autocorrelation refers to the
+correlation between the same attribute at two locations. Observations
+in close spatial proximity tend to be more related than are
+observations at larger distance or separation. Errors in spatial data
+(such as incorrect elevation values assigned to a point) are spatially
+autocorrelated. The effect of correlated DEM error has been
+investigated in the literature \citep{Fisher_1991, Goodchild_1992}. It
+was shown that not only is error spatially variable throughout a DEM,
+but within the elevation model the error value of an individual grid
+cell is related to the error in neighboring cells. Unfortunately, DEM
+providers do not include information regarding the spatial dependence
+or spatial relationship of errors.
+
+Stochastic modeling uses stochastic conditional simulation to generate
+multiple equally likely representations of an actual terrain
+surface. \citet{Hunter_Goodchild_1997, Ehlschlaeger_1996} computed a
+normal distribution of maps or realizations to reproduce the spatial
+autocorrelation encountered in the original error surface, filtered
+using a Gaussian convolution filter, with kernel sizes derived from
+autocorrelation analysis of the original error surfaces.
+
+Various researchers have applied stochastic techniques to evaluate
+uncertainty in DEM data. \citet{Ehlschlaeger_1996} stochastically
+simulated error in a DEM to evaluate the impact of DEM uncertainty on
+a least-cost-path application. \citet{Hunter_Goodchild_1997}
+investigated the effect of simulated changes in elevation at different
+levels of spatial autocorrelation on slope and aspect
+calculations. \citet{Felix_Hebeler} produced uncertainty surfaces to
+show the impact of DEM uncertainty on an ice sheet
+model. \citet{Amii_Darnell} developed a fuzzy framework to examine the
+probable and possible uncertainties in classifying landslide hazard.
+
+The aim of this paper is to quantify the variation in the output of a
+computational flow model for block and ash flows, when the model
+inputs are given as a range of possible uncertainties/values.  In
+particular, we focus on assessing the influence of DEM uncertainties,
+along with uncertainties in initial size and location of the
+avalanche, and the internal and bed friction angles. There is
+uncertainty in all of these inputs and it can be represented using
+either field data or stochastic methods.  The distribution or the
+range of the parameters can be obtained from laboratory and field
+instruments for friction angles, and historical records of flow
+frequency and magnitude for size of the initial failure.  Stochastic
+methods are used to assess the uncertainties in the DEMs.  In
+particular, a perturbation of the elevation based on the measured
+error model, and also an unconditional stochastic simulation are used
+\citep{Ehlschlaeger_1996}.  Both methods generate multiple likely
+representations of the actual terrain, while the second one accounts
+for the spatial autocorrelation between elevation points.  The effect
+of DEM uncertainty and its impact on the output model is analyzed by
+constructing a hazards map and performing a "probability analysis" for
+two volcanoes with different morphology: Galeras Volcano, Colombia,
+and Mammoth Mountain, CA, USA.
+
+We adapt here an approach based largely on the method of
+\citet{Ehlschlaeger_1996}, which uses the difference between two
+independent DEMs to train a Gaussian model of error.
+
+%\subsection{Hazard map}
+%Numerical models of real-world systems are characterized 
+%by large number of input variables. Quantification of uncertainty means
+%to be in some way able to attach a measure to something which may be 
+%poorly defined or vague \citep{Matthies2008}.
+%To quantify the uncertainties in the result of a simulation, one must understand 
+%both the sources of these uncertainties, and how uncertainties propagate 
+%through the simulation. 
+%A general objective of the paper is the exploration of high-dimensional input
+%variable space and its impact on the model. Full space analysis without any 
+%a priori assumption has an exponential growing computational complexity,
+%which needs to some "smart" approximation. Geological flow model are dealing 
+%with high dimensional input. There are large uncertainties associated with the 
+%construction of the DEMs and many other parameters that characterize the flow.
+%
+%When is viewed in its most general form, uncertainty analysis and hazard map construction 
+%involve determination of the "distribution" of the model prediction that results 
+%from uncertainty in the input parameter. One of the main challenge is the implementation
+%of a procedure that address  this problems.
+%Uncertainty propagation methods such as polynomial chaos and collocation methods, 
+%although extremely efficient, suffer from the so called �curse of dimensionality�.
+%More recent procedures used for the propagation of uncertainty: Monte Carlo, 
+%differential analysis, response surface methodology, the Fourier amplitude sensitivity
+%test (FAST), fast probability integration\citep{Sandia2002}, have positive and negative
+%features, and no single technique is optimum for all situations.
+%The traditional Monte Carlo methods converge slowly and is very unaffordable 
+%computationally for time-consuming simulations. A single TITAN2D run might take 20 minutes on a
+%single processor. To obtain a 3 digit accuracy in the expected value of a specified function it would 
+%required a million runs. One million runs of the 20 min calculation running non stop on 64 processor
+%would take 217 days \citep{Keith}.  In the paper is presented a hierarchical emulator that reduces
+%significantly the computational cost.
+%
+%
+%The aim of this work is to address the challenge of efficiently propagating
+%uncertainties in numerical simulations with many sources of uncertainties. 
+%We work under the framework of probability theory, which provides solid and 
+%comprehensive theoretical foundation. In contrast to the traditional, deterministic simulations, we 
+%describe uncertainties as randomness, and model the sources of uncertainties as random 
+%variables. 
+
+\section{Methodology}
+%\subsection{Stochastic modeling}
+
+In previous work \citep{stefanescu1}, the effect of DEMs on the output
+of TITAN2D % \citep{xxx} 
+was investigated by comparing the output
+(maximum flow depth over the entire simulated time) from different
+DEMs.  These DEMs were obtained from different techniques at different
+resolution. Two types of analysis were performed: a qualitative
+analysis and a statistical analysis. The qualitative analysis
+consisted of a comparison of the footprint of the flow, extended to a
+pixel based classification. The pixels were classified into inundated
+and non-inundated classes. For the statistical analysis we performed a
+Kolmogrov -- Smirnov test to check if two output datasets differed
+significantly. The conclusion was that for moderate and smaller scale
+flows, use of different DEMs affects computation of accurate
+footprints of the flow.
+
+This conclusion motivated us in examining the effect of DEM
+uncertainty by creating a model of the error and sampling it to create
+an ensemble of possible terrains.  The flow simulation is then run on
+every member of this ensemble.
+
+Naive, cell-by-cell approaches to treating DEM uncertainty quickly
+lead to the use of thousands if not millions of random variables,
+resulting in a computationally infeasible problem.  On the other hand,
+the error model described above can be parameterized with one or two
+random variables.  The parametrization methods are based on the
+assumption that the available DEM is a representation of the terrain
+to which errors have been added because of instrumental uncertainty.
+Therefore, the DEM can be assumed to be one of an infinite number of
+elevation realizations.
+
+
+\subsection{Method 1}
+\label{Method1}
+
+In this paper, we have available two "types" of DEMs of each mountain,
+which are used in creating DEM-to-DEM difference maps.  Different
+realizations of the terrain were constructed by adding to one DEM --
+considered to represent the "true" elevation -- a "random"
+perturbation.  Since any two types of DEMs are obtained using
+different techniques, the difference between them can be added to that
+which is assumed to be the "true" DEM to give us a set of possible
+DEMs. Thus, the resulting realizations are consistent with the
+available set of DEMs. Randomness in the perturbations is created by
+multiplying the difference map with a normally distributed factor
+between 0 and 1.
+\begin{equation}
+R = M + \epsilon \cdot Diff
+\label{eq:two}
+\end{equation}
+where $R$ is a realization of the terrain, $M$ is the DEM that best
+represents the terrain (the "true" DEM), $Diff$ is the difference map
+and $\epsilon$ is a random variable.  In this way we can define a set
+of DEM realizations using only one random variable.
+
+\subsection{Method 2}
+\label{Method2}
+
+%The second method takes advantage of the various available DEMs
+%of different resolutions and different creation methods. The DEM's 
+%available for experiment are: TOPSAR (5x5m and 30x30m resolution), NED 
+%(10x10m and 30x30m resolution), SRTM (30x30m and 90x90m resolution) and 
+%ASTER 30x30m resolution. 
+%By using this method the DEM is not an input parameter of the simulator, the 
+%effect of DEM is accounted by creating a hazard map.
+%For each DEM we create a hazard map,
+%with the same parameter distribution and range as presented above.  
+%A final hazard map is created as a weighted
+%sum of the seven hazard map based on how much a particular DEM varied from some estimate of the true topography, 
+%i.e the "best" DEM \citep{stefanescu1}. We divided the DEMs into: 3 categories. 
+%In the first category we include the DEMs for which the flow map 
+%was very different with respect to TOPSAR5m : SRTM90m
+%and interpolated TOPSAR30m, in the second category are SRTM30m, ASTER and
+%NED30m, while in the last category we include the one which are least
+%different: decimated TOPSAR30m and NED10m. This categorization the 
+%DEMs is used in choosing the appropriate weight for the final hazard map.
+
+The main idea of Method 2 derives from geostatistics, where vectors of
+a random variable $Z(\mathcal{U})$ are used to characterize unknown
+values, generated by probability distributions which characterize the
+uncertainty of the random variables. $Z$ represents a continuous
+random field and $\mathcal{U}$ represents the area covered by the
+random field.  The random field function used is implemented in the
+function \textit{r.random.surface} \citep{Ehlschlaeger_1994} of GRASS
+GIS \citep{Mitasova1996}, and generates fields containing cells with a normal
+distribution (mean of 0.0 and variance of 1.0). The random field
+function derives its spatial dependence by the use of a filter
+function. The following equation is used to generate the random
+fields:
+\begin{align}
+ &Z(\mathcal{U})= \frac{\sum_v w_{u,v}\epsilon_v}{\sqrt{\sum_v
+      w_{u,v}^2}}, \quad u\in \mathcal{U}, \; v \in \mathcal{V}
+  \\ &w_{u,v} = \left\{ \begin{array}{ll} 1 & \quad :d_{u,v} \le F
+    \\ \left(1- \frac{d_{u,v} - F}{D - F} \right)^E & \quad F <
+    d_{u,v} \le D, \; u \in \mathcal{U}, \; v \in \mathcal{V}\\ 0 &
+    \quad :d_{u,v} > D
+\end{array} \right.                                                    
+\end{align}
+where $Z(\mathcal{U})$ is the random field, $\mathcal{V}$ is the set
+of points affecting the area $\mathcal{U}$, $w_{u,v}$ is the spatial
+autocorrelative effect between points $u$ and $v$, $v$ is a random
+variable with a mean of 0 and variance of 1, $d_{u,v}$ is the distance
+between $u$ and $v$, $D$ is the minimum distance of spatial
+independence, $E$ is the distance decay exponent, and $F$ is a
+parameter that is helps to capture the terrain features.
+
+
+Random fields are calibrated to the spatial continuity of the field
+being simulated using a correlogram function. The method used to fit
+the correlogram and to choose the best descriptive parameters of the
+random field (the minimum distance of spatial independence, the
+correlated distance decay exponent and the filter parameter) is a
+weighted least-square estimator implemented in GRASS's
+\textit{r.lags.difference}.  After running hundreds of tests with
+multiple combinations of $D$, $E$ and $F$, we found the best random
+field to fit the error map characteristics based on the minimum sum of
+least squares difference between the error field's correlogram and a
+target correlogram. xx\textit{Figure~\ref{fig1} shows the error map
+correlogram compared to several correlgrams closely fitting the error 
+correlogram. It can be seen the dependence of the correlation coefficient with 
+the distance.  
+%Lag distances less than 
+%1000 meters were weighed twice as important than lags greater than 
+%1000 meters, and lag distances less than 100 meters are weighted five 
+%times more importantly
+}xx
+
+The correlogram model was then used with sequential Gaussian
+simulation to generate $N$ error map realizations.  Each error
+realization was added to the ``true'' DEM to generate equally probable
+realizations of the topography for the error structure of a DEM under
+consideration:
+\begin{equation}
+ R(U)=m(U)+m(m(T))+(m(s^2(T))\cdot \epsilon)\cdot Z(U)
+\label{eq:one}
+\end{equation} 
+where $R(U)$ is a realization of an elevation dataset $m(U)$, $T$ is a
+group of sets of spatially uncorrelated sample points, $\epsilon$ is a
+random variable with mean 0.0 and variance 1.0, and $Z(U)$ is the
+random field which captures the autocorrelation between points.  The
+mean and the standard deviation are determined from randomly drawn,
+spatially independent points scattered across the error map. The error
+map was generated by subtracting the lower quality DEM from the
+``true'' DEM, and characterizes the error of the lower quality DEM at
+each point.
+
+\subsection{DEM realizations}
+Many DEM users are aware that DEM uncertainty affects the results of
+their application, however, in most cases the DEM is accepted as the
+true representation of the earth's surface. In this section, the two
+methods for generating multiple realizations of the terrain are
+presented for both Galeras Volcano and Mammoth Mountain to test
+whether it is safe to assume that the representation of topography is
+acceptable as it is.
+
+The motivation for creating realizations of the DEM was to be able to
+use the DEM along with other uncertain parameters as uncertain inputs
+for the calculation of a hazard map using the computational fluid
+dynamical model TITAN2D.  One of our working hypotheses is that the
+DEM contributes a significant proportion of the variance in simulated
+flow, hence hazard map output.  For sampling the input parameter
+space, a Latin Hypercube Sampling (LHS) was implemented.
+
+For Galeras Volcano, two test DEMs at 30 m spacing were considered for
+our analysis. The SRTM (Shuttle Radar Topography Mission) 30m DEM was
+derived by spline interpolation from a 90m DEM of southern Colombia
+using radar data collected in 2000, while the ASTER (Advanced
+Spaceborne Thermal Emission and Reflection Radiometer) DEM was
+calculated at the Jet Propulsion Laboratory using orthorectified
+imagery from 12 January 2010 (Fig.~\ref{fig2} a).  The ASTER dataset
+was used as a surrogate for the ``true'' elevation while the SRTM
+dataset was used in creating the error model.
+
+
+Two 30-m resolution DEMs derived from independent techniques were used
+for Mammoth Mountain.  A TOPSAR dataset was considered to be the
+``true'' elevation, while an SRTM dataset was used in creating the
+error map.  A rectangular area of approximately 42 kilometers$^2$ was
+defined within the TOPSAR and SRTM DEMs (Fig.~\ref{fig2} b).
+
+For Method 1, sixty-four (64) DEM realizations were created and used
+as input parameters for the TITAN2D simulator along with uncertain
+parameters presented in ~\ref{Parameters}.  The input space is defined
+by seven parameters.
+
+%For Method 2 also 64 simulator runs were performed, the
+%input space being in this case of  6 parameters. 
+
+%The stochastic model developed by \citep{Ehlschlaeger_1996} is generating first a error model as the difference 
+%between two DEMs and then unconditional stochastic simulation is employed to define a probability
+%density function (p.d.f.). The p.d.f. generates random surfaces with a gaussian distribution matching the
+%mean and standard deviation observed in the difference map. The technique does not ensure that the "true map" is
+%generated from the process, however it does provide a bound within which we can state 
+%that true map lies.  
+
+For Method 2, realizations of the terrain surface were created by
+taking into consideration the spatial autocorrelation of the error.
+The error map was obtained by subtracting the elevation of a given DEM
+from the ``true'' elevation at each location. The correlogram for the
+difference map was calculated to determine the range of spatial
+dependence of elevation points. We found that spatial dependence
+persisted above a threshold value of the correlogram cross-correlation
+coefficient of 0.4 to a distance of 2500 meters for Galeras and 2100
+meters for Mammoth. To determine the probability distribution function
+(pdf) for the stochastic simulation, 91 sets of spot locations were
+selected from the map, each set containing 91 points, all pairs of
+points were separated by more than 2500 meters or 2100 meters,
+respectively. For each DEM, pdf statistics were derived.  The random
+field parameters were chosen after testing more than 400 random field
+parameters for the smallest difference between the error model
+correlogram and the random field.  This occurs when the minimum
+distance of spatial independence, $D =2500$; the distance decay, $E =
+0.8$, and the filter parameter, $F =400$ for Galeras and $D =2100$, $E
+= 0.7$, and $F =350$ for Mammoth.  A total of 64 equally probable
+potential elevation surfaces of the area having a 30-m resolution were
+generated.
+
+\subsection{Hazard map construction}
+%The next step of the analysis is to generate a functional
+%representation of the hazard at a location. 
+ 
+There are numerous ways to create a volcanic hazards map based on
+computational fluid dynamics modeling.  The traditional Monte Carlo
+method can be used if we assume that uncertainty in model input
+parameters is the main restriction to our knowledge of future events
+at a given volcano.  This is the case, for example, if we know that
+block and ash flows are common at a given volcano, but it is difficult
+to know the size or volume of potential future events.  Although Monte
+Carlo is relatively simple to implement, it converges slowly and is
+unaffordable computationally because of the number of time-consuming
+simulations.  A single TITAN2D run might take 20 minutes on a single
+processor. To obtain three-digit accuracy in the expected value of a
+specified function would require a million runs. One million runs of
+20-min calculations running non-stop on 64 processor would take 217
+days \citep{Keith}.
+
+Here, we briefly described the use of an hierarchical emulator that
+significantly reduces computational cost; a detailed discussion of the
+methodology can be found in \citet{dalbeythesis, Keith}. An emulator
+can be thought of as a fast surrogate for a single numerical model
+simulation (a simulator).  We describe the process of computing a
+hazard map for block and ash flows with uncertain model inputs
+introduced by \citet{dalbeythesis}.  Two-level construction of a group
+or ensemble of emulators is used to include a separation of uncertain
+inputs and geographic coordinates.  The process starts by identifying
+the model inputs whose uncertainties will drive the process. In our
+case, the uncertain flow inputs we use are volume and shape, starting
+location, basal and internal friction angles, and finally topography,
+as given by the DEM.  For the resulting eight-dimensional parameter
+input space, a Latin Hypercube Sampling was performed to determine
+parameter values at which simulations were to be run \citep{bayarriusc}. As
+priors for the emulator, simulation outputs for each of these input
+parameter vectors were stored at 64 grid points.
+
+
+The variable of interest for our application is the field of maximum
+flow depth over time for each spatial position, at each of the
+downsampled input parameter gridpoints.  Tesselations of the
+geographic coordinate space and the parameter input space are
+constructed (we use Delaunay triangulation).  At a designated
+location, ${\bf x}^*$, of the input parameter plus spatial coordinate
+space at which the hazard is to be computed, the covering simplex
+$S_{\bf x}^* $ of the parameter space is identified, and all nodes of
+that simplex are enumerated, as are all nodes within a neighborhood
+(two hops in the tesselation) of the covering simplex nodes.  For each
+such two-hop node, we tesselate in the spatial coordinates and
+evaluate all emulators constructed over these nodes.  We average these
+coordinate space emulators to (the coordinate components of) ${\bf
+  x}^*$ by barycentric weighting; notice there will be an emulator for
+each parameter input sample point. Now in the input parameter space,
+construct a tessellation of the two-hop nodes and average the
+emulators to ${\bf x}^*$ by barycentric weighting of the fine-scale
+emulator.  The emulator is now readily and quickly evaluated for each
+evaluation. The hazard map construction can now proceed by treating
+the emulator as a surrogate for the simulator in the classical Monte
+Carlo procedure.  For any point in the domain we can now exercise the
+emulator to get potential flows and hence exceedance probabilities.
+
+
+\subsection{TITAN2D and flow simulations}
+
+TITAN2D was developed for modeling dry geophysical granular flows,
+such as debris avalanches and block and ash flows.  Given a digital
+elevation map specifying the topography of a volcano and the values of
+input parameters, including the initial volume of erupted material and
+the friction angles, TITAN2D calculates the flow depth and velocity at
+any location throughout the duration of an event.  The TITAN2D code
+combines numerical simulations of a natural granular flow with digital
+terrain data. It is based on a depth-averaged model for an
+incompressible granular materia governed by Coulomb-type friction
+interactions \citep{Savage1989}.  The governing equations are obtained
+by applying conservation laws to the incompressible continuum,
+providing appropriate constitutive modeling assumptions, and then
+taking advantage of the shallowness of the flows (flows are much
+longer and wider than they are deep) to obtain simpler depth-averaged
+representations \citep{Patra2005}. The motion of the material is
+considered to be gravitationally driven and resisted by both internal
+and bed friction. The stress boundary conditions are: no stress at the
+upper free-surface and a Coulomb-like friction law imposed at the
+interface between the material and the basal surface.
+
+The primary factor driving the flow is the component of gravity
+tangential to the surface, which depends on a local slope computed
+from the elevation data, hence, the criticality of the DEM to the flow
+computations. The resulting hyperbolic system of equations was solved
+using a finite-volume scheme with a second-order Godunov
+solver. Although many real geophysical flows --- such as debris flows
+--- are fluidized, in this study we deal only with granular material
+that has not been fluidized, such as dome-collapse block and ash flows
+or rock avalanches initiated by slope instability.  The program runs
+in parallel, using the Message Passing Interface (MPI) to allow
+communication between multiple processors, increasing computational
+power, decreasing computational time and allowing use of large
+datasets. The algorithm uses local adaptive mesh refinement for shock
+capturing, and dynamic load balancing for the efficient use of
+computational resources. Topographic data are included in the
+simulation through a preprocessing routine in which the digital
+elevation data are imported.  TITAN2D performs flow simulations on a
+DEM of a desired region, the simulation accuracy being highly
+dependent on the level of the DEM resolution and quality.
+
+Inputs to the code are the size and location of the initial volume,
+the internal and bed friction and the DEM. \citet{Keith} presented
+several methods for characterizing the effect of input data
+uncertainty on model output. At that time, efficient methods for
+representing the uncertainty associated with spatial parameters like
+terrain elevation were not well understood.
+
+\subsection{Bayes Linear Method}
+
+The straightforward way to account for uncertain inputs and stochastic
+forcing is a Monte Carlo approach --- run many simulations and
+`average' the results in some fashion. If simulations are expensive to
+run, this approach is not feasible. To circumvent this difficulty, the
+statistics community has developed the idea of an emulator.  In
+essence, the emulator is a regression surface based on a
+representative sample of simulations at selected inputs, accompanied
+by statistical error bounds. Equipped with this surface, output values
+at new (untested) input values need not be run.  Instead output
+results can be determined by evaluating the emulator. There are indeed
+many methods -- kriging, metamodels, support vector machines, etc., by
+which such surrogates may be constructed and there exists a body of
+literature on the topic \citep{simpson1,simpson2}.  One often-used
+emulator is the GAuSsian Process (GASP) emulator, which assumes the
+regression has the form of a trend plus a Gaussian
+\citep{kennedy2001bcc, ContiOHagan, ohagan2006bac, bayarriusc}.  To
+construct a GASP emulator, the covariance structure of the Gaussian
+must be assumed and parameters determined by Bayesian or partially
+Bayesian methodology.  A fully Bayesian determination of the emulator
+can be costly, especially if the input data is high-dimensional.  Here
+we use the Bayes Linear method (BLM) \citep{blm1tutor} to construct an
+emulator. Given prior beliefs $(B)$ of mean and variance, the BLM
+updates these beliefs conditioned on the data $(D)$.  Note that
+``data'' generally here refers to the output of computationally
+expensive physics based simulators.  Because only the first two
+moments of a distribution are determined, the BLM is exact only for
+Gaussian distributions.  As an emulator construction, the BLM update
+is simpler than a full GASP construction, but the resulting emulator
+is comparable.  Given the prior expectation $E[B]$ and variance
+$var(B)$, the BLM updates are
+\begin{eqnarray} \label{blupdate}
+E_D(B) &=& E[B] + cov(B,D) (var(D))^{-1} [D-E[D]] \\ \nonumber
+var_D(B) &=& var(B) - cov(B,D) (var(D))^{-1} cov(D,B)
+\end{eqnarray}
+These update formulae can be derived by minimizing the mean square
+error $(B - a^T D)^2$ between $B$ and some linear combination of the
+data. Thus the BLM update can be viewed as the projection of the set
+of prior beliefs onto the span of the data.
+
+\section{Implementation}
+\subsection{Case study I: Galeras Volcano}
+
+Galeras Volcano (elevation 4,276 meters), located in southwestern
+Colombia (1\Deg 13.31' N and 77\Deg 21.68' W), is one of the most
+active volcanoes on the world \citep{hurtado_1997}. Nearly 400,000
+people currently live near the volcano; 10,000 of them reside within
+the zone of high volcanic hazard. Pyroclastic flows pose a major
+hazard for this population. The current period of activity that began
+in 2004 presents a serious problem for all stakeholders: decision
+makers, scientists, public safety officials, and the general
+population.  Computational modeling has the potential to provide
+useful information for hazard assessment and risk mitigation.
+However, there is a need to evaluate the validity of the modeling and
+the quality of the DEMs available for use in such modeling.
+
+Galeras is an important volcano for computational flow modeling from
+both risk management and scientific perspectives
+\citep{calvache1997}. Forecasts of volcanic explosions using various
+geophysical tools \citep{narvaez_1997} have occasionally brought
+public warnings to a high level of alert during the past 20
+years. When the alert reaches the highest level, the public are urged
+to evacuate some local areas; this occured as recently as January,
+2010. The worst event at Galeras occurred in 1993, when an eruption
+killed 9 scientists and journalists \citep{baxter1997}.
+
+The topography of the volcano presents a problem for creation of a
+good DEM. The irregular morphology on a small scale, with steep
+slopes, narrow channels, deep gorges and abrupt cliffs poses problems
+for the creation of accurate topographic models
+\citep{ordones_2000}. In addition, the current flow hazard map at
+Galeras is mainly based on the sparse geological record
+\citep{calvache_1990a}. Dense vegetation, deep erosion, successive
+deposits of lava and pyroclastic flows hinder the tracing of specific
+deposits in the field. The diverse effects of this landscape, as
+reflected in DEMs created by different processes and of different
+scales, must be examined and quantified to determine the level of
+confidence that can be placed in model results. Galeras provides a
+wide range of topographic features that challenge the use of
+computational flow models.
+
+\subsection{Case study II : Mammoth Mountain}
+
+Mammoth Mountain is a large, geologically young, composite dome
+volcano located on the southwestern rim of Long Valley Caldera,
+California \citep{Bailey1989}.  There are many active hazards issues
+for Mammoth Mountain, including snow avalanches, rock avalanches and
+debris flows. In addition, it is intersected by the Mono-Inyo Craters
+volcanic chain, which is the most active volcanic region in the
+southwestern U.S.  If Mono-Inyo type activity occurs on Mammoth
+Mountain, then domes may form.  These new domes would be growing atop
+a steep edifice, and therefore could become gravitationally unstable.
+Given that block and ash flows occurred at Mammoth Mountain during its
+older dome growth stage, there is reason to believe that renewed dome
+formation would result in block and ash flow activity. If this is so,
+then parts of Mammoth Lakes, CA, are at risk from block and ash flows.
+Our previous work on Mammoth Mountain (Stefanescu et al., submitted)
+was the testing of the hypothesis that different DEMs result in
+different model outputs of block and ash flow inundation.
+
+\subsection{Model Set-up}
+
+In our process to quantify the DEM uncertainties using TITAN2D, a set
+of parameters was drawn on which to set the bounds of the input
+domain: internal friction angle, basal friction angle, flow volume,
+location and DEM. The numerical values for these parameters were
+chosen to bracket the range of flow volumes and initial locations, and
+to be representative of the friction angles that have been used by
+other researchers in their computational models.  The same reasonable
+parameter values were used for both volcanoes, so they do not
+necessarily represent any optimization for a particular case.  The
+internal friction angle has little effect on the output of the flow
+models \citep{Keith, sheridan_2005}. Many TITAN users have chosen
+values of internal friction that range between 15 and 37 degrees with
+values between 30 and 35 being the most frequent values used
+\citep{Patra2005, murcia_2010}.  For our study we use an internal
+friction angle uniformly distributed between 20 and 25 degrees.
+
+The value of the basal friction angle has a large effect on flow
+dynamics in the TITAN2D simulations \citep{Patra2005,
+  stinton_2006}. Factors that could affect the choice of basal
+friction angle include the volume of the flow, the type of the pyroclastic
+flow, the nature of the substrate and the amount of
+channelization. \citet{murcia_2010} listed the basal friction values
+chosen by TITAN2D users; they range between 5 and 28 degrees; the mean
+value being about 15 degrees. We are using a basal friction angle
+uniformly distributed between 15 and 20 degrees.
+ 
+Volumes of pyroclastic flows at stratovolcanoes typically cover a few
+orders of magnitude. The volume values in this study bracket the range
+of possible pyroclastic flows for both Mammoth and Galeras.  According
+to \citet{calvache_1990a}, Galeras volcano produced 5 large
+pyroclastic flow eruptive episodes; an historic eruption in 1866, and
+prehistoric events in 1100, 2300, 2900, and 4500 yBP.  The total
+deposit volumes of these episodes range from $O(10^6 - 9\times 10^6)
+m^3$.  Block and ash flows on Mammoth Mountain might contain $O(10^5 -
+10^7) m^3$ of material \citep{Patra2005, Burkett2007}.  Thus, our
+choice of volumes ranges from $1.9 \times 10^5$ to $5 \times 10^6
+m^3$.  The shape of the initial failure region is approximated as a
+paraboloid for which the volume is calculated as follows:
+\begin{equation}
+ V=\frac{\pi}{2}\cdot r_{min}\cdot r_{max} \cdot h_{max}
+\label{eq:three}
+\end{equation}
+For a good match of the volume range, the radius values were uniformly
+distributed between 25 and 500 m, while the initial height followed
+the same distribution with values between 10 and 150 m.
+
+Initiation locations were taken from previous mapping of vent sites,
+coupled with knowledge of known weak areas within the volcano as
+indicated by hydrothermal alteration.  Around the centers of the
+separate initiation locations, different starting positions were
+uniformly distributed in a circle of radius 200 m.  A rectangular area
+of approximative 40 $km^2$ was defined around the vent within the
+available DEMs as the potential run-out area.
+
+\section{Results and Conclusions}
+xxherexx
+
+One of the goals of our analysis was to understand the effect of the
+spatial structure of available DEMs on hazard maps. Figure~\ref{fig2}
+c,d shows the correlograms for the ASTER DEM and the TOPSAR DEM, which
+are the DEMs considered to best represent the real topography for
+Galeras Volcano and Mammoth Mountain, respectively. It is apparent
+that data processing resulted in a smoothing and filtering of the
+TOPSAR DEM which causes the correlation coefficient to vary smoothly
+as a function of distance and any two elevation values.  Using a
+distance between two points of 2000m, for the ASTER DEM the
+correlation coefficient is 0.6, whereas for the TOPSAR DEM the
+correlation coefficient is 0.4. This means that elevation values
+within the ASTER DEM are more highly correlated.
+
+Starting from these premises, we can explain the hazard map output for
+the cases when the DEM is considered to be an input parameter for the
+TITAND2D model.  Figures~\ref{fig3} (a) and (c) display maps of
+Galeras of the probability that the flow depth will exceed 0.5 m in
+the next ten years using Method 1 or Method 2, respectively to create
+the terrain realizations.
+ 
+In Figures~\ref{fig3} and ~\ref{fig4} show maps at Galeras and Mammoth
+of the spatially varying non-confidence in the probability-of-hazard
+map depicted in Figure~\ref{fig4} (a) and (b), respectively. The
+non-confidence is defined as the computed standard deviation of
+probability-of-hazard $\sigma_P$ divided by the probability-of-hazard
+P.  When calculated by standard means, as was done here, the ratio
+$\sigma_P/P$ only measures the non-confidence in the statistics due to
+insufficient re-sampling of the input parameter space.
+
+After a visual inspection of the figures we can conclude that the
+difference between hazard map outputs is more obvious for Galeras than
+for Mammoth Mountain.  From the non-confidence figure it is observed
+that the error is concentrated at flow margins.
+
+For Mammoth Mountain the differences are less obvious, but with
+important differences again concentrated at the edge of the flow.  A
+better illustration of how the probabilities are varying for the case
+when Method 1 is used compared to Method 2 is showed in
+Figure~\ref{fig5}. We observe that comparing every point where there
+is a probability of having a flow depth greater than 0.5 m for the two
+methods, the results for Galeras show a greater dispersion than
+Mountain Mountain.  When the flow is deep, the probability is high and
+tends to cluster near 1 for both mountains.  As the probability
+decreases dispersion becomes greater for Galeras.  We can conclude
+that as the topography becomes more highly correlated, one should use
+a more complex creation method as stochastic Method 2. It appears that
+the spatial autocorrelation of the elevation points influences the
+hazard map output and a ''controlled'' perturbation of the elevation
+as Method 1 will not capture this effect.
+
+One of the conclusions of the previous work was that for moderate and
+smaller scale flows, different representations of the terrain more
+profoundly affect computation of an accurate footprint of the flow. We
+built a new set of hazard maps for the case when the volume is low,
+with a range between $10^4 - 5\times 10^4$ and for a high volume
+between $9\times 10^6 - 5\times 10^7$.  Since only 517 pixels for
+Mammoth and 872 pixels for Galeras were generated, the low flow hazard
+map gives extreme results, which means that we have a hazard (flow
+greater than 0.5m) with either probability $\sim1$ or $\sim0$.  In
+Figure~\ref{fig6} (a), (b) we observe that there is a significant
+mismatch of prediction (left upper corner and right lower corner) for
+both volcanoes that can be critical in case of a risk assessment.  For
+high volume, for Galeras, we observe that the area of probability
+greater than zero is much smaller when we are using Method 2 compared
+to Method 1. We don't know the reason for this counterinuitive effect.
+
+The question that we tried to answer next is ''What is the effect of
+the DEM in constructing a hazard map?''.  A quantitative and
+qualitative analysis is performed for the case when the ''original''
+deterministic DEM (ASTER 30m for Galeras and TOPSAR 30m for Mammoth as
+in Figure~\ref{fig7} is used as input parameter for the hierarchical
+emulator, or when the input are a set of terrain realizations obtained
+following the methodology presented above.
+
+We compare the hazard maps produced when DEM uncertainty is included
+against maps produced when DEM uncertainty is included.
+Figures~\ref{fig8} and~\ref{fig9} show that for Galeras the
+probability that the flow was deeper than 0.5m varies considerably
+from the case of no DEM uncertainty. Hence, the DEM is an important
+input parameter and the effect of DEM it is not diminished by other
+uncertain parameters or the method used. We observe that capturing the
+probability of having flow greater than 0.5 m at the edge of flow is
+done with error in both cases. For Mammoth Mountain the effect of DEM
+is much more obvious when Method 2 is used, one of the causes might be
+the early termination of the flow compared to the original DEM.
+
+Perturbing the DEM is more important as autocorrelation increases, as
+the scatter in comparative probabilities is greater for Galeras than
+for Mammoth.
+
+\bibliographystyle{plainnat}	
+%\bibliographystyle{plainyr}	
+\bibliography{mybib}		
+
+\begin{figure}[H]
+\centering
+       % \Pic[0.3]{SRTM30_dem.jpg}\\
+	\includegraphics[width=10cm,height=12cm,keepaspectratio]{figs/mammoth_error_correl.jpg}\\       
+\caption{ Error map correlogram (red) and various random fields}
+\label{fig1}  
+\end{figure}
+
+\begin{figure}[H]
+    \begin{minipage}[b]{0.6\textwidth}
+        \begin{tabular}{c}
+       % \Pic[0.3]{SRTM30_dem.jpg}\\
+	\includegraphics[width=8cm,height=9cm,keepaspectratio]{figs/Aster_galeras.jpg}\\
+        (a)
+        \end{tabular}
+    \end{minipage}
+%\hfill
+    \begin{minipage}{0.6\textwidth}
+        \begin{tabular}{c}
+       % \Pic[0.3]{NED30_dem.jpg}\\
+	\includegraphics[width=8cm,height=9cm,keepaspectratio]{figs/topsar30m.jpg}\\
+        (b)
+        \end{tabular}
+    \end{minipage} 
+    \begin{minipage}[b]{0.6\textwidth}
+        \begin{tabular}{c}
+       % \Pic[0.3]{SRTM30_dem.jpg}\\
+       \includegraphics[width=8cm,height=9cm,keepaspectratio]{figs/GalerasAsterCut_correlogram_line.jpg}\\
+        (c)
+        \end{tabular}
+    \end{minipage}
+%\hfill
+    \begin{minipage}{0.6\textwidth}
+        \begin{tabular}{c}
+       % \Pic[0.3]{NED30_dem.jpg}\\
+	\includegraphics[width=8cm,height=9cm,keepaspectratio]{figs/Mammoth30Cut_correlogram_line.jpg}\\
+        (d)
+        \end{tabular}
+    \end{minipage} 
+
+\caption{a) The Galeras ASTER 30m DEM terrain surface (Easting, Northing and elevation coordinates) 
+(b) The Mammoth NED 30m DEM terrain surface (Easting Northing and elevation coordinates) 
+(c) Galeras Volcano ASTER DEM correlogram (d) Mamouth Mountain TOPSAR DEM correlogram}
+\label{fig2}  
+\end{figure}
+
+\begin{figure}[H]
+    \begin{minipage}[b]{0.6\textwidth}
+        \begin{tabular}{c}
+       % \Pic[0.3]{SRTM30_dem.jpg}\\
+       \includegraphics[width=8cm,height=9cm,keepaspectratio]{figs/Galeras_0_P_5m.jpg}\\
+        (a)
+        \end{tabular}
+    \end{minipage}
+%\hfill
+    \begin{minipage}{0.6\textwidth}
+        \begin{tabular}{c}
+       % \Pic[0.3]{NED30_dem.jpg}\\
+	\includegraphics[width=8cm,height=9cm,keepaspectratio]{figs/Galeras_0_sigma_5m.jpg}\\
+        (b)
+        \end{tabular}
+    \end{minipage} 
+        \begin{minipage}[b]{0.6\textwidth}
+        \begin{tabular}{c}
+       % \Pic[0.3]{SRTM30_dem.jpg}\\
+       \includegraphics[width=8cm,height=9cm,keepaspectratio]{figs/Galeras_3_P_5m.jpg}\\
+        (c)
+        \end{tabular}
+    \end{minipage}
+%\hfill
+    \begin{minipage}{0.6\textwidth}
+        \begin{tabular}{c}
+       % \Pic[0.3]{NED30_dem.jpg}\\
+	\includegraphics[width=8cm,height=9cm,keepaspectratio]{figs/Galeras_3_sigma_5m.jpg}\\
+        (d)
+        \end{tabular}
+    \end{minipage} 
+\caption{a) Probability that a flow will exceed 0.5 m in depth as a function of position on Galeras Volcano, Columbia, given the uncertainties in DEM and input parameters using  Method 1 to create DEM realizations (b) Standard deviation in the estimate that the flow will exceed 0.5 m in depth -- Method 1
+(c) Probability that a flow will exceed 0.5 m in depth as a function of position on Galeras Volcano, Columbia, given the uncertainties in DEM and input parameters using Method 2 to create DEM realizations (d) Standard deviation in the estimate that the flow will exceed 0.5 m in depth -- Method 2}
+\label{fig3}  
+\end{figure}
+
+\begin{figure}[H]
+    \begin{minipage}[b]{0.6\textwidth}
+        \begin{tabular}{c}
+       % \Pic[0.3]{SRTM30_dem.jpg}\\
+       \includegraphics[width=8cm,height=9cm,keepaspectratio]{figs/Mammoth_0_P_5m.jpg}\\
+        (a)
+        \end{tabular}
+    \end{minipage}
+%\hfill
+    \begin{minipage}{0.6\textwidth}
+        \begin{tabular}{c}
+       % \Pic[0.3]{NED30_dem.jpg}\\
+	\includegraphics[width=8cm,height=9cm,keepaspectratio]{figs/Mammoth_0_sigma_5m.jpg}\\
+        (b)
+        \end{tabular}
+    \end{minipage} 
+        \begin{minipage}[b]{0.6\textwidth}
+        \begin{tabular}{c}
+       % \Pic[0.3]{SRTM30_dem.jpg}\\
+       \includegraphics[width=8cm,height=9cm,keepaspectratio]{figs/Mammoth_3_P_5m.jpg}\\
+        (c)
+        \end{tabular}
+    \end{minipage}
+%\hfill
+    \begin{minipage}{0.6\textwidth}
+        \begin{tabular}{c}
+       % \Pic[0.3]{NED30_dem.jpg}\\
+	\includegraphics[width=8cm,height=9cm,keepaspectratio]{figs/Mammoth_3_sigma_5m.jpg}\\
+        (d)
+        \end{tabular}
+    \end{minipage} 
+\caption{a) Probability that a flow will exceed 0.5 m in depth as a function of position on Mammoth Mountain, CA, given the uncertainties in DEM and input parameters using Method 1to create DEM realizations. (b) Standard deviation in the estimate that the flow will exceed 0.5 m in depth -- Method 1
+(c) Probability that a flow will exceed 0.5 m in depth as a function of position on Mammoth Mountain, CA, given the uncertainties in DEM and input parameters using  Method 2 to create DEM realizations.
+(b) Standard deviation in the estimate that the flow will exceed 0.5 m in depth -- Method 2 }
+\label{fig4}  
+\end{figure}
+
+\begin{figure}[H]
+    \begin{minipage}[b]{0.6\textwidth}
+        \begin{tabular}{c}
+       % \Pic[0.3]{SRTM30_dem.jpg}\\
+       \includegraphics[width=8cm,height=9cm,keepaspectratio]{figs/cloud_galeras.jpg}\\
+        (a)
+        \end{tabular}
+    \end{minipage}
+%\hfill
+    \begin{minipage}{0.6\textwidth}
+        \begin{tabular}{c}
+       % \Pic[0.3]{NED30_dem.jpg}\\
+	\includegraphics[width=8cm,height=9cm,keepaspectratio]{figs/cloud_mammoth.jpg}\\
+        (b)
+        \end{tabular}
+    \end{minipage} 
+\caption{a) The probability that flow will exceed 0.5 m  Method 1 versus Method 2 for Galeras Volcano, Colombia
+(b) The probability that flow will exceed 0.5 m Method 1 versus Method 2 for Mammoth Mountain, CA }
+\label{fig5}  
+\end{figure}
+
+\begin{figure}[H]
+    \begin{minipage}[b]{0.6\textwidth}
+        \begin{tabular}{c}
+       % \Pic[0.3]{SRTM30_dem.jpg}\\
+       \includegraphics[width=8cm,height=9cm,keepaspectratio]{figs/cloud_Galeras_low.jpg}\\
+        (a)
+        \end{tabular}
+    \end{minipage}
+%\hfill
+    \begin{minipage}{0.6\textwidth}
+        \begin{tabular}{c}
+       % \Pic[0.3]{NED30_dem.jpg}\\
+	\includegraphics[width=8cm,height=9cm,keepaspectratio]{figs/cloud_Mammoth_low.jpg}\\
+        (b)
+        \end{tabular}
+    \end{minipage} 
+        \begin{minipage}[b]{0.6\textwidth}
+        \begin{tabular}{c}
+       % \Pic[0.3]{SRTM30_dem.jpg}\\
+       \includegraphics[width=8cm,height=9cm,keepaspectratio]{figs/cloud_Galeras_high.jpg}\\
+        (c)
+        \end{tabular}
+    \end{minipage}
+%\hfill
+    \begin{minipage}{0.6\textwidth}
+        \begin{tabular}{c}
+       % \Pic[0.3]{NED30_dem.jpg}\\
+	\includegraphics[width=8cm,height=9cm,keepaspectratio]{figs/cloud_Mammoth_high.jpg}\\
+        (d)
+        \end{tabular}
+    \end{minipage}
+\caption{(a) The probability that flow will exceed 0.5 m  Method 1 versus Method 2 for: (a) Galeras Volcano, Colombia for low flow
+(b) Mammoth Mountain, CA for low flow (c) Galeras Volcano, Colombia for high flow (d) Mammoth Mountain, CA for high flow }
+\label{fig6}  
+\end{figure}
+
+\begin{figure}[H]
+      \begin{minipage}[b]{0.6\textwidth}
+        \begin{tabular}{c}
+       % \Pic[0.3]{SRTM30_dem.jpg}\\
+       \includegraphics[width=8cm,height=9cm,keepaspectratio]{figs/Galeras_Aster30_P.jpg}\\
+        (a)
+        \end{tabular}
+    \end{minipage}
+%\hfill
+    \begin{minipage}{0.6\textwidth}
+        \begin{tabular}{c}
+       % \Pic[0.3]{NED30_dem.jpg}\\
+	\includegraphics[width=8cm,height=9cm,keepaspectratio]{figs/Galeras_Aster30_sigma.jpg}\\
+        (b)
+        \end{tabular}
+    \end{minipage} 
+     \begin{minipage}[b]{0.6\textwidth}
+        \begin{tabular}{c}
+       % \Pic[0.3]{SRTM30_dem.jpg}\\
+       \includegraphics[width=8cm,height=9cm,keepaspectratio]{figs/Mammoth_Topsar30_P.jpg}\\
+        (c)
+        \end{tabular}
+    \end{minipage}
+%\hfill
+    \begin{minipage}{0.6\textwidth}
+        \begin{tabular}{c}
+       % \Pic[0.3]{NED30_dem.jpg}\\
+	\includegraphics[width=8cm,height=9cm,keepaspectratio]{figs/Mammoth_Topsar30_sigma.jpg}\\
+        (d)
+        \end{tabular}
+    \end{minipage} 
+\caption{ (a) The probability that flow will exceed 0.5 m for Galeras ASTER (b) Standard deviation in the estimate that the flow will
+ exceed 0.5 m in depth for Galeras ASTER
+  (c) The probability that flow will exceed 0.5 m for Mammoth TOPSAR (d) Standard deviation in the estimate that the flow will
+ exceed 0.5 m in depth for Mammoth TOPSAR}
+\label{fig7}  
+\end{figure}
+
+\begin{figure}[H]
+      \begin{minipage}[b]{0.6\textwidth}
+        \begin{tabular}{c}
+       % \Pic[0.3]{SRTM30_dem.jpg}\\
+       \includegraphics[width=8cm,height=9cm,keepaspectratio]{figs/Galeras0_minus_Aster30.jpg}\\
+        (a)
+        \end{tabular}
+    \end{minipage}
+%\hfill
+    \begin{minipage}{0.6\textwidth}
+        \begin{tabular}{c}
+       % \Pic[0.3]{NED30_dem.jpg}\\
+	\includegraphics[width=8cm,height=9cm,keepaspectratio]{figs/Galeras3_minus_Aster30.jpg}\\
+        (b)
+        \end{tabular}
+    \end{minipage} 
+    \begin{minipage}[b]{0.6\textwidth}
+        \begin{tabular}{c}
+       % \Pic[0.3]{SRTM30_dem.jpg}\\
+       \includegraphics[width=8cm,height=9cm,keepaspectratio]{figs/Mammoth0_minus_Topsar30.jpg}\\
+        (c)
+        \end{tabular}
+    \end{minipage}
+%\hfill
+    \begin{minipage}{0.6\textwidth}
+        \begin{tabular}{c}
+       % \Pic[0.3]{NED30_dem.jpg}\\
+	\includegraphics[width=8cm,height=9cm,keepaspectratio]{figs/Mammoth3_minus_Topsar30.jpg}\\
+        (d)
+        \end{tabular}
+    \end{minipage} 
+\caption{ Probability difference map (absolute value) between:  (a) Mammoth TOPSAR hazard map and the Method 1 hazard map 
+(b) Mammoth TOPSAR hazard map and the Method 2 hazard map (c) Galeras ASTER hazard map and the Method 1 hazard map 
+(d) Galeras ASTER hazard map and the Method 2 hazard map}
+\label{fig8}  
+\end{figure}
+
+\begin{figure}[H]
+      \begin{minipage}[b]{0.6\textwidth}
+        \begin{tabular}{c}
+       % \Pic[0.3]{SRTM30_dem.jpg}\\
+       \includegraphics[width=8cm,height=9cm,keepaspectratio]{figs/Galeras_Aster_vs_meth0.jpg}\\
+        (a)
+        \end{tabular}
+    \end{minipage}
+%\hfill
+    \begin{minipage}{0.6\textwidth}
+        \begin{tabular}{c}
+       % \Pic[0.3]{NED30_dem.jpg}\\
+	\includegraphics[width=8cm,height=9cm,keepaspectratio]{figs/Galeras_Aster_vs_meth3.jpg}\\
+        (b)
+        \end{tabular}
+    \end{minipage} 
+    \begin{minipage}[b]{0.6\textwidth}
+        \begin{tabular}{c}
+       % \Pic[0.3]{SRTM30_dem.jpg}\\
+       \includegraphics[width=8cm,height=9cm,keepaspectratio]{figs/Mammoth_Topsar_vs_meth0.jpg}\\
+        (c)
+        \end{tabular}
+    \end{minipage}
+%\hfill
+    \begin{minipage}{0.6\textwidth}
+        \begin{tabular}{c}
+       % \Pic[0.3]{NED30_dem.jpg}\\
+	\includegraphics[width=8cm,height=9cm,keepaspectratio]{figs/Mammoth_Topsar_vs_meth3.jpg}\\
+        (d)
+        \end{tabular}
+    \end{minipage} 
+\caption{(a) The probability that flow will exceed 0.5 m for Galeras ASTER hazard map versus Method 1
+(b) The probability that flow will exceed 0.5 m for Galeras ASTER hazard map versus Method 2 
+(c) The probability that flow will exceed 0.5 m  Mammoth TOPSAR hazard map versus Method 1
+(d) The probability that flow will exceed 0.5 m  Mammoth TOPSAR hazard map versus Method 2 }
+\label{fig9}  
+\end{figure}
+
+\end{document}

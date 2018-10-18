@@ -1,0 +1,47 @@
+This is BibTeX, Version 0.99c (TeX Live 2009)
+The top-level auxiliary file: iemss.aux
+The style file: iemss.bst
+Database file #1: iemss.bib
+Warning--I didn't find a database entry for "churchman:itor"
+You've used 2 entries,
+            2747 wiz_defined-function locations,
+            603 strings with 4914 characters,
+and the built_in function-call counts, 1026 in all, are:
+= -- 104
+> -- 40
+< -- 3
++ -- 18
+- -- 12
+* -- 69
+:= -- 170
+add.period$ -- 6
+call.type$ -- 2
+change.case$ -- 12
+chr.to.int$ -- 2
+cite$ -- 2
+duplicate$ -- 44
+empty$ -- 76
+format.name$ -- 18
+if$ -- 220
+int.to.chr$ -- 1
+int.to.str$ -- 1
+missing$ -- 2
+newline$ -- 14
+num.names$ -- 8
+pop$ -- 13
+preamble$ -- 1
+purify$ -- 10
+quote$ -- 0
+skip$ -- 44
+stack$ -- 0
+substring$ -- 61
+swap$ -- 12
+text.length$ -- 1
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 22
+warning$ -- 0
+while$ -- 9
+width$ -- 0
+write$ -- 29
+(There was 1 warning)

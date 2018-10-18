@@ -1,0 +1,52 @@
+This is BibTeX, Version 0.99d (TeX Live 2012)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: paper_DEM_draft2MIB.aux
+The style file: plainnat.bst
+Database file #1: mybib.bib
+I was expecting a `,' or a `}'---line 422 of file mybib.bib
+ : 
+ : @Article{ Sacks1989,
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You've used 36 entries,
+            2773 wiz_defined-function locations,
+            843 strings with 11784 characters,
+and the built_in function-call counts, 18700 in all, are:
+= -- 1627
+> -- 1219
+< -- 21
++ -- 412
+- -- 375
+* -- 1553
+:= -- 2894
+add.period$ -- 114
+call.type$ -- 36
+change.case$ -- 232
+chr.to.int$ -- 35
+cite$ -- 72
+duplicate$ -- 799
+empty$ -- 1425
+format.name$ -- 427
+if$ -- 3941
+int.to.chr$ -- 2
+int.to.str$ -- 1
+missing$ -- 37
+newline$ -- 194
+num.names$ -- 144
+pop$ -- 426
+preamble$ -- 1
+purify$ -- 197
+quote$ -- 0
+skip$ -- 654
+stack$ -- 0
+substring$ -- 743
+swap$ -- 98
+text.length$ -- 6
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 391
+warning$ -- 0
+while$ -- 143
+width$ -- 0
+write$ -- 481
+(There was 1 error message)

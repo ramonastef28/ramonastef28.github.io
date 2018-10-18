@@ -1,0 +1,45 @@
+This is BibTeX, Version 0.99c (TeX Live 2009)
+The top-level auxiliary file: iemss_galeras_march3010-2_res.aux
+The style file: iemss.bst
+Database file #1: iemss_1.bib.bib
+You've used 20 entries,
+            2747 wiz_defined-function locations,
+            713 strings with 8871 characters,
+and the built_in function-call counts, 10391 in all, are:
+= -- 998
+> -- 694
+< -- 11
++ -- 330
+- -- 231
+* -- 873
+:= -- 1895
+add.period$ -- 62
+call.type$ -- 20
+change.case$ -- 156
+chr.to.int$ -- 19
+cite$ -- 20
+duplicate$ -- 340
+empty$ -- 590
+format.name$ -- 265
+if$ -- 2055
+int.to.chr$ -- 2
+int.to.str$ -- 1
+missing$ -- 21
+newline$ -- 106
+num.names$ -- 80
+pop$ -- 137
+preamble$ -- 1
+purify$ -- 137
+quote$ -- 0
+skip$ -- 290
+stack$ -- 0
+substring$ -- 456
+swap$ -- 40
+text.length$ -- 3
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 215
+warning$ -- 0
+while$ -- 79
+width$ -- 0
+write$ -- 264

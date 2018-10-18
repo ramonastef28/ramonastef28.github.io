@@ -1,0 +1,248 @@
+\begin{thebibliography}{36}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Archip et~al.(2005)Archip, Rohling, Tahmasebpour, and
+  Warfield]{Archip2005}
+N.~Archip, P.~Rohling, H.~Tahmasebpour, and S.K. Warfield.
+\newblock Spectral clustering algorithms for ultrasound image segmentation.
+\newblock \emph{in: MICCAI 2005, Lecture notes in Computer Science},
+  3750:\penalty0 862--869, 2005.
+
+\bibitem[Bailey(1989)]{Bailey1989}
+R.A. Bailey.
+\newblock \emph{Geologic Map of Long Valley Caldera, Mono-Inyo Craters Volcanic
+  Chain and Vicinity, Eastern California}.
+\newblock Department of the Interior, Reston, VA (US), 1989.
+
+\bibitem[Burrough et~al.(2000)Burrough, van Gaans, and McMillan]{Burrough2000}
+P.A. Burrough, P.F.M. van Gaans, and R.A. McMillan.
+\newblock High-resolution landform classification using fuzzy k-means.
+\newblock \emph{Fuzzy Sets and Systems}, 113:\penalty0 37--52, 2000.
+
+\bibitem[Bursik et~al.(2005)Bursik, Patra, Pitman, Nichita, Macias, Saucedo,
+  and Girina]{BuPaPi05}
+M.~Bursik, A.~Patra, E.~B. Pitman, C.~Nichita, J.~L. Macias, R.~Saucedo, and
+  O.~Girina.
+\newblock Advances in studies of dense volcanic granular flows.
+\newblock \emph{Reports on Progress in Physics}, 68:\penalty0 271--301, 2005.
+\newblock doi:10.1088/0034-4885/68/2/R01.
+
+\bibitem[Carleer et~al.(2005)Carleer, Debeir, and Wolff]{Carleer2005}
+A.P. Carleer, O.~Debeir, and E.~Wolff.
+\newblock Assessment of very high spatial resolution satellite image
+  segmentations.
+\newblock \emph{Photogrammetric Engineering and Remote Sensing}, pages
+  1285--1294, 2005.
+
+\bibitem[Chen et~al.(2011)Chen, Song, Bai, Lin, and Chang]{Chen2011}
+W.Y. Chen, Y.~Song, H.~Bai, C.J. Lin, and E.Y. Chang.
+\newblock Parallel spectral clustering in distributed systems.
+\newblock \emph{IEEE Transactions on Pattern Analysis and Machine
+  Intelligence}, 33 (3):\penalty0 568--586, 2011.
+
+\bibitem[Chung(1997)]{Chung1997}
+F.R.K Chung.
+\newblock Spectral graph theory.
+\newblock \emph{CBMS Regional Conference Series in Mathematics, American
+  Mathematical Society}, 92, 1997.
+
+\bibitem[Dalbey(2009)]{dalbeythesis}
+K.~Dalbey.
+\newblock Predictive simulation and model based hazard maps of geophysical mass
+  flows.
+\newblock \emph{PhD thesis, Department of Mechanical and Aerospace Engineering,
+  University at Buffalo}, 2009.
+
+\bibitem[Dalbey et~al.(2008)Dalbey, Patra, Pitman, Bursik, and Sheridan]{Keith}
+K.~Dalbey, A.K. Patra, E.B. Pitman, M.I. Bursik, and M.F. Sheridan.
+\newblock Input uncertainty propagation methods and hazard mapping of
+  geophysical mass flow.
+\newblock \emph{Journal of Geophysical Research}, 113:\penalty0 5203--5219,
+  2008.
+\newblock doi:10.1029/2006JB004471.
+
+\bibitem[Dhillon et~al.(2007)Dhillon, Guan, and Kulis]{Dhillon2007}
+I.S. Dhillon, P.~Guan, and B.~Kulis.
+\newblock Weighted graph cuts without eigenvectors: {A} multilevel approach.
+\newblock \emph{IEEE Transactions on Pattern Analysis and Machine
+  Intelligence}, 29 (11):\penalty0 1944--1957, 2007.
+
+\bibitem[Ding et~al.(2001)Ding, He, Gu, and Simon]{Ding2001}
+C.H.Q Ding, X.~He, M.~Gu, and H.D. Simon.
+\newblock A min–max cut algorithm for graph partitioning and data clustering.
+\newblock \emph{Proceedings of the IEEE International Conference on Data Mining
+  (ICDM)}, pages 107--114, 2001.
+
+\bibitem[Donath and Hofmann(1973)]{Donath1973}
+W.E. Donath and A.J. Hofmann.
+\newblock Lower bounds for the partitioning of graphs.
+\newblock \emph{IBM Journal of Research and Development}, 17:\penalty0
+  420--425, 1973.
+
+\bibitem[Ehlschlaeger and Goodchild(1994)]{Ehlschlaeger_1994}
+C.~Ehlschlaeger and M.F. Goodchild.
+\newblock Uncertainty in spatial data: Defining, visualizing, and managing data
+  errors.
+\newblock In \emph{Proceedings GIS/LIS'94}, pages 246--253, 1994.
+
+\bibitem[Fowlkes et~al.(2004)Fowlkes, Belongie, Chung, and Malik]{Fowlkes2004}
+C.~Fowlkes, F.~Belongie, F.~Chung, and J.~Malik.
+\newblock Spectral grouping using the nystrom method.
+\newblock \emph{IEEE Transactions on Pattern Analysis and Machine
+  Intelligence}, 26 (2):\penalty0 214--225, 2004.
+
+\bibitem[Goldstein(2007)]{blm1tutor}
+M.~Goldstein.
+\newblock Bayes linear methods {I} adjusting beliefs: Concepts and properties.
+\newblock \emph{Part 1 of 3 of online tutorial, website:}, 2007.
+
+\bibitem[Gunn(1997)]{Gunn1997}
+S.R. Gunn.
+\newblock Support vector machines for classification and regression.
+\newblock \emph{Technical report image speech and intelligent group Southampton
+  University}, 1997.
+
+\bibitem[Hagen and Kahng(1992)]{Hagen1992}
+L.~Hagen and A.~Kahng.
+\newblock New spectral methods for ratio cut partitioning and clustering.
+\newblock \emph{IEEE Transactions on Computer-Aided Design of Integrated
+  Circuits and Systems}, 11 (9):\penalty0 1074--1085, 1992.
+
+\bibitem[Kohn et~al.(1995)Kohn, Suk, and Bhandarkar]{Koh1995}
+J.~Kohn, M.S. Suk, and S.M. Bhandarkar.
+\newblock A multilayer self organizing feature map for range image
+  segmentation.
+\newblock \emph{Neural Networks}, 8 (1), 1995.
+
+\bibitem[Mahadevan(2008)]{Mahadevan2008}
+S.~Mahadevan.
+\newblock Fast spectral learning using {L}anczos eigenspace projections.
+\newblock \emph{in AAAI}, pages 1472--1475, 2008.
+
+\bibitem[Najman and Schmitt(1996)]{Najman1996}
+L.~Najman and M.~Schmitt.
+\newblock Geodesic saliency of watershed contours and hierarchical
+  segmentation.
+\newblock \emph{IEEE Transactions on Pattern Analysis and Machine
+  Intelligence}, 18(12):\penalty0 1163--1173, 1996.
+
+\bibitem[Ng et~al.(2002)Ng, Jordan, and Weiss]{Ng2002}
+A.~Ng, M.~Jordan, and Y.~Weiss.
+\newblock On spectral clustering: analysis and an algorithm.
+\newblock \emph{In T. Dietterich, S. Becker, and Z. Ghahramani (Eds.), Advances
+  in Neural Information Processing Systems}, 14:\penalty0 849--856, 2002.
+
+\bibitem[Patra et~al.(2013)Patra, Bursik, Dehn, Jones, Pavolonis, Pitman,
+  Singh, Singla, Stefanescu, Pouget, and Webley]{ICCS2013}
+A.~Patra, M.I. Bursik, J.~Dehn, M.~Jones, M.~Pavolonis, E.~B. Pitman, T.~Singh,
+  P.~Singla, E.R. Stefanescu, S.~Pouget, and P.~Webley.
+\newblock Challenges in {D}eveloping {DDDAS} {B}ased {M}ethodology for
+  {V}olcanic {A}sh {H}azard {A}nalysis – {E}fect of {N}umerical {W}eather
+  {P}rediction {V}ariability and {P}arameter {E}stimation.
+\newblock In \emph{submitted to International Conference on Computational
+  Science}, 2013.
+
+\bibitem[Patra et~al.(2005)Patra, Bauer, Nichita, Pitman, Sheridan, Bursik,
+  Rupp, Webber, Namikawa, and Renschler]{Patra2005}
+A.K. Patra, A.C. Bauer, C.~Nichita, E.B. Pitman, M.~F. Sheridan, M.~Bursik,
+  B.~Rupp, A.~Webber, L.~Namikawa, and C.~Renschler.
+\newblock Parallel adaptive numerical simulation of dry avalanches over natural
+  terrain.
+\newblock \emph{Journal of Volcanology and Geothermal Research}, 139:\penalty0
+  1--21, 2005.
+
+\bibitem[Sacks et~al.(1989)Sacks, Welch, Mitchell, and Wynn]{Sacks1989}
+J.~Sacks, W.J. Welch, T.J. Mitchell, and H.P. Wynn.
+\newblock Design and analysis of computer experiments.
+\newblock \emph{Statistical Science}, 4(4):\penalty0 409--435, 1989.
+
+\bibitem[Sakai and Imiya(2009)]{Sakai2009}
+T.~Sakai and A.~Imiya.
+\newblock Fast spectral clustering with random projection and sampling.
+\newblock \emph{Machine Learning and Data Mining in Pattern Recognition}, pages
+  372--384, 2009.
+
+\bibitem[Savage and Hutter(1989)]{Savage1989}
+S.B. Savage and K.~Hutter.
+\newblock The motion of a finite mass of granular material down a rough
+  incline.
+\newblock \emph{Journal of Fluid Mechanics}, 199:\penalty0 177--215, 1989.
+
+\bibitem[Sheridan et~al.(2005)Sheridan, Stinton, Patra, Pitman, Bauer, and
+  Nichita]{sheridan_2005}
+M.F. Sheridan, A.J. Stinton, A.~Patra, E.B. Pitman, A.~Bauer, and C.C. Nichita.
+\newblock Evaluating {TITAN2D} mass-flow model using the 1963 {L}ittle {T}ahoma
+  {P}eak avalanches, {M}ount {R}ainier, {W}ashington.
+\newblock \emph{Journal of Volcanology and Geothermal Research}, 139:\penalty0
+  275--308, 2005.
+
+\bibitem[Sheridan et~al.(2010)Sheridan, Patra, Dalbey, and
+  Hubbard]{Sheridan2010}
+M.F. Sheridan, A.K. Patra, K.~Dalbey, and B~Hubbard.
+\newblock Probabilistic digital hazard maps for avalanches and massive
+  pyroclastic flows using {TITAN2D}.
+\newblock \emph{in Groppelli G. and Viereck-Goette, L., editors, Stratigraphy
+  and Geology of Volcanic Areas , Geological Society of America Special Paper},
+  464:\penalty0 281--291, 2010.
+
+\bibitem[Shi and Malik(2000)]{ShiMalik2000}
+J.~Shi and J.~Malik.
+\newblock Normalized cuts and image segmentation.
+\newblock \emph{IEEE Transactions on Pattern Analysis and Machine
+  Intelligence}, 22 (8):\penalty0 888--905, 2000.
+
+\bibitem[Song et~al.(2008)Song, Chen, Bai, Lin, and Chang]{Song2008}
+Y.~Song, W.Y. Chen, H.~Bai, C.J. Lin, and E.Y. Chang.
+\newblock Parallel spectral clustering.
+\newblock \emph{in: Daelemans, W., Goethals, B., Morik, K. (eds.) ECML PKDD
+  2008, Part II}, 5215:\penalty0 374--389, 2008.
+
+\bibitem[Sonka et~al.(1999)Sonka, Hlavac, and Boyle]{Sonka1999}
+M.~Sonka, V.~Hlavac, and R.~Boyle.
+\newblock Image processing, analysis and machine vision.
+\newblock \emph{PWS}, 1999.
+
+\bibitem[Stefanescu et~al.(2012{\natexlab{a}})Stefanescu, Bursik, Cordoba,
+  Dalbey, Jones, Patra, Pieri, Pitman, and Sheridan]{stefanescuPRS2012}
+E.~R. Stefanescu, M.~Bursik, G.~Cordoba, K.~Dalbey, M.~D. Jones, A.~K. Patra,
+  D.~C. Pieri, E.~B. Pitman, and M.~F. Sheridan.
+\newblock Digital elevation model uncertainty and hazard analysis using a
+  geophysical flow model.
+\newblock \emph{Proceedings of the Royal Society A: Mathematical, Physical and
+  Engineering Science}, 468\penalty0 (2142):\penalty0 1543--1563,
+  2012{\natexlab{a}}.
+\newblock \doi{10.1098/rspa.2011.0711}.
+\newblock URL
+  \url{http://rspa.royalsocietypublishing.org/content/468/2142/1543.abstract}.
+
+\bibitem[Stefanescu et~al.(2012{\natexlab{b}})Stefanescu, Bursik, and
+  Patra]{stefanescu1}
+E.R. Stefanescu, M.~Bursik, and A.K. Patra.
+\newblock Effect of digital elevation model on mohr-coulomb geophysical flow
+  model output.
+\newblock \emph{Natural Hazards}, 62\penalty0 (2):\penalty0 635--656,
+  2012{\natexlab{b}}.
+\newblock \doi{10.1007/s11069-012-0103-y}.
+\newblock URL \url{http://dx.doi.org/10.1007/s11069-012-0103-y}.
+
+\bibitem[Tung et~al.(2010)Tung, Wong, and Clausi]{Tung2010}
+F.~Tung, A.~Wong, and D.A. Clausi.
+\newblock Enabling scalable spectral clustering for image segmentation.
+\newblock \emph{Pattern Recognition}, 43:\penalty0 4069--4076, 2010.
+
+\bibitem[Von~Luxburg(2007)]{vonLuxburg2007}
+U.~Von~Luxburg.
+\newblock A tutorial on spectral clustering.
+\newblock \emph{Statistics and Computing}, 17 (4):\penalty0 395--416, 2007.
+
+\bibitem[Yu and Shi(2003)]{Stella2003}
+S.X. Yu and J.~Shi.
+\newblock Multiclass spectral clustering.
+\newblock \emph{In: Proc. Internat. Conf. on Computer Vision}, pages 313--319,
+  2003.
+
+\end{thebibliography}

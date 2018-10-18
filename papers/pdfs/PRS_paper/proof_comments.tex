@@ -1,0 +1,102 @@
+% Cover letter using letter.sty
+\documentclass{letter} % Uses 10pt
+%Use \documentstyle[newcent]{letter} for New Century Schoolbook postscript font
+% the following commands control the margins:
+\topmargin=-1in    % Make letterhead start about 1 inch from top of page 
+\textheight=8in  % text height can be bigger for a longer letter
+\oddsidemargin=0pt % leftmargin is 1 inch
+\textwidth=6.5in   % textwidth of 6.5in leaves 1 inch for right margin
+
+\newcommand{\Deg}{$^{\circ}$}
+
+\begin{document}
+
+\signature{E. Ramona Stefanescu}           % name for signature 
+\longindentation=0pt                       % needed to get closing flush left
+\let\raggedleft\raggedright                % needed to get date flush left
+ 
+\begin{letter}{\\
+Author response to the queries -- RSPA20110711 }
+
+
+\begin{flushleft}
+{\large\bf E. R. Stefanescu - corresponding author}
+\end{flushleft}
+\medskip\hrule height 1pt
+%\begin{flushright}
+%\hfill 318 Jarvis Hall, Buffalo, NY 14260 \\
+%\hfill (716) 238-1179 or (716) 645-1420 
+%\end{flushright} 
+%\vfill % forces letterhead to top of page
+
+ 
+%\opening{To whom it may concern:} 
+ \begin{itemize}
+ \item Q1 - OK
+ \item Q2 -  Department of Civil Engineering, Universidad de Nari\~{n}o, Nari\~{n}o, Colombia 
+ \item Q3 - Please replace the sentences starting line 311 with: \textit{For sampling the input parameter
+space, a Latin Hypercube Sampling (LHS) was implemented. LHS is
+commonly used in computer sampling experiments McKay et al., Sacks et al., mainly because
+it is computationally cheap to generate and can cope with many input
+variables.} 
+\item Q4 -OK
+\item Q5 - TOPSAR (Topographic Synthetic Aperture Radar)
+\item Q6 - Please use: \textit{For any point in the domain, it can now be exercised like the simulator to get
+potential flows and hence exceedance probabilities.}
+\item Q7 - OK
+\item Q8 - OK
+\item Q9 - Ehlschlaeger, Ch.R., and  M.F. Goodchild, 1994.
+\textit{Uncertainty in spatial data: Defining, visualizing and 
+managing data errors}. Proceedings of GIS/LIS, Phoenix,
+Arizona. pp. 246-53. \\
+
+Stefanescu, E.R. and Bursik, M.I. and Cordoba, G. and Patra, A. , Pieri, D.C. and  M.F. Sheridan, 2010. \textit{Impact of DEM uncertainty on TITAN2D flow model output, Galeras Volcano, Colombia}. Proceedings of International Congress on Environmental Modelling and Software. International Environmental Modelling and Software Society (iEMSs), Ottawa, Canada. \\
+
+Stefanescu, E.R., Bursik, M.I., Dalbey, K., Jones, M.D., Patra, A.K. and E.B. Pitman, 2010. \textit{DEM uncertainty and hazard analysis using a geophysical flow model}. Proceedings of International Congress on Environmental Modelling and Software. International Environmental Modelling and Software Society (iEMSs), Ottawa, Canada. \\
+
+\item Q10 - Ehlschlaeger, Ch.R. and A. Shortridge, 1996.
+\textit{Modeling elevation uncertainty in geographical analysis}
+Proc. Spatial Data Handling '96, Delft, The Netherlands, v. 2 (1996), pp. 9B.15Ð9B.2 \\
+
+Heuvelink, G.B.M., Burrough, P.A., and A. Stein, 1989. \textit{Propagation of errors in spatial modelling 
+with GIS}. Int. J. Geogr.Inf. Syst. 3, 303Ð32 
+
+\item Q11 - M. Goldstein, 1995. \textit{Bayes linear methods I - Adjusting beliefs: concepts and properties}. Technical Report 1995/1, Department of Mathematical Sciences, University of Durham. \\
+
+Sheridan, M.F., Patra, A.K., Dalbey, K. and B., Hubbard, 2010. \textit{Probabilistic digital hazard maps for avalanches and massive pyroclastic flows using TITAN2D}. Geological Society of America Special Papers, 464, p. 281-291\\
+
+Weng, Q., 2002. Quantifying uncertainty of digital elevation models
+derived from topographic maps, Advances in Spatial Data
+Handling (D. Richardson and P. van Oosterom, editors),
+Springer-Verlag, New York, New York, p. 403Ð418
+
+\item Q12 - OK
+
+\item Q13 - Stefanescu, E.R., Bursik, M. and A.K., Patra, 2012. \textit{Effect of digital elevation model on Mohr-Coulomb geophysical flow model output}, Natural Hazards, doi:10.1007/s11069-012-0103-y
+
+\item Q14 - Please remove
+
+\item SQ1 - OK \\
+
+\item Line 310: Change to \textit{One working hypothesis}
+\item Line 393: \textit{... use of a hierarchical emulator}.
+ \item Line 579:  Change to \textit{30\Deg and 35\Deg}.
+ \item Line 680: Change to \textit{TITAN2D}.
+ \item Line 772: Change from Mountain Mountain to \textit{Mammoth Mountain}.
+ \item Line 780: Change to \textit{In previous work ... footprint}
+ \item Line 1012: Change to reference to: \\
+ Hildreth, W. 2004, \textit{Volcanological perspectives on Long Valley, Mammoth Mountain, and Mono Craters: Several contiguous but discrete systems}, J. Volcanol. Geotherm. Res., 136,169 Ð 198.
+ \end{itemize}
+
+%\encl{}  				% Enclosures
+
+\end{letter}
+ 
+
+\end{document}
+
+
+
+
+
+

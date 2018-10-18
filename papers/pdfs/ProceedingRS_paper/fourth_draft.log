@@ -1,0 +1,715 @@
+This is pdfTeX, Version 3.1415926-1.40.11 (TeX Live 2010) (format=pdflatex 2010.7.21)  28 APR 2011 00:17
+entering extended mode
+ \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**fourth_draft.tex
+(./fourth_draft.tex
+LaTeX2e <2009/09/24>
+Babel <v3.8l> and hyphenation patterns for english, dumylang, nohyphenation, ge
+rman-x-2009-06-19, ngerman-x-2009-06-19, ancientgreek, ibycus, arabic, armenian
+, basque, bulgarian, catalan, pinyin, coptic, croatian, czech, danish, dutch, u
+kenglish, usenglishmax, esperanto, estonian, farsi, finnish, french, galician, 
+german, ngerman, swissgerman, monogreek, greek, hungarian, icelandic, assamese,
+ bengali, gujarati, hindi, kannada, malayalam, marathi, oriya, panjabi, tamil, 
+telugu, indonesian, interlingua, irish, italian, kurmanji, lao, latin, latvian,
+ lithuanian, mongolian, mongolianlmc, bokmal, nynorsk, polish, portuguese, roma
+nian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, turkish,
+ turkmen, ukrainian, uppersorbian, welsh, loaded.
+(/usr/local/texlive/2010/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
+(/usr/local/texlive/2010/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/local/texlive/2010/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2010/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+(/usr/local/texlive/2010/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2010/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/usr/local/texlive/2010/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+
+(/usr/local/texlive/2010/texmf-dist/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2010/02/14 v0.04n Graphics/color for pdfTeX
+\Gread@gobject=\count87
+))
+\Gin@req@height=\dimen103
+\Gin@req@width=\dimen104
+)
+(/usr/local/texlive/2010/texmf-dist/tex/latex/multirow/multirow.sty
+\bigstrutjot=\dimen105
+)
+(/usr/local/texlive/2010/texmf-dist/tex/latex/preprint/authblk.sty
+Package: authblk 2009/11/18 1.3 (PWD)
+\affilsep=\skip43
+\@affilsep=\skip44
+\c@Maxaffil=\count88
+\c@authors=\count89
+\c@affil=\count90
+)
+(/usr/local/texlive/2010/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count91
+\float@exts=\toks15
+\float@box=\box26
+\@float@everytoks=\toks16
+\@floatcapt=\box27
+)
+(/usr/local/texlive/2010/texmf-dist/tex/latex/rotating/rotating.sty
+Package: rotating 2009/03/28 v2.16a rotated objects in LaTeX
+
+(/usr/local/texlive/2010/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
+)
+\c@r@tfl@t=\count92
+\rotFPtop=\skip45
+\rotFPbot=\skip46
+\rot@float@box=\box28
+\rot@mess@toks=\toks17
+)
+(/usr/local/texlive/2010/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip10
+Package: url 2006/04/12  ver 3.3  Verb mode for urls, etc.
+)
+(/usr/local/texlive/2010/texmf-dist/tex/latex/graphics/lscape.sty
+Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
+)
+(/usr/local/texlive/2010/texmf-dist/tex/latex/tools/longtable.sty
+Package: longtable 2004/02/01 v4.11 Multi-page Table package (DPC)
+\LTleft=\skip47
+\LTright=\skip48
+\LTpre=\skip49
+\LTpost=\skip50
+\LTchunksize=\count93
+\LTcapwidth=\dimen106
+\LT@head=\box29
+\LT@firsthead=\box30
+\LT@foot=\box31
+\LT@lastfoot=\box32
+\LT@cols=\count94
+\LT@rows=\count95
+\c@LT@tables=\count96
+\c@LT@chunks=\count97
+\LT@p@ftn=\toks18
+)
+(/usr/local/texlive/2010/texmf-dist/tex/latex/subfig/subfig.sty
+Package: subfig 2005/06/28 ver: 1.3 subfig package
+
+(/usr/local/texlive/2010/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2010/01/09 v3.1m Customizing captions (AR)
+
+(/usr/local/texlive/2010/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2010/01/14 v3.1m caption3 kernel (AR)
+\captionmargin=\dimen107
+\captionmargin@=\dimen108
+\captionwidth=\dimen109
+\caption@indent=\dimen110
+\caption@parindent=\dimen111
+\caption@hangindent=\dimen112
+)
+\c@ContinuedFloat=\count98
+Package caption Info: float package is loaded.
+Package caption Info: longtable package is loaded.
+
+(/usr/local/texlive/2010/texmf-dist/tex/latex/caption/ltcaption.sty
+Package: ltcaption 2008/03/28 v1.2 longtable captions (AR)
+)
+Package caption Info: rotating package is loaded.
+)
+\c@KVtest=\count99
+\sf@farskip=\skip51
+\sf@captopadj=\dimen113
+\sf@capskip=\skip52
+\sf@nearskip=\skip53
+\c@subfigure=\count100
+\c@subfigure@save=\count101
+\c@lofdepth=\count102
+\c@subtable=\count103
+\c@subtable@save=\count104
+\c@lotdepth=\count105
+\sf@top=\skip54
+\sf@bottom=\skip55
+)
+(/usr/local/texlive/2010/texmf-dist/tex/latex/natbib/natbib.sty
+Package: natbib 2009/11/07 8.31a (PWD, AO)
+\bibhang=\skip56
+\bibsep=\skip57
+LaTeX Info: Redefining \cite on input line 694.
+\c@NAT@ctr=\count106
+)
+(/usr/local/texlive/2010/texmf-dist/tex/latex/lineno/lineno.sty
+Package: lineno 2005/11/02 line numbers on paragraphs v4.41
+\linenopenalty=\count107
+\output=\toks19
+\linenoprevgraf=\count108
+\linenumbersep=\dimen114
+\linenumberwidth=\dimen115
+\c@linenumber=\count109
+\c@pagewiselinenumber=\count110
+\c@LN@truepage=\count111
+\c@internallinenumber=\count112
+\c@internallinenumbers=\count113
+\quotelinenumbersep=\dimen116
+\bframerule=\dimen117
+\bframesep=\dimen118
+\bframebox=\box33
+LaTeX Info: Redefining \\ on input line 3056.
+)
+(/usr/local/texlive/2010/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2000/07/18 v2.13 AMS math features
+\@mathmargin=\skip58
+
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2010/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01
+
+(/usr/local/texlive/2010/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks20
+\ex@=\dimen119
+))
+(/usr/local/texlive/2010/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen120
+)
+(/usr/local/texlive/2010/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count114
+LaTeX Info: Redefining \frac on input line 211.
+\uproot@=\count115
+\leftroot@=\count116
+LaTeX Info: Redefining \overline on input line 307.
+\classnum@=\count117
+\DOTSCASE@=\count118
+LaTeX Info: Redefining \ldots on input line 379.
+LaTeX Info: Redefining \dots on input line 382.
+LaTeX Info: Redefining \cdots on input line 467.
+\Mathstrutbox@=\box34
+\strutbox@=\box35
+\big@size=\dimen121
+LaTeX Font Info:    Redeclaring font encoding OML on input line 567.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
+\macc@depth=\count119
+\c@MaxMatrixCols=\count120
+\dotsspace@=\muskip11
+\c@parentequation=\count121
+\dspbrk@lvl=\count122
+\tag@help=\toks21
+\row@=\count123
+\column@=\count124
+\maxfields@=\count125
+\andhelp@=\toks22
+\eqnshift@=\dimen122
+\alignsep@=\dimen123
+\tagshift@=\dimen124
+\tagwidth@=\dimen125
+\totwidth@=\dimen126
+\lineht@=\dimen127
+\@envbody=\toks23
+\multlinegap=\skip59
+\multlinetaggap=\skip60
+\mathdisplay@stack=\toks24
+LaTeX Info: Redefining \[ on input line 2666.
+LaTeX Info: Redefining \] on input line 2667.
+)
+(/usr/local/texlive/2010/texmf-dist/tex/latex/graphics/epsfig.sty
+Package: epsfig 1999/02/16 v1.7a (e)psfig emulation (SPQR)
+\epsfxsize=\dimen128
+\epsfysize=\dimen129
+)
+(/usr/local/texlive/2010/texmf-dist/tex/latex/base/latexsym.sty
+Package: latexsym 1998/08/17 v2.2e Standard LaTeX package (lasy symbols)
+\symlasy=\mathgroup4
+LaTeX Font Info:    Overwriting symbol font `lasy' in version `bold'
+(Font)                  U/lasy/m/n --> U/lasy/b/n on input line 47.
+)
+(./fourth_draft.aux)
+\openout1 = `fourth_draft.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
+
+(/usr/local/texlive/2010/texmf-dist/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count126
+\scratchdimen=\dimen130
+\scratchbox=\box36
+\nofMPsegments=\count127
+\nofMParguments=\count128
+\everyMPshowfont=\toks25
+\MPscratchCnt=\count129
+\MPscratchDim=\dimen131
+\MPnumerator=\count130
+\everyMPtoPDFconversion=\toks26
+) (/usr/local/texlive/2010/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2010/04/01 v0.9 Utility functions of pdfTeX for LuaTeX (HO)
+
+
+(/usr/local/texlive/2010/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/message (HO)
+)
+(/usr/local/texlive/2010/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+(/usr/local/texlive/2010/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2010/04/26 v1.7 LaTeX kernel commands for general use (HO)
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+)
+(/usr/local/texlive/2010/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+(/usr/local/texlive/2010/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2007/09/30 v1.0 Managing graphics extensions (HO)
+)
+(/usr/local/texlive/2010/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2010/02/22 v3.7 Keyval support for LaTeX options (HO)
+
+(/usr/local/texlive/2010/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2010/03/01 v1.9 Key value parser (HO)
+
+(/usr/local/texlive/2010/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2010/01/28 v1.3 Prefix for e-TeX command names (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 436.
+
+(/usr/local/texlive/2010/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+Package caption Info: Begin \AtBeginDocument code.
+Package caption3 Info: subfig package 1.2 or 1.3 is loaded.
+LaTeX Info: Redefining \subref on input line 72.
+Package caption Info: End \AtBeginDocument code.
+LaTeX Font Info:    Try loading font information for U+lasy on input line 74.
+
+(/usr/local/texlive/2010/texmf-dist/tex/latex/base/ulasy.fd
+File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
+) [1
+
+{/usr/local/texlive/2010/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] [3]
+ [4] [5]
+[6]
+
+LaTeX Warning: Reference `Parameters' on page 7 undefined on input line 439.
+
+[7] [8] [9] [10] [11] [12] [13] [14] (./fourth_draft.bbl [15] [16]
+Missing character: There is no â in font cmti10!
+Missing character: There is no € in font cmti10!
+Missing character: There is no ™ in font cmti10!
+ [17]
+[18]) <figs/mammoth_error_correl.jpg, id=77, 562.1pt x 421.575pt>
+File: figs/mammoth_error_correl.jpg Graphic file (type jpg)
+
+<use figs/mammoth_error_correl.jpg> [19]
+<figs/Aster_galeras.jpg, id=82, 562.1pt x 421.575pt>
+File: figs/Aster_galeras.jpg Graphic file (type jpg)
+
+<use figs/Aster_galeras.jpg>
+Overfull \hbox (32.62141pt too wide) in paragraph at lines 849--854
+[][] 
+ []
+
+<figs/topsar30m.jpg, id=83, 562.1pt x 421.575pt>
+File: figs/topsar30m.jpg Graphic file (type jpg)
+ <use figs/topsar30m.jpg>
+Overfull \hbox (32.62141pt too wide) in paragraph at lines 857--862
+[][] 
+ []
+
+<figs/GalerasAsterCut_correlogram_line.jpg, id=84, 562.1pt x 421.575pt>
+File: figs/GalerasAsterCut_correlogram_line.jpg Graphic file (type jpg)
+
+<use figs/GalerasAsterCut_correlogram_line.jpg>
+Overfull \hbox (32.62141pt too wide) in paragraph at lines 864--869
+[][] 
+ []
+
+<figs/Mammoth30Cut_correlogram_line.jpg, id=85, 562.1pt x 421.575pt>
+File: figs/Mammoth30Cut_correlogram_line.jpg Graphic file (type jpg)
+
+<use figs/Mammoth30Cut_correlogram_line.jpg>
+Overfull \hbox (32.62141pt too wide) in paragraph at lines 872--877
+[][] 
+ []
+
+
+Overfull \hbox (71.22643pt too wide) in paragraph at lines 848--878
+[][] $[]$
+ []
+
+
+Overfull \hbox (71.22643pt too wide) in paragraph at lines 848--878
+[] $[]$ 
+ []
+
+[20 <./figs/mammoth_error_correl.jpg>]
+<figs/Galeras_0_P_5m.jpg, id=89, 562.1pt x 421.575pt>
+File: figs/Galeras_0_P_5m.jpg Graphic file (type jpg)
+
+<use figs/Galeras_0_P_5m.jpg>
+Overfull \hbox (32.62141pt too wide) in paragraph at lines 887--892
+[][] 
+ []
+
+<figs/Galeras_0_sigma_5m.jpg, id=90, 562.1pt x 421.575pt>
+File: figs/Galeras_0_sigma_5m.jpg Graphic file (type jpg)
+
+<use figs/Galeras_0_sigma_5m.jpg>
+Overfull \hbox (32.62141pt too wide) in paragraph at lines 895--900
+[][] 
+ []
+
+<figs/Galeras_3_P_5m.jpg, id=91, 562.1pt x 421.575pt>
+File: figs/Galeras_3_P_5m.jpg Graphic file (type jpg)
+
+<use figs/Galeras_3_P_5m.jpg>
+Overfull \hbox (32.62141pt too wide) in paragraph at lines 902--907
+[][] 
+ []
+
+<figs/Galeras_3_sigma_5m.jpg, id=92, 562.1pt x 421.575pt>
+File: figs/Galeras_3_sigma_5m.jpg Graphic file (type jpg)
+
+<use figs/Galeras_3_sigma_5m.jpg>
+Overfull \hbox (32.62141pt too wide) in paragraph at lines 910--915
+[][] 
+ []
+
+
+Overfull \hbox (71.22643pt too wide) in paragraph at lines 886--917
+[][] $[]$
+ []
+
+
+Overfull \hbox (71.22643pt too wide) in paragraph at lines 886--917
+[] $[]$ 
+ []
+
+[21 <./figs/Aster_galeras.jpg> <./figs/topsar30m.jpg> <./figs/GalerasAsterCut_c
+orrelogram_line.jpg> <./figs/Mammoth30Cut_correlogram_line.jpg>]
+<figs/Mammoth_0_P_5m.jpg, id=96, 562.1pt x 421.575pt>
+File: figs/Mammoth_0_P_5m.jpg Graphic file (type jpg)
+
+<use figs/Mammoth_0_P_5m.jpg>
+Overfull \hbox (32.62141pt too wide) in paragraph at lines 923--928
+[][] 
+ []
+
+<figs/Mammoth_0_sigma_5m.jpg, id=97, 562.1pt x 421.575pt>
+File: figs/Mammoth_0_sigma_5m.jpg Graphic file (type jpg)
+
+<use figs/Mammoth_0_sigma_5m.jpg>
+Overfull \hbox (32.62141pt too wide) in paragraph at lines 931--936
+[][] 
+ []
+
+<figs/Mammoth_3_P_5m.jpg, id=98, 562.1pt x 421.575pt>
+File: figs/Mammoth_3_P_5m.jpg Graphic file (type jpg)
+
+<use figs/Mammoth_3_P_5m.jpg>
+Overfull \hbox (32.62141pt too wide) in paragraph at lines 938--943
+[][] 
+ []
+
+<figs/Mammoth_3_sigma_5m.jpg, id=99, 562.1pt x 421.575pt>
+File: figs/Mammoth_3_sigma_5m.jpg Graphic file (type jpg)
+
+<use figs/Mammoth_3_sigma_5m.jpg>
+Overfull \hbox (32.62141pt too wide) in paragraph at lines 946--951
+[][] 
+ []
+
+
+Overfull \hbox (71.22643pt too wide) in paragraph at lines 922--954
+[][] $[]$
+ []
+
+
+Overfull \hbox (71.22643pt too wide) in paragraph at lines 922--954
+[] $[]$ 
+ []
+
+[22 <./figs/Galeras_0_P_5m.jpg> <./figs/Galeras_0_sigma_5m.jpg> <./figs/Galeras
+_3_P_5m.jpg> <./figs/Galeras_3_sigma_5m.jpg>]
+<figs/cloud_galeras.jpg, id=103, 562.1pt x 421.575pt>
+File: figs/cloud_galeras.jpg Graphic file (type jpg)
+
+<use figs/cloud_galeras.jpg>
+Overfull \hbox (32.62141pt too wide) in paragraph at lines 960--965
+[][] 
+ []
+
+<figs/cloud_mammoth.jpg, id=104, 562.1pt x 421.575pt>
+File: figs/cloud_mammoth.jpg Graphic file (type jpg)
+
+<use figs/cloud_mammoth.jpg>
+Overfull \hbox (32.62141pt too wide) in paragraph at lines 968--973
+[][] 
+ []
+
+
+Overfull \hbox (71.22643pt too wide) in paragraph at lines 959--975
+[][] $[]$ 
+ []
+
+[23 <./figs/Mammoth_0_P_5m.jpg> <./figs/Mammoth_0_sigma_5m.jpg> <./figs/Mammoth
+_3_P_5m.jpg> <./figs/Mammoth_3_sigma_5m.jpg>]
+<figs/cloud_Galeras_low.jpg, id=108, 562.1pt x 421.575pt>
+File: figs/cloud_Galeras_low.jpg Graphic file (type jpg)
+
+<use figs/cloud_Galeras_low.jpg>
+Overfull \hbox (32.62141pt too wide) in paragraph at lines 981--986
+[][] 
+ []
+
+<figs/cloud_Mammoth_low.jpg, id=109, 562.1pt x 421.575pt>
+File: figs/cloud_Mammoth_low.jpg Graphic file (type jpg)
+
+<use figs/cloud_Mammoth_low.jpg>
+Overfull \hbox (32.62141pt too wide) in paragraph at lines 989--994
+[][] 
+ []
+
+<figs/cloud_Galeras_high.jpg, id=110, 562.1pt x 421.575pt>
+File: figs/cloud_Galeras_high.jpg Graphic file (type jpg)
+
+<use figs/cloud_Galeras_high.jpg>
+Overfull \hbox (32.62141pt too wide) in paragraph at lines 996--1001
+[][] 
+ []
+
+<figs/cloud_Mammoth_high.jpg, id=111, 562.1pt x 421.575pt>
+File: figs/cloud_Mammoth_high.jpg Graphic file (type jpg)
+
+<use figs/cloud_Mammoth_high.jpg>
+Overfull \hbox (32.62141pt too wide) in paragraph at lines 1004--1009
+[][] 
+ []
+
+
+Overfull \hbox (71.22643pt too wide) in paragraph at lines 980--1011
+[][] $[]$
+ []
+
+
+Overfull \hbox (71.22643pt too wide) in paragraph at lines 980--1011
+[] $[]$ 
+ []
+
+[24 <./figs/cloud_galeras.jpg> <./figs/cloud_mammoth.jpg>]
+<figs/Galeras_Aster30_P.jpg, id=115, 562.1pt x 421.575pt>
+File: figs/Galeras_Aster30_P.jpg Graphic file (type jpg)
+
+<use figs/Galeras_Aster30_P.jpg>
+Overfull \hbox (32.62141pt too wide) in paragraph at lines 1017--1022
+[][] 
+ []
+
+<figs/Galeras_Aster30_sigma.jpg, id=116, 564.1075pt x 421.575pt>
+File: figs/Galeras_Aster30_sigma.jpg Graphic file (type jpg)
+
+<use figs/Galeras_Aster30_sigma.jpg>
+Overfull \hbox (32.61662pt too wide) in paragraph at lines 1025--1030
+[][] 
+ []
+
+<figs/Mammoth_Topsar30_P.jpg, id=117, 562.1pt x 421.575pt>
+File: figs/Mammoth_Topsar30_P.jpg Graphic file (type jpg)
+
+<use figs/Mammoth_Topsar30_P.jpg>
+Overfull \hbox (32.62141pt too wide) in paragraph at lines 1032--1037
+[][] 
+ []
+
+<figs/Mammoth_Topsar30_sigma.jpg, id=118, 562.1pt x 421.575pt>
+File: figs/Mammoth_Topsar30_sigma.jpg Graphic file (type jpg)
+
+<use figs/Mammoth_Topsar30_sigma.jpg>
+Overfull \hbox (32.62141pt too wide) in paragraph at lines 1040--1045
+[][] 
+ []
+
+
+Overfull \hbox (71.22643pt too wide) in paragraph at lines 1016--1049
+[][] $[]$
+ []
+
+
+Overfull \hbox (71.22643pt too wide) in paragraph at lines 1016--1049
+[] $[]$ 
+ []
+
+[25 <./figs/cloud_Galeras_low.jpg> <./figs/cloud_Mammoth_low.jpg> <./figs/cloud
+_Galeras_high.jpg> <./figs/cloud_Mammoth_high.jpg>]
+<figs/Galeras0_minus_Aster30.jpg, id=123, 562.1pt x 421.575pt>
+File: figs/Galeras0_minus_Aster30.jpg Graphic file (type jpg)
+
+<use figs/Galeras0_minus_Aster30.jpg>
+Overfull \hbox (32.62141pt too wide) in paragraph at lines 1055--1060
+[][] 
+ []
+
+<figs/Galeras3_minus_Aster30.jpg, id=124, 562.1pt x 421.575pt>
+File: figs/Galeras3_minus_Aster30.jpg Graphic file (type jpg)
+
+<use figs/Galeras3_minus_Aster30.jpg>
+Overfull \hbox (32.62141pt too wide) in paragraph at lines 1063--1068
+[][] 
+ []
+
+<figs/Mammoth0_minus_Topsar30.jpg, id=125, 562.1pt x 421.575pt>
+File: figs/Mammoth0_minus_Topsar30.jpg Graphic file (type jpg)
+
+<use figs/Mammoth0_minus_Topsar30.jpg>
+Overfull \hbox (32.62141pt too wide) in paragraph at lines 1070--1075
+[][] 
+ []
+
+<figs/Mammoth3_minus_Topsar30.jpg, id=126, 562.1pt x 421.575pt>
+File: figs/Mammoth3_minus_Topsar30.jpg Graphic file (type jpg)
+
+<use figs/Mammoth3_minus_Topsar30.jpg>
+Overfull \hbox (32.62141pt too wide) in paragraph at lines 1078--1083
+[][] 
+ []
+
+
+Overfull \hbox (71.22643pt too wide) in paragraph at lines 1054--1086
+[][] $[]$
+ []
+
+
+Overfull \hbox (71.22643pt too wide) in paragraph at lines 1054--1086
+[] $[]$ 
+ []
+
+[26 <./figs/Galeras_Aster30_P.jpg> <./figs/Galeras_Aster30_sigma.jpg> <./figs/M
+ammoth_Topsar30_P.jpg> <./figs/Mammoth_Topsar30_sigma.jpg>]
+<figs/Galeras_Aster_vs_meth0.jpg, id=130, 562.1pt x 421.575pt>
+File: figs/Galeras_Aster_vs_meth0.jpg Graphic file (type jpg)
+
+<use figs/Galeras_Aster_vs_meth0.jpg>
+Overfull \hbox (32.62141pt too wide) in paragraph at lines 1092--1097
+[][] 
+ []
+
+<figs/Galeras_Aster_vs_meth3.jpg, id=131, 562.1pt x 421.575pt>
+File: figs/Galeras_Aster_vs_meth3.jpg Graphic file (type jpg)
+
+<use figs/Galeras_Aster_vs_meth3.jpg>
+Overfull \hbox (32.62141pt too wide) in paragraph at lines 1100--1105
+[][] 
+ []
+
+<figs/Mammoth_Topsar_vs_meth0.jpg, id=132, 562.1pt x 421.575pt>
+File: figs/Mammoth_Topsar_vs_meth0.jpg Graphic file (type jpg)
+
+<use figs/Mammoth_Topsar_vs_meth0.jpg>
+Overfull \hbox (32.62141pt too wide) in paragraph at lines 1107--1112
+[][] 
+ []
+
+<figs/Mammoth_Topsar_vs_meth3.jpg, id=133, 562.1pt x 421.575pt>
+File: figs/Mammoth_Topsar_vs_meth3.jpg Graphic file (type jpg)
+
+<use figs/Mammoth_Topsar_vs_meth3.jpg>
+Overfull \hbox (32.62141pt too wide) in paragraph at lines 1115--1120
+[][] 
+ []
+
+
+Overfull \hbox (71.22643pt too wide) in paragraph at lines 1091--1124
+[][] $[]$
+ []
+
+
+Overfull \hbox (71.22643pt too wide) in paragraph at lines 1091--1124
+[] $[]$ 
+ []
+
+[27 <./figs/Galeras0_minus_Aster30.jpg> <./figs/Galeras3_minus_Aster30.jpg> <./
+figs/Mammoth0_minus_Topsar30.jpg> <./figs/Mammoth3_minus_Topsar30.jpg>]
+[28 <./figs/Galeras_Aster_vs_meth0.jpg> <./figs/Galeras_Aster_vs_meth3.jpg> <./
+figs/Mammoth_Topsar_vs_meth0.jpg> <./figs/Mammoth_Topsar_vs_meth3.jpg>]
+(./fourth_draft.aux)
+
+LaTeX Warning: There were undefined references.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 4340 strings out of 493747
+ 65977 string characters out of 3143546
+ 132198 words of memory out of 3000000
+ 7524 multiletter control sequences out of 15000+200000
+ 11531 words of font info for 45 fonts, out of 3000000 for 9000
+ 714 hyphenation exceptions out of 8191
+ 44i,16n,42p,717b,376s stack positions out of 5000i,500n,10000p,200000b,50000s
+</usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
+></usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
+</usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></
+usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></us
+r/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr
+/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/
+local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/lo
+cal/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/loca
+l/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/
+texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/te
+xlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texl
+ive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive
+/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/20
+10/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2010/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/local/texlive/2010/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2010/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2010/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on fourth_draft.pdf (28 pages, 1345345 bytes).
+PDF statistics:
+ 198 PDF objects out of 1000 (max. 8388607)
+ 117 compressed objects within 2 object streams
+ 0 named destinations out of 1000 (max. 500000)
+ 156 words of extra memory for PDF output out of 10000 (max. 10000000)
+
