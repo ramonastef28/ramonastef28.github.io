@@ -1,0 +1,525 @@
+\documentclass[10pt,mathserif]{beamer}
+
+\usepackage{graphicx,amsmath,amssymb,tikz,psfrag}
+%\usepackage{multimedia}
+\usepackage{color}
+%\AtBeginSection[] 
+%{ 
+%       \begin{frame}<beamer> 
+%               \frametitle{Outline} 
+%               \tableofcontents[currentsection,currentsubsection] 
+%       \end{frame} 
+%} 
+
+%% begin presentation
+
+%\title{\large \bfseries Deep Reinforcement Learning}
+
+\title{\large \bfseries Automatic Reconstruction of Textured 3D Models}
+
+\author{Ramona Stefanescu\\[3ex]
+}
+
+\date{\today}
+
+\begin{document}
+
+\frame{
+\thispagestyle{empty}
+\titlepage
+}
+
+\section{Introduction}
+
+\begin{frame}{The problem}
+\begin{itemize}
+\item How can we scan the environment's surface geometry using laser range-finders and color cameras
+\item How can we accurately express all the data in a single coordinate system
+\item How can we convert separate scans into a single surface description
+\item How can we combine the color information from the different views to reconstruct a high quality texture
+\end{itemize}
+\end{frame}
+
+\begin{frame}{System Calibration}
+\begin{itemize}
+\item A camera with lens distortions can be described by the following parameters:
+\begin{itemize}
+\item focal length
+\item principal point
+\item skew coefficient 
+\item image distortion coefficients
+\end{itemize}
+\item A basic 2D laser range finder or LiDAR consists of a 1D laser range finder rotating mirror
+deflecting the beam to different directions.
+\item The 3D coordinates of a scanned point p corresponding to a measured range $r$ in the coordinate
+frame of the 3D scanner:
+\begin{align}
+p = 
+\left\{
+	\begin{array}{ll}
+		 \cos(\theta)(\cos(\omega)*r + dx) \\
+                 \sin(\theta)(\cos(\omega)*r + dx) \\
+	         \sin(\omega)*r + dz
+         \end{array}
+\right.
+\end{align}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Extrinsic Calibration}
+\begin{itemize}
+\item We seek to find the rotation $R$ and the translation $t$ between the camera and the laser range
+finder.
+\item In photogrammetry, the function to minimize is usually the error of reprojecting a 3D point onto
+the image plane.
+\item This would require knowing the exact correspondence of a 3D lidar measurement and a 2D image point.
+\item Instead, use a planar checkerboard pattern exhibiting features visible in both sensors. 
+The shape of the same calibration pattern can also be observed by the laser range finder and one can 
+robustly establish a correspondence between camera and lidar data.
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\begin{itemize}
+\item For the region in the range image corrsponding to the calibration patern, a robust total least
+squares estimator is used to fit a plane to the set of points in 3D.
+\item The equation of a plane using a normal vector $n$ and a scalar $d$ from the origin is:
+\begin{align}
+n\cdot x - d = 0
+\end{align}
+\item where $x$ denotes a 3D point in the plane.
+\item The least square estimator results in an estimate of $n_l$ and $d_l$ in the laser coordinate 
+frame and of $n_c$ and $d_c$ in camera coordinate frame 
+\item Estimating the rigid transformation between the laser and camera frame can now be achieved by
+finding the transform that minimizes the difference in observations of the calibration plane.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Transformation between camera and lidar}
+\begin{itemize}
+\item While a distance metric for point features can be defined easily, it is not so obvious for planes.
+\item We separate the problem by estimating translation and rotation independently.
+\item The translation $t$ can be estimated by minimizing the difference in distance from the camera origin to the planes, represented in the camera coordinate system and the laser coordinate system.
+\item The rotation $R$ can be estimated by minimizing the difference in the angular difference between
+the normals of the corresponding planes.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Transformations - cont}
+\textbf{Iterative Closest Point (ICP)}
+\begin{itemize}
+\item Given two independently acquired sets of 3D points $\mathcal{P} = \{p_i\}$ with $M$ points and
+$Q = \{q_i\}$ with $N$ points, we want to find the rigid body transformation $T$ consisting of a rotation $R$ and a translation $t$ which minimizes the error metric $H$.
+\begin{align}
+H(R,t) = sum_{(p_i,q_i) \in \mathcal{J}} ||Rp_i + t - q_i||^2
+\end{align}
+\end{itemize}
+\textbf{Normal Distributions Transform (NDT)}
+\begin{itemize}
+\item NDT is one of the scan matching methods 
+\item In this algorithm, the scanned space is divided into cells, and the input points in 
+each cell are converted into normal distribution which characterizes the distribution of points.
+\end{itemize}
+\end{frame}
+
+%\begin{frame}{Normal Distributions Transform (NDT)}
+%\begin{itemize}
+%\item NDT is one of the scan matching methods
+%\item In this algorithm, the scanned space is divided into cells, adddn the input points in 
+%each cell are converted into normal distribution which characterizes the distribution of points.
+%\end{itemize}
+%\end{frame}
+
+\section{Matching and fitting}
+\begin{frame}{Least square methods}
+\begin{itemize}
+\item When fitting a line we have $y = mx +b$ and want to find ($m$ and $b$) to minimize the fitting error (residual)  
+\begin{align}
+E &= \sum_{i}||y_i - mx_i -b||^2 \\
+&= \left|\begin{bmatrix}y_1 \\ \vdots \\ y_n \end{bmatrix} - \begin{bmatrix} x_1 & 1 \\ \vdots \\
+x_n & 1 \end{bmatrix} \begin{bmatrix} m \\ b \end{bmatrix} \right|^2 \\
+& = || Y - Xh||^2
+\end{align}
+\item Find $h=[m,b]^T$ that minimizes E: $\frac{\partial E}{\partial h} = 0$
+\item $||Y - Xh||^2 = (Y -Xh)^T(Y-Xh)$
+\item  $\frac{\partial E}{\partial h} = -2 X^TY+ 2X^TXh =0$  
+\item The analytical solution is: $h = (X^TX)^{-1}X^TY$
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Least square}
+\begin{itemize}
+\item Distance between point $(x_i, y_i, 1)$ and line $(a,b,d)$
+\item Find $(a,b,d)$ to minimize the sum of squared perpendicular distances: 
+$E = \sum_{i=1}^n (ax_i + by_i +d)^2$
+\item $Ah=0$, A is rank deficient
+\item Minimize $||Ah||$ subject to $||h|| =1$
+\item $ A= UDV^T \rightarrow$ h = last column of V  
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Cross-validation}
+\begin{itemize}
+\item In cases where the size of the training data might be small, people sometime use a sophisticated
+technique for hyperparameter tuning called \textbf{cross-validation}
+\item The idea is that instead of arbitrarly picking the 1000 datapoints to be the validation set and
+rest training set, you can get a better and less noisy estimate of how well a certain value of $k$ works by iterationg over different validations sets and averaging the performance across these.
+\item For example, in 5-fold  cross-validation, we would split the training data into 5 equal folds, 
+use 4 of them for training, and 1 for validation.
+\begin{enumerate}
+\item kNN has a number of disadvantages:
+\item The classifier must remember all of the training data and store if for future comparisons with the test data
+\item Classifying a test image is expensive since it requires a comparison to all training images.
+\end{enumerate}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Linear Classification}
+This method will have two major components:
+\begin{itemize}
+\item a \textbf{score function} that maps the raw data to class scores
+\item a \textbf{a loss function} 
+\end{itemize}
+A score function $f: R^D\rightarrow R^K$ maps the raw image pixels to class scores.
+\begin{align}
+f(x_i, W,b) = Wx_i + b
+\end{align}
+\begin{itemize}
+\item Each row of W is a classifier. One change in the row of W will results in the corresponding line
+in the pixel space to rotate.
+\item The biases b, on the other hands, allow our classifiers to translate the lines. 
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Support Vector Machine}
+\begin{itemize}
+\item SVM loss is set up so that the SVM "wants" the correct class for each image to have a score 
+higher than the incorrect classes by some fixed margin $\Delta$.
+\item The score for the $j$-th class is the $j$-th element: $s_j = f(x_i, W)_j$
+\item The SVM loss for the $i$-th example is then formalized as follows:
+\begin{align}
+L_i = \sum_{j\neq y_i} max(0, s_j - s_{y_i} + \Delta
+\end{align}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Regularization}
+\begin{itemize}
+\item The most common regularization penalty is the $L_2$ norm that discourages large weights:
+\begin{align}
+R(W) = \sum_{k}\sum_{l}W_{k,l}^2
+\end{align}
+\item The regularization is not a function of the data, it is only based on the weights
+\begin{align}
+L = \frac{1}{N} \sum_i L_i + \lambda R(W)
+\end{align} 
+\item The most appealing property is that penalizing large weights tends to improve generalization,
+because it means that no input dimension can have a very large influence on the score all by itself.
+\item Since the $L_2$ penalty prefers smaller and more diffuse weights vectors, the final classifier 
+is encouraged to take into account all input dimensions to small amounts rather than a few input dimensions and very strong.
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Softmax classifier}
+\begin{itemize}
+\item Unlike the SVM which treats the outputs $f(x_i, W)$ as (uncalibrated and difficult to interpret)
+scores for each class, the Softmax classifier gives a slightly more intuitive output - normalized class probabilities.
+\item While the mapping function stays unchanges: $f(x_i; W) = Wx_i$, we replace the \textit{hinge loss} with a \textbf{a cross-entropy loss} that has the form:
+\begin{align}
+L_i = -log(\frac{e^f_{y_i}}{\sum_j e^{f_j}})
+\end{align} 
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Optimization}
+\begin{itemize}
+\item The goal of optimization is to find $W$ that minimizes the loss function.
+\item There are two ways to compute gradient: \textbf{numerical gradient} and \textbf{analytical
+gradient}
+\item The gradient tells us the direction in which the function has the steepest rate of increase, but it does not tell us how far along this we should step.
+\item The step size or the \textit{learning rate} is one of the most important hyperparameters
+\item The gradient for the SVM is:
+\begin{align}
+=- \left(\sum_{j \neq y_i}indicator_function(w_j^Tx_i - w_{y_i}x_i + \Delta > 0\right) x_i
+\end{align}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Mini-batch}
+\begin{itemize}
+\item In large-scale applications, the training data can have an order of milions of examples.
+\item It is wasteful to compute the full loss function over the entire training set, instead compute the gradient over \textbf{batches} of the training data.
+\item The reason this work well is that the examples in the training data are correlated.
+\item Usually the batch size is: 32, 64 or 128. We use power of 2 because many vectorized operation implementations work faster when their inputs are sized in power of 2. 
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Data processing}
+\begin{itemize}
+\item \textbf{Mean extraction} - it involves substracting the mean across every individual feature in the data, and has the geometric interpretation of centering the cloud of data arounf the origin.
+\item \textbf{Normalization} - normalizing the data dimensions so that they are of approximately the same scale. One would be dividing each dimension by its standard deviation.
+\item \textbf{PCA and Whitening} - steps:
+\begin{enumerate}
+\item Extract mean
+\item Compute cov = np.dot(X.T,X)
+\item U,S, U = SVD(cov)
+\item decorrelate the data Xrot = np.dot(X,U)
+\item reduce Xrotreduced=X([:,1:100])
+\item Whitening takes the data in the eigenbasis and divides every dimension by the eigenvalue to 
+normalize the scale: Xrot=X/sqrt(S+1e-10)
+\end{enumerate}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Batch Normalization}
+\begin{itemize}
+\item Batch normalization - is forcing the activations throughout a network to take on a gaussian 
+distribution at the begining of the training
+\item Insert the BachNorm layer immediatialy after the fully connected layer and before non-linearities
+\item Batch normalization can be interpred as doing preprocessing at every layer of the network
+\item Normalization is a simple differentiable operation
+\item Network with bad initialization are significantly more robust to bad initialization
+\end{itemize}
+\end{frame}
+
+\begin{frame}{L1 regularization}
+\begin{itemize}
+\item the L1 regularization has the property that it leads the weight vectors to become sparse during optimization
+\item In other words, neurons with L1 regularization end up using only a sparse subset of thir inputs and become nearly invariant to "noisy inputs"
+\item \textbf{Elastic net regularization} -  use both L1 and L2
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Dropout}
+\begin{itemize}
+\item Dropout is an extremly effecient, simple and recently introduced regularization techniques.
+\item While training, the dropout is implemented by only keeping a neuron active with some probability $P$ or setting it to zero otherwise.
+\item \textbf{Inverted dropout} -  performs the scaling at training time, leaving the forward pass at 
+test time untouched.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Summary}
+\begin{itemize}
+\item Preprocessing: center the data to have mean of zero, and normalize its scale to $[-1,1]$
+\item Initialize the weights by drawing them from a gaussian distribution with standard deviation of
+$\sqrt{2/n}$ - Xavier initialization
+\item Use L2 regularization and dropout(the inverted version)
+\item Use bath normalization
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Activation functions}
+\begin{itemize}
+\item \textbf{Sigmoid}: takes a real-valued number and "squashes" it into range between $0$ and $1$
+\item A very undesirable property of the sigmoid neuron is that when the neuron's activation saturates at either tail of 0 or 1, the gradient at these regions is almost zero.
+\item \textbf{Tanh}: like the sigmoid neuron, its activation saturate, but unlike the sigmoid neuron
+its output is zero-centered.
+\item Tanh is always preffered to the sigmoid nonlinearity.
+\item \textbf{ReLU: Rectified Linear Unit} - it computes the function $f(x) = \max(0,x)$.
+\item Greatly accelerates the convergence of stochatic gradient descent
+\item Compared to tanh/sigmoid that involve expensive operation: Relu are fast to compute
+\item Cons: Relu can be fragile during training and can "die"
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Bezier curve}
+\begin{itemize}
+\item It is a parametric representation of curves used in computer graphics to model smooth curves
+\item Linear Bezier curves: $B(t) = (1-t)\cdot p_0 + t\cdot p_1$
+\item \textbf{Slerp} - spherical linear interpolation - in the context of quaternion interpolation
+\begin{align}
+Slerp(p_0;p_1;t) =\frac{\sin[(1-t)\Omega]}{\sin\Omega}p_0 + \frac{\sin t\Omega}{\sin\Omega}p_1
+\end{align}
+where $cos\Omega = p_0\cdot p_1$
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Ian Gooffellow book}
+Distributions:
+\begin{itemize}
+\item The Bernoulli distribution is a distribution over a single binary random variable
+\item It is controlled by a single parameter $\phi \in [0,1]$, which gives the probability of the 
+random variable being equal to 1.
+\item It has the following properties:
+\begin{align}
+& P(x = 1) = \phi \\
+& P(x = 0) = 1 - \phi \\
+& P(x = \mathcal{x}) =\phi^x(1 - \phi)^{1-x} \\
+& \mathcal{E}_x[x] = \phi \\
+& Var_x(x) = \phi(1 - \phi)
+\end{align}
+\end{itemize}
+\end{frame}
+
+\section{Probability}
+\begin{frame}{Information theory}
+\begin{itemize}
+\item In the context of machine learning, we use few key ideas from information theory to characterize 
+probability distributions or quantify similarity between probability distributions 
+\item The basic intuition behind information theory is that learning that an unlikely event has occured is more
+informative that learning that likely event has occured
+\item This intuition is formalized as:
+\begin{itemize}
+\item Likely events should have low information content, and in the extreme case, event that are guaranteed to happen should have no information content whatsoever
+\item Less likely events should have higher information content
+\item Independent events should have additive information 
+\end{itemize} 
+\item To satisfy all 3 properties, the \textbf{self-information} of an event $X=x$ to be
+\begin{align}
+I(x) = -log P(x)
+\end{align}
+\textbf{nat} is the unit and it represents the amount of information gained by observing an event of probability 
+$\frac{1}{e}$
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Information theory - cont}
+\begin{itemize}
+\item We can quantify the amount of uncertainty in an entire probability distribution using the \textbf{Shannon entropy}:
+\begin{align}
+H(x)= \mathbb{E}_{x\sim P}[I(x)] = - \mathbb{E}_{x\sim P}[log P(x)]
+\end{align}
+the Shannon entropy of a distribution is the expected amount of information in an event drawn from that distribution
+\item Distribution that are nearly deterministic (where the outcome is nearly certain) have low entropy; distribution that are closer to uniform have high entropy.
+\item If we have two separate probability distributions $P(x)$ and $Q(x)$ over the same random variable $x$, we can
+measure how different these two distributions are using \textbf{Kullback-Leibler (KL) divergence}:
+\begin{align}
+D_{KL}(P||Q) = \mathbb{E}_{x\sim P}\left[\log \frac{P(x)}{Q(x)} \right]
+=\mathbb{E}_{x}\left(\log P(x) - \log Q(x)\right) 
+\end{align}
+\item Is not a true distance measure because it is not symmetric: $D_{KL}(P||Q) \neq D_{KL}(Q||P)$
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Kullback-Leibler divergence}
+\begin{itemize}
+\item Suppose we have a distribution $p(x)$ and wish to approximate it with another distribution $q(x)$
+\begin{align}
+&q^* = argmin_q D_{KL}(p||q) \;\; \text{or} \\ \nonumber
+&q^* = argmin_q D_{KL}(q||p)
+\end{align}
+\item The choice of which direction of the KL divergence to use is problem-dependent
+\item When $q^* = argmin_q D_{KL}(p||q)$ we select $q$ that has high probability where $p$ has high probability
+\item When $p$ has multiple modes, q choses to blur the modes together, in order to put high probability mass in all of them
+\item When $q^* = argmin_q D_{KL}(q||p)$ we select a $q$ that has low probability where $p$ has low probability
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Structured Probabilistic Models}
+\begin{itemize}
+\item Machine learning algorithms often involve probability distributions over a very large number of 
+random variables
+\item Often, these probabilities distributions involve direct interactions between relatively few variables
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Simulated Annealing}
+\textbf{Check for a better explanation at Beyond Hill Climbing, Lesson2, Chapter 3, RL nanodegree}
+\end{frame}
+
+
+\section{Numerical Computation}
+\begin{frame}{Overflow and Underflow}
+\begin{itemize}
+\item \textbf{Underflow} occurs when numbers near zero are rounded to zero
+\item \textbf{Overflow} occurs when numbers with large magnitude are approximated as $\infty$ or $-\infty$
+\item Conditioning refers to how rapidly a function changes with respect to small changes in its inputs
+\item Functions that change rapidly when their inputs are perturbed slightly can be problematic for scientific
+computation because rounding errors in the inputs can result in large changes in the output.
+\item \textbf{condition number} is $\max_{i,j}\frac{|\lambda_i|}{|\lambda_j|}$
+\item When this number is large, matrix inversion is particularly sensitive to error in the input.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Hessian matrix}
+\begin{itemize}
+\item Point where $f'(x) = 0$ are known as \textbf{critical points} or \textbf{stationary points}
+\item At a critical point, where $\nabla_x f(x) =0$, we can examine the eigenvalues of the Hessian to determine
+whether the critical point is a local maximum, local minimum, or saddle point.
+\item When the Heassian is positive definite (all its eigenvalues are positive), the point is a local minimum
+\item When the Hessian is negative definite (all its eigenvalues are negative), the point is a local maxima
+\item When the Hessian has a poor condition number, gradien descent perform poorly
+\item Use Hessian information in the search $\rightarrow$ \textbf{Newton's method}.
+i\item Newton's method is based on using a second-order Taylor series expansion to approximate $f(x)$
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Lipschitz continuous}
+\begin{itemize}
+\item A Lipschitz continous function is a function $f$ whose rate of change is bounded by a \textbf{Lipschitz constant} $\mathcal{L}$:
+\begin{align}
+\forall x, \forall y, \; |f(x) - f(y)| \le \mathcal{L}||x - y||_2
+\end{align}
+\item Convex optimization algorithms are applicable only to convex functions - functions for which the Hessian is 
+positive semidefinite everywhere.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Karush-Kuhn-Tucker multipliers}
+\begin{itemize}
+\item The KKT approach provides a very general solution to constraint optimization
+\item With the KKT approach, a \textbf{generalized Lagrangian} can be introduced:
+\begin{align}
+L(x,\lambda, \alpha) = f(x) + \sum_i\lambda_i g^{(i)}(x) + \sum_j\alpha_jh^{(j)}(x)
+\end{align}
+\item where $g^{(i)}$ are called the \textbf{equality constraints} and the inequalities involving $h^{(j)}$ are
+called \textbf{inequality constraints}
+\end{itemize}
+\end{frame}
+
+\section{Machine Learning}
+\begin{frame}{Learning Alg}
+\begin{itemize}
+\item Machine learning alg contain: an optimization algorithm, a cost function, a model, and a dataset to
+build a machine learning algorithm
+\item A machine learning algorithm is an algorithm that is able to learn from data
+\item Roughly speaking, unsupervised learning involves observing several examples of a random vector $x$, and
+attempting to implicitly or explicitly learn the probability distribution $p(x)$ 
+\item Supervized learning involves observing several examples of a random vector $x$ and an associated value
+or vector $y$, and learning to predict $y$ from $x$, usually by estimating $p(y|x)$
+\item There are no well-define boundaries between supervised and unsupervised. For example, the chain rule of
+probability states that for a vector $x\in \mathbb{R}^n$, the joint distribution can be decomposed as:
+\begin{align}
+p(x) = \prod_{i=1}^n p(x_i|x_1,\dots,x_{i-1})
+\end{align}
+which means that we can solve the unsupervised problem of modeling $p(x)$ by spliting it into $n$ supervised
+learning problems.
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Transformations in 2D}
+\begin{itemize}
+\item \textbf{Isometric transformations:} are transformations that preserve distances. In its most basic
+form, an isometry can be described as a rotation $R$ and translation $t$.
+\item \textbf{Similarity transformations:} are transformations that preserve shape. They can do everything that 
+isometric can do plus scaling
+\item \textbf{Affine transformations:} preserve points, straight lines and parallelism
+\item \textbf{Projective transformations:} transformations that maps lines to lines, but does not necessarily preserve parallelism. Despite not preserving parallelism, projective transformations does preserve collinearity of points, and it maps lines to lines.
+\end{itemize}
+\end{frame}
+
+
+%\begin{frame}{Trick questions}
+%\begin{itemize}
+%\item Hyperbolic tan $tanh = \frac{e^x - e^{-x}}{e^x + e^{-x}}$
+%\item Sigmoid $\sigma(x) = \frac{1}{1+e^{-x}}$
+%\item $\sigma'(x) = \sigma(x)(1 -\sigma(x))$
+%\item Likelihood ratio trick: $\nabla_x \log f(x) = \frac{\nabla_x f(x)}{f(x)}$
+%\item $e = \sum_{n=0}^{\infty}\frac{1}{n!} = \frac{1}{0!} + \frac{1}{1!} + \frac{1}{2!} + \dots$
+%\item $e = \lim_{n\rightarrow \infty}(1 + \frac{1}{n})^n$
+%\item Euler's formula: $e^{ix} = \cos x + i\sin x$ 
+%\item de Moivre's formula: $(\cos x + i \sin x)^n = (e^{ix})^n = \cos(nx) + i\sin(nx)$
+%where $e = 2.71828$
+%\end{itemize}
+%\end{frame}
+
+
+\end{document}

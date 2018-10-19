@@ -1,0 +1,687 @@
+\documentclass[10pt,mathserif]{beamer}
+
+\usepackage{graphicx,amsmath,amssymb,tikz,psfrag}
+
+
+\input defs.tex
+
+%% formatting
+
+\mode<presentation>
+{
+\usetheme{default}
+}
+\setbeamertemplate{navigation symbols}{}
+\usecolortheme[rgb={0.13,0.28,0.59}]{structure}
+\setbeamertemplate{itemize subitem}{--}
+\setbeamertemplate{frametitle} {
+	\begin{center}
+	  {\large\bf \insertframetitle}
+	\end{center}
+}
+
+\newcommand\footlineon{
+  \setbeamertemplate{footline} {
+    \begin{beamercolorbox}[ht=2.5ex,dp=1.125ex,leftskip=.8cm,rightskip=.6cm]{structure}
+      \footnotesize \insertsection
+      \hfill
+      {\insertframenumber}
+    \end{beamercolorbox}
+    \vskip 0.45cm
+  }
+}
+\footlineon
+
+\AtBeginSection[] 
+{ 
+	\begin{frame}<beamer> 
+		\frametitle{Outline} 
+		\tableofcontents[currentsection,currentsubsection] 
+	\end{frame} 
+} 
+
+%% begin presentation
+
+\title{\large \bfseries Introduction to Computational Traffic Models}
+
+\author{Ramona Stefanescu\\[3ex]
+Samsung Semiconductors, Inc.}
+
+\date{\today}
+
+\begin{document}
+
+\frame{
+\thispagestyle{empty}
+\titlepage
+}
+
+%\section{Introduction}
+
+\begin{frame}{Traffic Models}
+There are 4 main compenents in modeling the road traffic: 
+\begin{itemize}
+\item Route calculation 
+\item Prediction
+\item Behavior planning
+\item Trajectory generation
+\end{itemize}
+\end{frame}
+
+
+\section{Route calculation}
+
+\begin{frame}{Route calculation}
+In calculating the route from a given location to another location we can use one the following methods: 
+\begin{itemize}
+\item Graph-based Planning Methods
+\item Configuration Space Methods
+\item Probabilistic Road Maps Methods
+\item Artificial Potential Field Methods
+\end{itemize}
+\end{frame}
+
+
+\subsection{Graph-based planning methods}
+\begin{frame}{Graph-based Plan Methods}
+\begin{itemize}
+\item A graph, G, consists of a set of vertices, V, and a set of Edges, E, that link pairs
+of vertices.
+\item The goal is to construct a path through the grid/graph from the start to goal.
+\item Find path tha minimizes the cost function.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Grassfire}
+\begin{itemize}
+\item Identify the "STOP" position and mark it with 0
+\item Starting from 0 add 1 for each cell away from the starting position
+\item The distance values produced by the grassfire algorithm indicate the smallest number
+of steps needed to move from each node to the goal
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Grassfire algorith - pseudo code}
+\begin{itemize}
+\item For each node $n$ in the graph
+\begin{itemize}
+\item n.distance = infinity
+\end{itemize}
+\item Create an empty list
+\begin{itemize}
+\item n.goal = 0, add goal to list 
+\end{itemize}
+\item while list not empty
+\begin{itemize}
+\item Let current = first node in list, remove current from list
+\item For each node, n that is adjacent to current
+\begin{itemize}
+\item if n.distance=infinity
+\item n.distance = current.distance + 1
+\item add n to the back of the list
+\end{itemize}
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Grassfire Algorithm}
+\begin{itemize}
+\item It will find the shortest path between the start and the goal if one exists
+\item If no path exists that will be reported
+\item The computational effort required to run the grassfire algorithm on a gris increases linearly with the number of nodes
+\item $\mathcal{O(|V|)}$, where $|V|$ is the no of nodes
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Dijkstra's Algorithm}
+\begin{itemize}
+\item For each node n in the graph: n.distance = infinity
+\item Create an empty list
+\item Start.distance = 0, add start to list
+\item While list not empty
+\begin{itemize}
+\item Let curent = node in the list with the smallest distance, remove current from list
+\item For each node, n that is adjacent to current
+\begin{itemize}
+\item if n.distance $> $current.distance + length of edge from n to current then:
+\item n.distance = current.distance + length of edge from n to current then
+\item n.parent = current
+\item add n to list if it isn't there already
+\end{itemize}
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Computational Complexity of Dijkstra's algorithm}
+\begin{enumerate}
+\item A naive version of Dijkstra's can be implemented with a computational complexity that grows
+quadratically with the number of nodes:
+\begin{align}
+\mathcal{O}(|V|^2)
+\end{align}
+\item Using clever structures known as \textbf{priority queue} the computational complexity can be reduced to something that grows more slowly:
+\begin{align}
+\mathcal{O}((|E| + |V|)log(|V|))
+\end{align}
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{Grassfire and Dijkstra's Alg}
+\begin{itemize}
+\item When applied on a grid graph where all of the edges have the same length, Dijkstra's algorithm and the grassfire procedure have similar behaviors.
+\item They both explore nodes in order based on their distance from the starting node until they encounter the goal.
+\item Both explore all or almost all nodes and this can be a problem when you have large number of nodes.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{$A^*$}
+\begin{itemize}
+\item $A^*$ is an example of broader class of procedure \textit{best first search} algorithms.
+\item They explore a set of possibilities by using an approximating heuristic cost function to sorth the varies alternatives
+\item Similar to grassfire and Dijkstra. These two explore evenly in all directions until they find the goal node.
+\item $A^*$ introduces the idea of heuristic distance, which is an estimate between a given node and the goal node. We can use this information to gide the search in to direction that can get us to goal faster.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Heuristic functions}
+\begin{itemize}
+\item For \textbf{shortest path problems}, we're interested in heuristic function H, which given a 
+node $n$ return a non-negative value that is indicative of the distance from that node to the goal.
+\item For \textbf{path finding problems}, we often use heuristic functions that are monotonic, which means that they satisfy the following properties:
+\begin{enumerate}
+\item H(goal) = 0
+\item For any 2 adjacent nodes x and y: $H(x) <= H(y) + d(x,y)$ and $d(x,y)$ denotes the length of the edge between those two nodes $x$ and $y$.
+\end{enumerate}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Example Heuristic Functions}
+\begin{itemize}
+\item Euclidean Distance
+\begin{align}
+H(x_n,y_n) = \sqrt{((x_n - x_g)^2 + (y_n - y_g)^2)}
+\end{align}
+\item Manhattan distance
+\begin{align}
+H(x_n,y_n) = |x_n -x_g| + |y_n - y_g|
+\end{align}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{$A^*$ pseudo code}
+\begin{itemize}
+\item For each node n in the graph: n.f = infinity, n.g = infinity
+\item Create an empty list
+\item start.g = 0, start.f = H(start) add start to list
+\item While list not empty:
+\begin{itemize}
+\item Let current = node in the list with the smallest f value, remove current from the list
+\item If (current == goal node) report succes
+\item For each node, n that is adjacent to current
+\begin{itemize}
+\item if (n.g $>$ current.g + cost of edge from n to current))
+\item n.g = current.g + cost of edge from n to current
+\item n.f = f.g + H(n)
+\item n.parent = current
+\item add n to list of it isn't there already
+\end{itemize}
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\subsection{Configuration Space}
+
+\begin{frame}{Configuration Space}
+\begin{itemize}
+\item The motion planning problems we've considered so far, we've reduced the problem to planning on a graph, where the robot can take
+on various discrete positions.
+\item The configuration space of a robot is the set of all configurations and/or positions that the robot can attain.
+\item The region of configuration space that the robot can attain is referred to as the free space of the robot.
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Path Planning in Configuration Space}
+\begin{itemize}
+\item Start the motion planning problem framed on a continuous configuration space and then use 
+various approached to reformulate this problem in terms of a graph. 
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Collision Detection Function}
+\begin{itemize}
+\item Let $x$ denote the coordinates of a point in configuration space
+\item CollisionCheck(x) should return 0 if x is in freespace and 1 if x results in a collision with the
+obstacles.
+\end{itemize}
+\end{frame}
+
+
+\subsection{Probabilistic Road Maps}
+
+
+\begin{frame}{Probabilistic Road Map}
+\begin{itemize}
+\item The approach of discreetizing the configuration space evenly on the grid, can work well when the space is small, say two or 
+three. But the number of samples required can grow to be freigheningly large as we increase the dimension of the space to five, 
+six, ten etc.
+\item \textbf{Pseudocode}
+\begin{itemize}
+\item Repeat n time
+\item $\rightarrow$ Generate a random point in configuration space, $x$
+\item $\rightarrow$ If $x$ is free then:
+\begin{itemize}
+\item Find the $k$ closest points in the roadmap to $x$ according to the \textbf{Dist} function
+\item Try to connect the new random sample to each of the $k$ neighbors using the \textbf{LocalPlanner} procedure. Each succesful 
+connection forms a new edge in the graph.
+\end{itemize}
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{The Dist function}
+\begin{itemize}
+\item The PRM procedure relies upon a distance function, Dist, that can be used to gauge the distance between two points in configuration space.
+\item Common choices for distance function include:
+\begin{itemize}
+\item The L1 distance: $Dist_1 = \sum_{i}|x_i - y_i| $
+\item The L2 distance: $Dist_2 =  \sqrt{\sum_{i}(x_i - y_i)^2}$
+\end{itemize}
+\item A complete path planning algorithm would fina path if one existed, and report failure if it didn't. 
+i\item With the PRM procedure, it is possible to have a situation where the algorithm would fail to find a path even when one exist.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{PRM}
+\begin{itemize}
+\item In practice, the number of samples that one chooses to generate for the road map is an 
+important parameter of this procedure. 
+\item One idea is to try to sample more points closer to the bounderies of configuration space 
+obstacles.
+\item To date however there is no single sampling strategy that is guaranteed to work well in all 
+cases.
+\item Since samples are choosen randomly the resulting trajectory can sometimes seem very jerky and
+unnatural.
+\item Use a path smoother
+\item By relaxing the notion of completeness a bit and embracing the power of randomization, PRM 
+provide effective methods for planning routes that can be applied to a wide range of robotic systems.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Rapidly Exploring Random Tree (RRT)}
+\begin{itemize}
+\item In the probabilistic roadmap procedure, the basic idea was to construct a roadmap of the 
+free space consisting of random samples and edges between them.
+\item Once that has been constructed, you could connect the desired start and end points to this graph
+and plan a path from one end to the other.
+\item The advantage of this approach is that you can reuse the roadmap over and over again to answer 
+multiple planning problems.
+\item There are times when you're interested in answering one specific planning problem.
+\item In those situations, it can be wasteful to construct roadmaps that span the entire free space.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Rapidly Exploring Random Tree (RRT)}
+\begin{itemize}
+\item Like the probabilistic road map technique, this approach works by generating random samples and
+connecting them together to form a graph, but the sampling scheme is a bit different.
+\item The RRT procedure proceeds by constructing a special kind of graph called a tree, where every 
+node is connected to a single parent and the tree is rooted at a given starting location.
+\item 
+\end{itemize}
+\end{frame}
+
+\begin{frame}{RRT procedure}
+\begin{itemize}
+\item Add start node to tree
+\item Repeat n times 
+\item $\rightarrow$ Generate a random configuration, $x$
+\item $\rightarrow$ If $x$ is in freespace using the \textbf{CollisionCheck} function
+\begin{itemize}
+\item Find $y$, the closest node in the tree to the random configuration $x$
+\item If $(Dist(x,y) > delta)$  -- check if x is too far from y
+\item $\rightarrow$ find a configuration, $z$, that is along the path from $x$ to $y$ such 
+that $Dist(z,y) <= delta$
+\item $\rightarrow$ x=z
+\item If $(LocalPlanner(x,y))$  --check if you can get from $x$ to $y$
+\item $\rightarrow$ Add $x$ to the tree with $y$ as its parent 
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{RRT 2 tree procedure}
+\begin{itemize}
+\item While not done
+\begin{itemize}
+\item Extend Tree A by adding a new node, x
+\item Find the closest node in Tree B to x,y
+\item If (LocalPlanner(x,y)) --check if you can bridge the 2 trees
+\item $\rightarrow$ add edge between $x$ and $y$
+\item $\rightarrow$ this completes a route between a root of Tree A and the root of Tree B. Return this route
+\item c$\rightarrow$ Else: Swap Tree A and Tree B
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+
+\subsection{Artificial Potential Field Methods}
+\begin{frame}{Artificial Potential Field Methods}
+\begin{itemize}
+\item This is another approach to guiding robots into obstacle filled environments 
+based on artificial potential fields.
+\item The basic idea here is to try to construct a smooth function over the extent of the 
+configuration space, which has high values when the robot is near to an obstacle and lower values when
+it's further away.
+\item We also want this function to have its lowest value at the desired goal location
+\item And it's value should increase as we move to configurations that are further away.
+\item If we can construct such a function, we can use it's gradient to guide the robot to the desired
+configuration.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Potential function}
+\begin{itemize}
+\item There are many ways to build \textit{potential function} but one of the most popular is to 
+construct a simple quadratic function, that is zero at the goal and increases as you move away from it.
+\item $f_a(x)$ - an attractive potential function, $x = (x_1, x_2)^T$ the current position of the robot and $x_g = (x_1^g, x_2^g)^T$ the desired goal can be defined as follows:
+\begin{align}
+f_a(x) = \xi(||x - x_g||^2)
+\end{align}
+where $\xi$ is simply a constant scaling parameter
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Repulsive Potential Field}
+\begin{itemize}
+\item In addition to getting to the goal we also want the robot to avoid the obstacles in the 
+environment
+\item Use a second funtion to repel the robot from these configuration space obstacles
+\item Is constructed based on a function, $\rho(x)$, that returns the distance to the closest obstacle
+from a given point in configuration space, $x$.
+\begin{align}
+f_r(x) =
+\left\{
+	\begin{array}{ll}
+		\eta(\frac{1}{\rho(x)} - \frac{1}{d_0})^2  & \mbox{if } \rho(x) \leq d_0 \\
+		0 & \mbox{if } \rho(x) > d_0
+	\end{array}
+\right.
+\end{align}
+\item Where $\rho$ is simply a constant scaling parameter and $d_0$ is a parameter that controls the influence of the repulsive potential
+\item This function has been used sucessfully in image processing - called \textbf{distance transformation}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{}
+\begin{itemize}
+\item We have two components: \textbf{an attractive potential}, which pulls the robot towards the
+desired configuration, and \textbf{a repulsive potential}, which steers the robot away from obstacles
+\item A really attractive feature of this procedure is that it only requires a robot to be able to
+evaluate the gradient of this artificial potential function.
+\item This is sometimes reffered to as sensor based planning. The reading from the robot's position 
+sensor are used to pull it towards the goal. While the measurement from it's range sensors like laser scaners or stereo system are used to push it away from the obstacles in the environment.
+\end{itemize}
+\end{frame}
+
+\section{Prediction}
+\begin{frame}{Prediction}
+\begin{itemize}
+\item A prediction module uses a map and data from sensor fusion to generate predictions
+for what all other dynamic objects in view are likely to do.
+\item Approaches:
+\begin{enumerate}
+\item Model Based Approach: knowledge about physics, constrains impose by the road, traffic etc
+\item Data-Driven Approach: used data to extract model
+\end{enumerate}
+\end{itemize}
+\end{frame}
+
+\subsection{Model-Based Approach}
+\begin{frame}{Model-Based Approach}
+For each \textbf{dynamic object} nearby
+\begin{itemize}
+\item Identify common driving behaviors (change lane, turn left, cross street, etc)
+\item Define process model for each behavior (is a mathematical model that computes the state of the object at time t+1)
+\item The process model will incorporate uncertain states
+\item Update beliefs by comparing the observation with the output of the process model
+\item Trajectory generation
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Frenet Coordinates}
+\begin{itemize}
+\item Frenet Coordinates are ways of representing position on a road in a more intuitive way than traditional $(x,y)$ Cartesian Coordinates.
+\item With Frenet coordinates, variables $s$ and $d$ to describe a vehicle's position on the road.
+\item The $s$ coordinate represent distance along the road (also known as \textbf{longitudinal displacement}) and the $d$ coordinate represents side-to-side position on the road (also known as \textbf{lateral displacement})
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Process Models for lane following}
+There is a trade-off between simplicity and accuracy when choosing a process model. One very simple
+approach is to treat the car as a point particle with holonomic properties (the point can move in 
+any direction at any time).
+\begin{itemize}
+\item \textbf{Linear point model - constant velocity} (Frenet coordinates: assumes to keep a
+constant distance to the lane center) 
+\begin{align}
+\begin{bmatrix}
+\dot{s} \\ \dot{d}
+\end{bmatrix} = 
+\begin{bmatrix}
+\dot{s_0} \\ 0
+\end{bmatrix} + W
+\end{align}
+\item \textbf{Non-linear point model} (constant acceleration with curvature in Cartesian coordinates)
+\begin{align}
+\begin{bmatrix}
+\dot{x} \\ \dot{y} \\ \dot{\theta}\\ \dot{v} \\ \dot{\omega}\\ \dot{a} \\ \dot{c_0} \\ \dot{c_1}
+\end{bmatrix} =
+\begin{bmatrix}
+(v+at)cos(\theta) \\ (v+at)sin(\theta) \\ w\\ a\\ 0\\0\\ vc_1\\0
+\end{bmatrix} + W
+\end{align}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Process Models for lane following}
+\begin{itemize}
+\item \textbf{Kinematic Bicycle Model with controller} (PID controller on distance and angle)
+\begin{align}
+\begin{bmatrix}
+\dot{x} \\ \dot{y}\\ \dot{\theta}\\ \dot{v}
+\end{bmatrix} =
+\begin{bmatrix}
+v\cos{\theta} \\ v\sin{\theta}\\ \frac{v}{L}\tan{\delta} \\ a 
+\end{bmatrix} + W
+\end{align}
+\item The vehicle is a non-holonomic system 
+\item Take two inputs: a steering angle and acceleration
+\item For the steering angle we could use a PID controller with the targer lane centerline as the 
+refrence line: 
+\begin{align}
+\delta_t = - J_PCTE - J_D\dot{CTE} -J_I\sum_{i=0}^tCTE_i
+\end{align}
+where CTE is the \textit{Cross Track Error}
+\item For acceleration we can use a constant velocity model or a constant acceleration model. If we want a more complex accleration behavior we could use a PID controller with the speed limit as the target.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Process Models - cont}
+\begin{itemize}
+\item Dynamic bicycle model with controller (PID controller on distance and angle)
+\begin{align}
+\begin{bmatrix}
+\ddot{s} \\ \ddot{d} \\ \ddot{\theta}
+\end{bmatrix} = 
+\begin{bmatrix}
+\dot{\theta}\dot{d} + a_s \\ \dot{\theta}_{\dot{s}} + \frac{2}{m}(F_{c,f}cos\delta + F_{c,r})\\
+\frac{2}{I_z}(l_fF_{c,f} - l_rF_{c,r})
+\end{bmatrix} + W
+\end{align}
+\item $F_{c,f}$ represents the lateral force on the tires at the front of the vehicle, while $F_{c,r}$ represents the lateral force on the rear tire. We can add more complexity by modeling the four wheels of the car.
+\item While this model is a more accurate representation of the physics, in practice using it doesn't usually make sense for prediction since there is so much uncertainty inherent to predicting the behaviors of all drivers, that minor accuracy improvement to process models just aren't worth the computational overhead that they come with.  
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Autonomous Multiple Model Algorithm - variables}
+A simple approach to multimodal estimation is called \textbf{Autonomous Multiple Model Estimation or AMM}.
+\begin{itemize}
+\item Consider some set of $M$ process models/behaviors
+\item Probabilities for process models $\mu_1, \mu_2, \dots, \mu_M$
+\item Nultiple model algorithms serve a similar purpose for model based approaches: they are 
+responsible for maintaining beliefs for the probability of each maneuver.
+\item AMM cam can ve summarized with the following equation:
+\begin{align}
+\mu_k^{(i)}= \frac{\mu_{k-1}^{(i)}L_{k}^{(i)}}{\sum_{j=1}^M\mu_{k-1}^{(j)}L_k^{(j)}}
+\end{align}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{AMM -cont}
+\begin{itemize}
+\item If we ignore the denomitor in the previous eq (since it just serves to normalize the probabilities), we can capture the essence of the algorithm with:
+\begin{align}
+\mu_k^{(i)} \propto \mu_{k-1}^{(i)}L_k^{(i)} 
+\end{align}
+where the $mu_k^{(i)}$ is the probability that model number $i$ is the correct model at time $k$ and 
+$L_k^{(i)}$ is the \textbf{likelihood} for that model (as computed by comparison to process model).
+\end{itemize}
+\textbf{Trajectory generation}
+\begin{itemize}
+\item Trajectory generation is straightforward once we have a process model.
+\item We iterate our model over and over until we generated a prediction that spans whatever
+time horizon we are supposed tp cover.
+\item Note that each iteration of the process model will necessarily add uncertainty to our prediction.
+\end{itemize}
+\end{frame}
+
+\subsection{Data-Driven Approach}
+\begin{frame}{Data-Driven Approach - Trajectory}
+There are 2 types of learing: offline and online
+\begin{itemize}
+\item The off-line learning consistents of the following steps:
+\begin{enumerate}
+\item Get a LOT of trajectories
+\item Clean the data
+\item Define some measure of similarity
+\item Perform unsupervised clustering
+\item Define \textbf{prototype trajectories} for each cluster
+\end{enumerate}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Online Trajectory Prediction}
+For every update cycle:
+\begin{enumerate}
+\item Observe vehicle's partial trajectory
+\item Compare to \textbf{prototype trajectories}
+\item Predict a trajectory
+\end{enumerate}
+\end{frame}
+
+
+\section{Behavior Planning}
+\begin{frame}{Behavior Planning}
+\begin{itemize}
+\item Is part of the path planning module, along with Prediction and Trajectory
+\item The Behavior Planning takes as input a map of the world, route to destination and predictions
+about what other static and dynamic are likely to do
+\item It produces as output an adjusted maneuver for the vehicle which the trajectory planner is
+responsible for reaching collision-free, smooth and safe
+\item The responsability of the Behavior Planner is to suggest maneuvers which are: feasible, as safe
+as possible, legal and efficient.
+\item The Behavior Planner is not responsible for: execution details and collision avoidance. 
+\end{itemize}
+\end{frame}
+
+\section{Trajectory generation}
+\begin{frame}{Trajectory generation}
+\begin{itemize}
+\item A trajectory is not just a curve that the car can follow but also a time sequence in which we say
+how fast the car should go.
+\item In finding a trajectory we need to account for both non-colission as well passenger comfort
+\item Continous trajectories $->$ drivable trajectories
+\end{itemize}
+\end{frame}
+
+\begin{frame}{The motion planning problem}
+\textbf{Configuration space:}
+\begin{itemize}
+\item Defines all possible configurations of our robot in a given world
+\item Configuration space can be 2D [x,y] or 3D [x,y,$\theta$]
+\item  Given: an initial configuration with a start and a goal, as well constrains describing how the
+vehicle is allowed to move, its dynamics and a description of the environment
+\end{itemize}
+Usually, the start configuration is the current configuration given to us by the localization module and sensors(car location, speed, acceleration etc). The behavior layer gives the desired end configuration and maybe some constraints regarding where to go and at which speed.
+Finally, prediction completes this problem by giving us information about how the obstacle region will evolve in time. This way, the sequence of actions that we generate takes into account other vehicles and pedestrian actions. 
+\end{frame}
+
+
+\begin{frame}{Types of Motion Planning Alg}
+\begin{enumerate}
+\item \textbf{Combinatorial methods}
+\begin{itemize}
+\item Consist in diving the free space into small pieces and solve the motion planning problem by connecting these atomic elements
+\item They are very intuitive way to find initial approximate solution but they usually do not scale well for large environments
+\end{itemize}
+\item \textbf{Potential fields}
+\begin{itemize}
+\item Are reacting methods - each obstical is going to create an anti-gravity field
+which makes it harder for the vehicle to come close to it
+\item The main problem with most potential fields methods is that they sometimes push us into local minima which can prevent us from finding a solution
+\end{itemize}
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{Types of Motion Planning Alg - cont}
+\begin{enumerate}
+\item[3.] \textbf{Optimal Control}
+\begin{itemize}
+\item Consists in trying to solve the motion planning problem and the control inputgeneration in one algorithm
+\item Using a dynamic model of a vehicle, start configuration and end configuration, we want to generate a sequence of inputs, for example, steering angle and throttle inputs, that would lead us from start to end configuration while optimizing a cost function relative to the control inputs such as minimizing gas consumption. And, relative to the configuration of the car, optimizing the distance from other vehicles.  
+\item Most of them are based on numerical optimization methods
+\item However, it is hard to incorporate all of the constraints related to the other vehicles in a way for these algorithms to work fasr
+\end{itemize}
+\item[4.] \textbf{Sampling Based Methods}
+\begin{itemize}
+\item Require a somewhat easier to compute definition of the free space
+\end{itemize}
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{Sampling based methods}
+\begin{itemize}
+\item Use a collision detection module that probes the free space to see if a configuration is in collision or not
+\item Unlike, combinatorial or optimal control methods, which analyze the whole environment, not all parts of the free space need to be explored in order to find a solution
+\item Explored parts are stored in a graph structure that can be searched with a
+graph search algorithm like Dijkstra or A star
+\item Two main classes of methods can be identified as sampling based: \textbf{discrete methods}, which rely on a finite set of configurations and/or inputs (like a grid superimposed over our configuration space). Deterministic graph search algorithms: $A^*$, $D^*$, Dijkstra
+\item \textbf{probabilistic methods:} - performs a random exploration of the configuration and input space. The set of possible configurations or states that will be explored is potentially infinite. Gives some of these methods the nice property that they are probabilistic complete and sometimes probabilistic optimal (meaning that they will always find a solution if you allow them enough computation time). Algorithms: RRT, PRM etc
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Hybrid $A^*$}
+\begin{itemize}
+\item The world is continuous, compared to $A^*$ where the world was discrete
+\item It uses an optimistic heuristic function guide grid cell expansion
+\item It does not always finds a solution, if when one exists
+\item The solution it finds is guaranteed to be driveable
+\item The solutions it finds are not always optimal
+\end{itemize}
+With hybrid $A^*$, we have lost completeness and optimality guarantees in favor of 
+drivability\\
+In practice, however this algorithm is efficient at finding good path almost all the time
+\end{frame}
+
+
+\begin{frame}
+
+\end{frame}
+
+\end{document}
+

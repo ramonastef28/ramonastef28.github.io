@@ -1,0 +1,687 @@
+\documentclass[10pt,mathserif]{beamer}
+
+\usepackage{graphicx,amsmath,amssymb,tikz,psfrag}
+%\usepackage{multimedia}
+\usepackage{color}
+
+%\AtBeginSection[] 
+%{ 
+%       \begin{frame}<beamer> 
+%               \frametitle{Outline} 
+%               \tableofcontents[currentsection,currentsubsection] 
+%       \end{frame} 
+%} 
+
+%% begin presentation
+
+%\title{\large \bfseries Deep Reinforcement Learning}
+
+\title{\large \bfseries Simulation group presentation}
+
+\author{Ramona Stefanescu\\[3ex]
+}
+\date{\today}
+
+\begin{document}
+
+\frame{
+\thispagestyle{empty}
+\titlepage
+}
+
+\section{Introduction}
+
+\begin{frame}{The problem}
+\begin{itemize}
+\item An intelligent agent must be capable of using its past experience to develop an understanding of how
+its actions affect the world in which it is situated.
+\item Given some objective, the agent must be able to effectively use its understanding of the world to produce
+a plan that is robust to the uncertainty present in the world.
+\item The challenge of the agent is to use its experience in the world to generate a model.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{What is reinforcement learning?}
+\begin{itemize}
+\item \textit{Reinforcement Learning} is a category of machine learning and it is best understood as if we have an \textbf{agent} that interacts with an \textbf{environment} such that it can observe the environment \textbf{state} and perform \textbf{actions}.
+\item Upon doing actions, the environment state changes into a new state and the agent receives a \textbf{reward} (or penalty).
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\begin{itemize}
+\item Reinforcement Learning (RL) aims at making this agent learn from his experience of interactions with environment so that it chooses the best actions that maximizes the sum of rewards it receives from the environment.
+\item RL is not something entirely new, in fact most of methods in reinforcement learning were invented decades ago. However, it recently gained a lot of interest when it was combined with deep learning - thus \textit{deep reinforcement learning}.
+\item Some example of problems where RL is used include robot control, board games, and supply chain management.
+\end{itemize}
+\end{frame}
+
+\section{Reinforcement Learning}
+
+\begin{frame}{Example}
+\begin{itemize}
+\item In this problem, the agent is a computer program that plays chess, and the environment is the chess board status (i.e. pieces on board and their locations).
+\item The agent (computer player) observes the board state and makes a move. As a result of its moves, the board state changes and eventually the game will end and the agent will either win (receive an award) or lose (receive a penalty).
+\item Reinforcement learning here can be used by an agent to improve its game playing skill. Such that the computer program that initially plays poorly after playing A LOT of chess rounds, it will become able to plan well and choose the moves that lead to winning the game.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Exploration vs Exploitation}
+\begin{itemize}
+\item In RL, the agent initially does not know what actions lead to win/lose but it has to do (\textbf{exploration}) by trying random actions and then it will memorize the effect of actions it made.
+\item Exploration helps the agent to learn more about the world it is interacting with.
+\item After enough exploration has been made, the agent may choose one of a good action it has explored before; this is known as \textbf{exploitation}.
+\item In reinforcement learning, there is always a tradeoff between whether the agent should re-use one of its good actions and try another new action (hoping it will lead to better result).
+\item This trade-off is known as \textit{exploration-exploitation dilemma.}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}
+\begin{itemize}
+\item Reinforcement learning problems are mathematically described using a framework called Markov Decision Process (MDP).
+\item MDPs are extended version of \textit{Markov Chain} which adds decisions and rewards elements to it. 
+\item The word Markov here refers to the Markovian property: future states are independent from any previous states history given the current state and action.
+\item This means that current state encapsulates all what is needed to decide the future state when an input action is received (this is a reasonable assumption in many problems and it simplifies things a lot). 
+\end{itemize}
+\end{frame}
+
+\begin{frame}{MDP}
+Formally, MDP is defined as a tuple of 5 items $<S, A, P, R, \gamma >$ which are:
+\begin{itemize}
+\item $S:$ set of observations. 
+\item $A:$ set of actions.
+\item $P$: $P(s' | s,a)$ transition probability matrix.
+\item $R$: $P(r | s,a)$ reward model that models what reward the agent will receive when it performs action $a$ when is in state $s$.
+\item $\gamma$: discount factor. This is a numerical value between $0$ and $1$ that represents the relative importance between immediate and future rewards. \end{itemize}
+\end{frame}
+
+\begin{frame}{MDP - cont}
+\begin{itemize}
+\item The way by which the agent choses which action to perform is named the agent \textit{policy} which is
+a function that takes the current environment state to return an action. 
+\item The policy is often denoted by the symbol \textbf{$\pi$}
+\begin{align} 
+\pi(s) = \mathcal{S} \rightarrow A
+\end{align}
+\item We need to differentiate between two types of environment:
+\begin{itemize}
+\item \textbf{Deterministic environment:} both state transition model and reward model are deterministic functions
+\item \textbf{Stochastic environment:} there is uncertainty about the actions effect. When the agent repeats doing the same action in a given state, the new state and received award may not be the same each time.
+\end{itemize} 
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Deterministic env}
+\begin{itemize}
+\item Deterministic environments are easier to solve, because the agent knows how to plan its actions with
+no-uncertainty given the environment
+\item The environment can be modeled in as a graph where each state is a node and edges represent transition actions from one state to another and edge weights are rewards.
+\item The agent can use a graph search algorithm such as A* to find the path with maximum total reward form the initial state.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Stochastic env}
+\begin{itemize}
+\item \textbf{Total reward:} - the goal of the agent is to pick the best policy that will maximize the total rewamrds received from the environment
+\item \textbf{At time 0:} Agent observes the environment state $s_0$ and picks an action $a_0$, then upon performing its action, environment state becomes $s_1$ and the agent receives a reward $r_1$
+\item \textbf{At time 1:} Agent observes current state $s_1$ and picks an action $a_1$, then upon performing its action, environment state becomes $s_2$ and the agent receives a reward $r_2$
+\item \textbf{At time 2:} Agent observes current state $s_2$ and picks an action $a_2$, then upon performing its action, environment state becomes $s_3$ and the agent receives a reward $r_3$
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{CartPole environment - OpenAI Gym}
+\begin{itemize}
+\item The cart-pole environment simulates an inverted pendulum mounted upwards on cart.
+\item The pendulum is initially vertical and our goal is to maintain it vertically balanced.
+\item The only way to control the pendulum is by choosing a horizontal direction for the cart to move (either
+to left of right).
+\item git clone https://github.com/openai/gym
+\end{itemize}
+\end{frame}
+
+\begin{frame}{CartPole - Environment}
+\begin{itemize}
+\item \textbf{Observation}: car position ([-2.4, 2.4]), cart velocity ([$-\infty$, $\infty$]), pole angle ([-$41.8^{\circ}$,$41.8^{\circ}$]), pole velocity at tip ([$-\infty$, $\infty$])
+\item \textbf{Actions:} push cart to the left (0) and push cart to the right (1)
+\item \textbf{Rewards:} reward is 1 for every step taken, including the termination step
+\item \textbf{Episode Termination:} pole angle is $> 21^{\circ}$, cart position is outside bounds, episode length is greater than 200
+\item \textbf{Solved Requirements:} Considered solved when the average reward is greater than or equal to 195.0 over 100 consecutive trials.
+\end{itemize}
+\end{frame}
+
+
+
+\begin{frame}{Total reward}
+\begin{itemize}
+\item The total reward received by the agent in response to the actions selected by its policy is going to be:
+\begin{align}
+\text{Total reward} = r_1 + r_2 + r_3 + r_4 + \dots
+\end{align}
+\item However, it is common to use a discount factor to give higher weight to near rewards, than the ones further away.
+\begin{align}
+\text{Total reward}  = \sum_{i=1}^T \gamma^{i-1}r_i
+\end{align}
+where $T$ is the horizon (episode length) which can be infinity if there is maximum length for the episode.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{}
+\begin{itemize}
+\item \textbf{Value-iteration} and \textbf{policy-iteration} are two fundamental methods for solving MDPs.
+\item Both value-iteration and policy-iteration assume that the agent knows the MDP model of the world (i.e. the agent knows the state-transition and reward probability function).
+\item It can be used by the agent to (offline) plan its actions given knowledge about the environment before interacting with it.
+\item \textbf{Q-learning} is a model-free learning environment that can be used in situations where the agent initially knows only what are the possible states and actions but does not know the state-transition and reward probability functions.
+\item In Q-learning the agent improves its behavior (online) through learning from the history of interactions with the environment.
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Value function}
+\begin{itemize}
+\item \textbf{Value-function: V(s)} represents how good is a state for an agent to be in.
+\item The value function depends on the policy by which the agent picks actions to perform.
+\item So, if the agent uses a given policy $\pi$ to select actions, the corresponding value function is given by:
+\begin{align}
+V^{\pi}(s) = \mathbb{E}\left[ \sum_{i=1}^T\gamma^{i-1}r_i\right] \; for \;\forall s\in \mathcal{S}
+\end{align}
+\item Among all possible value-functions, there exist an \textbf{optimal value function} that has higher value than other functions for all states:
+\begin{align}
+V^*(s) = \max V^{\pi}(s) \; for \; s\in\mathcal{S}
+\end{align}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Value function}
+\begin{itemize}
+\item The optimal policy $\pi^*$ is the policy that corresponds to optimal value function
+\begin{align}
+\pi^* = \arg\max V^{\pi}(s) \; for \; s\in\mathcal{S}
+\end{align}
+\item In addition to the state value-function, for convenience RL algorithms introduce another function which is the
+state-action pair \textbf{Q function}.
+\item $Q$ is a function of a state-action pair and return a real value.
+\begin{align}
+Q : \mathcal{S} \times \mathcal{A} \rightarrow \mathcal{R}
+\end{align}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Q function}
+\begin{itemize}
+\item The optimal Q-function $Q^*(s,a)$ means the expected total reward received by an agent starting in $s$ and picks action $a$, then will behave optimally afterwards.
+\item Since $V^*(s)$ is the maximum expected total reward when starting from state $a$, it will be the maximum of $Q^*(s,a)$ over all possible actions.
+\item The relationship between $Q^*(s,a)$ and $V^*(s)$ is easily obtained as:
+\begin{align}
+V^*(s) = \max_a Q^*(s,a) \; for \; s\in\mathcal{S}
+\end{align}
+\item If we know the optimal $Q$-function $Q^*(s,a)$, the optimal policy can be easily extracted by choosing the action $a$ that gives maximum $Q^*(s,a)$ for state $s$.
+\begin{align}
+\pi^*(s) = \arg \max_aQ^*(s,a) \; for \; s\in\mathcal{S}
+\end{align}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Bellman equation}
+\begin{itemize}
+\item Let's introduce an important equation called the \textbf{Bellman equation} which is super-important equation, used in many fields such as reinforcement learning, economics and control theory.
+\item Bellman equation using dynamic programming paradigm provides a recursive definition for the optimal Q-function.
+\item The $Q^*(s,a)$ is equal to the summation of immediate reward after performing action $a$ while in state $s$ and the discounted expected future reward after transition to a next state $s'$.
+\begin{align}
+&Q^*(s,a) = R(s,a) + \gamma\mathbb{E}_{s'}\left[V^*(s')\right] \\
+&Q^*(s,a) = R(s,a) + \gamma\sum_{s'\in\mathcal{S}}p(s'|s,a)V*(s')
+\end{align}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Bellman equation - cont}
+\begin{itemize}
+\item Since,
+\begin{align}
+V^*(S) = \max_a Q^*(s,a)
+\end{align}
+\item we get
+\begin{align}
+V^*(S) = \max_s\left[R(s,a) + \gamma \sum_{s'\in \mathcal{S}} p(s'|s,a) V^*(s')\right]
+\end{align}
+\end{itemize}
+Value-iteration and policy iteration rely on these equations to compute the optimal value-function.
+\end{frame}
+
+\begin{frame}{Value Iteration}
+\begin{itemize}
+\item Value iteration computes the optimal state value function by iteratively improving the estimate of $V(s)$
+\item The algorithm initialize $V(s)$ to arbitrary random values.
+\item It repeatedly updates the $Q(s,a)$ and $V(s)$ values until they converge.
+\item Value iteration is guaranteed to converge to the optimal values.
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Monte Carlo Methods}
+\begin{itemize}
+\item Here we do not assume complete knowledge of the environment.
+\item Monte Carlo methods require only \textit{experience} - sample sequence of states, actions, and
+rewards from actual or simulated interaction with an environment.
+\item Learning from actual experience requires no prior knowledge of the environment's dynamics, yet can still attain optimal behavior.
+\item Learning from \textit{simulated} experience is also powerful. Although a model is required, the model need only generate sample transitions, not the complete probability distributions of all possible transitions that is required for dynamic programming.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{$\epsilon$-greedy policies}
+\begin{itemize}
+\item You can think of the agent who follows an $\epsilon$-greedy policy as always having a (potential unfair) coin at its disposal, with probability
+$\epsilon$ of landing heads. 
+\item After observing a state, the agent flips the coin.
+\item $\rightarrow$ if the coin lands tails (so, with probability $1-\epsilon$), the agent selects the greedy action
+\item $\rightarrow$ if the coin lands heads (with probability $\epsilon$), the agent selects an action \textit{uniformly} at random from the set of available (non-greedy \textbf{AND} greedy) actions.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{$\epsilon$-greedy policies}
+\begin{itemize}
+\item In order to construct a policy $\pi$ that is $\epsilon$-greedy with respect to the current action-value function estimate $Q$, we
+need only set:
+\begin{align}
+\pi(a|s) = 
+\left\{
+        \begin{array}{ll}
+                1 - \epsilon + \frac{\epsilon}{|A(s)|}  & \mbox{if } a = argmax_{a'\in A(s)} Q(s, a') \\
+                \frac{\epsilon}{|A(s)|} & \mbox{otherwise}
+        \end{array}
+\right.
+\end{align}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{MC Control}
+\begin{itemize}
+\item So far we learned how the agent can take a policy $\pi$, us it to interact with environment for many episodes, and then
+use the results to estimate the action-value function $q_{\pi}$ with a Q-table
+\item Once the Q-table closely approximates the action-value function $q_{\pi}$, the agent can construct the policy $\pi'$ that is
+$\epsilon$-greedy with respect to the Q-table, which will yield a policy that is better than the original policy $\pi$
+\item Furthermore, if the agent alternates between these two steps, with:
+\begin{itemize}
+\item \textbf{Step 1:} using the policy $\pi$ to construct the Q-table, and
+\item \textbf{Step 2:} improving the policy by changing it to be $\epsilon$-greedy with respect of the Q-table ($\pi \leftarrow \epsilon$-greedy(Q),
+$\pi \leftarrow \pi'$)
+\end{itemize}
+we will eventually obtain the optimal policy $\pi_*$
+\end{itemize}
+\end{frame}
+
+\begin{frame}{MC Control}
+Control problem: estimate the optimal policy
+\begin{itemize}
+\item It is common to refer to Step 1 as \textbf{policy evaluation}, since it is used to determine the action-value function of the policy.
+\item Since Step 2 is used to \textbf{improve} the policy, we also refer to it as a \textbf{policy improvement} step.
+\item We can summarize, that what we've learned to say that our \textbf{Monte Carlo control method} alternates between \textbf{policy evaluation} and
+\textbf{policy improvement} steps to recover the optimal policy $\pi_*$
+\end{itemize}
+\end{frame}
+
+%\begin{frame}{Exploration vs Exploitation}
+%\begin{itemize}
+
+\begin{frame}{Monte Carlo Methods - Summary}
+\begin{itemize}
+\item Monte Carlo methods - even though the underlying problem involves a great degree of randomness, we can infer useful information that we can trust just by collecting a lot of samples.
+\item The \textbf{equiprobable random policy} is the stochastic policy where - from each stated the agent randomly
+selects from the set of available actions, and each action is selected with equal probability
+\end{itemize}
+\end{frame}
+
+\begin{frame}{MC Prediction}
+\begin{itemize}
+\item Algorithms that solve the \textbf{prediction problem} determine the value function $v_{\pi}$ (or $q_{\pi}$)
+corresponding to a policy $\pi$
+\item When working with finite MDPs, we can estimate tge action-value function $q_{\pi}$ corresponding to a policy $\pi$ in a table known as a Q-table. This table has one row for each state and one column for each action.
+\item The entry in the $s$-th row and $a$-th column contains the agent's estimate for expected return that is likely to follow, if the agent starts in state $s$, selects action $a$, and then henceforth follows the policy $\pi$
+\item Each occurrence of the state-action pair $s,a$ ($s\in S, a\in A$) in an episode is called a visit to $s,a$
+\item There are two types of MC prediction methods (for estimating $q_\pi$):
+\begin{itemize}
+\item \textbf{First-visit MC} - estimates $q_\pi(s,a)$ as the average of the returns following only first visits to $s,a$
+\item \textbf{Every-visit MC} - estimates $q_\pi(s,a)$ as the average of the returns following all visits to $s,a$
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Greedy Policies}
+\begin{itemize}
+\item A policy is \textbf{greedy} with respect to an action-value function estimate $Q$ if for every state $s\in S$, it is quaranteed to select an action $a\in A(s)$ such that $a = argmax_{a\in A(s)}Q(s,a)$.
+\item In the case of a finite MDP, the action-value function estimate is represented in a Q-table.
+\item To get the greedy actions, for each row in the table, we need only select the action(s) corresponding to the
+column(s) that maximize the row
+\item A policy is $\epsilon$-greedy with respect to an action-value function estimate $Q$ if for every state $s\in S$
+\begin{itemize}
+\item with probability $1-\epsilon$, the agent selects the greedy action, and
+\item with probability $\epsilon$, the agent selects an action \textit{uniformly} at random from the set of available (non-greedy and greedy) actions
+\end{itemize} 
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{MC Control}
+\begin{itemize}
+\item Algorithms designed to solve the control problem determine the optimal policy $\pi_*$ from interaction with 
+the environment
+\item The \textbf{Monte Carlo control method} uses alternating rounds of policy evaluation and improvement to recover the optimal policy
+\end{itemize}
+\textbf{Incremental Mean} - update the Q-table after every episode of interaction \\
+\textbf{Constant-alpha} - use a contant step-size parameter $\alpha$
+\end{frame}
+
+\begin{frame}{Exploration vs. Exploitation}
+\begin{itemize}
+\item All reinforcement learning agents face the \textbf{Exploration-Exploitation Dilemma}, where they must find a way to balance the drive to behave optimally based on their current knowledge (\textbf{exploitation}) and the need to
+acquire knowledge to attain better judgment (\textbf{exploration})
+\item In order for MC control to converge to the optimal policy, the \textbf{Greedy in the Limit with Infinite Exploration (GLIE)} conditions must be met:
+\begin{itemize}
+\item every state-action pair $s,a$ (for all $s\in \mathcal{S}$ and $a\in \mathcal{A}(s)$) is visited infinitely many times, and
+\item the policy converges to a policy that is greedy with respect to the action-value function estimate $Q$ 
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Constant-alpha MC Control}
+\begin{itemize}
+\item In the \textbf{policy evaluation} step, the agent collects an episode $S_0, A_0, R_1, \dots, S_T$ using the most recent policy $\pi$. After the episode finishes, for each time-step $t$, if the corresponding state-action pair 
+$(S_t, A_t)$ is a first visit, the Q-table is modified using the following update equation:
+\begin{align}
+Q(S_t,A_t) \leftarrow Q(S_t,A_t) + \alpha(G_t - Q(S_t,A_t))
+\end{align}
+where $G_t = \sum_{s=t+1}^T \gamma^{s-t-1}R_s$ is the return at tomestep $t$, and $Q(S_t,A_t)$ is the entry in the 
+Q-table corresponding to state $S_t$ and action $A_t$
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Temporal-Difference Learning}
+\begin{itemize}
+\item All of the TD control algorithms we have examined (Sarsa, Sarsamax, Expected Sarsa) are guaranteed to converge
+to the optimal action-value function $q_*$, as long as the step-size parameter $\alpha$ is sufficiently small, and the GLIE conditions are met.
+\item Once we have a good estimate for $q_*$, a corresponding optimal policy $\pi_*$ can be quickly obtained by 
+setting $\pi_*(s) = argmax_{a\in\mathcal{A}(s)}q_*(s,a)$ for all $s\in \mathcal{S}$
+\item All of the TD control methods we have examined (Sarsa, Sarsamax, Expected Sarsa) converge to the optimal action-value function $q_*$ (and so yield the optimal policy $\pi_*$) if:
+\begin{itemize}
+\item the value of $\epsilon$ decays in accordance with the GLIE conditions, and
+\item the step-size parameter $\alpha$ is sufficiently small
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Differences}
+The differences between these algorithms are summarized below:
+\begin{itemize}
+\item Sarsa and Expected Sarsa are both \textbf{on-policy} TD control algorithms. In this case, the same ($\epsilon$-greedy) policy that is evaluated and improved is also used to select actions
+\item Sarsamax is an \textbf{off-policy} method, where the (greedy) policy that is evaluated and improved is different from the ($\epsilon$-greedy) policy that is used to select actions
+\item On-policy TD control methods (like Expected Sarsa and Sarsa) have better online performance that off-policy TD control methods (like Sarsamax).
+\item Expected Sarsa generally achieves better performance than Sarsa
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Deep RL}
+\begin{itemize}
+\item The Deep Q-Learning algorithm represents the optimal action-value function $q_*$ as a neural network (instead
+of a table)
+\item Unfortunately, reinforcement learning is notoriously unstable when neural networks are used to represent the
+action values
+\item There Deep Q-learning algorithms which address these instabilities by using \textbf{two key features}
+\begin{itemize}
+\item \textbf{Experience Replay} - all the episode steps $e_t = (S_t, A_t, R_t, S_{t+1})$ are stored in one replay memory
+$D_t = \{e_1,\dots,e_t\}$. During Q-learning updates, samples are drawn at random from the replay memory and thus one sample could be used multiple times. Experience replay improves data efficiency, removes correlations in the
+observation sequences, and smooths over changes in the data distribution
+\item \textbf{Fixed Q-targets} Q is optimized towards target values that are only periodically updated. The Q-network is cloned and kept frozen as the optimization target every $C$ steps. This modification makes the training more stable as it overcomes the short-term oscillations.
+\end{itemize} 
+\end{itemize}
+\end{frame}
+
+\begin{frame}{DQN (Deep Q Networks)}
+\begin{itemize}
+\item When the agent interacts with the environment, the sequence of experience tuples can be highly correlated
+\item The naive Q-learning algorithm that learns form each of these experience tuples in sequential order runs the
+risk of getting swayed by the effects of this correlation
+\item By keeping track of a \textbf{replay buffer} and using \textbf{experience replay} to sample from the buffer at
+random, we can prevent action values from oscillating or diverge catastrophically
+\item The \textbf{replay buffer} contains a collection of experience tuples (S,A,R,S'). The tuples are gradually added to the buffer as we are interacting with the environment
+\item The act of sampling a small batch of tuples form the replay buffer in order to learn is known as 
+\textbf{experience replay}
+\item In addition to breaking harmful correlations, experience replay allows us to learn more from individual tuples
+multiple times, recall rare occurrences, and in general make better use of our experience
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Fixed Q-Targets}
+\begin{itemize}
+\item In Q-learning, we update a guess with a guess, and this can potentially lead to harmful correlations.
+\item To avoid this, we can update the parameters $\theta$ in the network $\hat{Q}$ to better approximate the action value corresponding to state $S$ and action $A$ with the following update rule:
+\begin{align}\nonumber
+\Delta\theta = \alpha\cdot(R+\gamma\max_a\hat{Q}(S',a;\theta^-) - \hat{Q}(S,A,\theta))\nabla_{\theta}\hat{Q}(S,A,\theta)	
+\end{align}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Deep Q-Learning Improvements}
+\begin{itemize}
+\item Several improvements to the original Deep Q-Learning algorithm have been suggested
+\item Deep Q-learning tends to overestimate action value and so the \textbf{double Q-learning} has been shown to work well in practice
+\item Deep Q-learning samples experience transitions \textit{uniformly} from a replay memory
+\item \textbf{Priorirized experienced replay} is based on the idea that the agent can learn more effectively from
+some transitions than from others, and the more important transitions should be sampled with higher probability
+\item Currently, in order to deetermine which states are (or are not) valuable, we have to estimate the corresponding action values \textit{for each action}.
+\item However, by replacing the traditional Deep Q-Network (DQN) architecture with a \textbf{dueling achitecture}, we can assess the value of each state, without having to learn the effect of each action.
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Variations of DQN}
+There are multiple variation of DQN:
+\begin{itemize}
+\item Double DQN (DDQN)
+\item Prioritized experience replay
+\item Dueling DQN
+\item Distributional DQN
+\item Noisy DQN
+\item Multi-step bootstrap targets
+\end{itemize}
+Each of the six extensions address a \textit{different} issue with the original DQN algorithm - called Rainbow.
+\end{frame}
+
+
+\begin{frame}{Policy gradient}
+All the methods we have introduced above aim to learn the state/action value function and then to select actions
+accordingly. 
+\begin{itemize}
+\item Policy gradient methods instead learn the policy directly with a parameterized function respect to $\theta$,
+$\pi(a|s;\theta)$
+\item Methods that learn approximations to both policy and value functions are often called \textit{actor-critic methods}, where \textit{actor} is reference to the learned policy, and \textit{critic} refers to the learned value function, usually a state-value function.
+\item In policy gradient methods, the policy can be parametrized in any way, as long as $\pi(a|s,\theta)$ is
+differentiable with respect to its parameters, that is, as long as $\nabla\pi(a|s,\theta)$
+\item REINFORCE, also known as Monte-Carlo policy gradient, relies on $Q_\pi(s,a)$, an estimated return by MC methods using episode samples, to update the policy parameter $\theta$
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Policy gradient}
+\begin{itemize}
+\item In the episodic case, the performance is defined as the value of the start state under the parameterized 
+policy
+\item In the continuing case, the performance is based on the average reward rate
+\item The reward function is defined as:
+\begin{align}
+J(\theta) = \sum_{s\in S} d^{\pi}(s)V^{\pi}(s) = \sum_{s\in S}d^{\pi}(s) \sum_{a\in A}\pi_{\theta}(a|s)Q^{\pi}(s,a)
+\end{align}
+where $d^{\pi}(s)$ is the stationary distribution of Markov chain for $\pi_\theta$
+\item It is natural to expect policy-based methods are more useful in the continuous space, because there is an
+infinite number of actions and (or) states to estimate the values for and hence value-based approaches are way
+too expensive computationally in the continuous space. 
+\item Using \textit{gradient ascent}, we can move $\theta$ toward the direction suggested by the gradient $\nabla_\theta J(\theta)$ to find the best $\theta$ for $\pi_\theta$ that produces the highest return.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Policy gradient - cont}
+\begin{itemize}
+\item Computing the gradient $\nabla_\theta J(\theta)$ is tricky because it depends on both the action selection
+(directly determined by $\pi_\theta$) and the stationary distribution of states following the target selection 
+behavior (indirectly determined by $\pi_\theta)$
+\item  
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Policy gradient methods}
+\begin{itemize}
+\item Policy-based methods search directly for the \textit{optimal policy}
+\item While the Policy Gradient Methods estimate the best weights by gradient 
+ascent
+\item Both policy-based methods and policy gradient methods directly try to
+optimize for the optimal policy, without maintaining value function estimates
+\item For each episode, if the agent won the game, we'll amend the policy network weights to make each (state, action) pair that appeared in the episode to make
+them more likely to repear in future episodes
+\item For each episode, if the agent lost the game, we'll change the policy 
+network weights to make it less likely to repeat the corresponding (state,action) pairs in future episodes
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Policy Gradient}
+\begin{itemize}
+\item PG is preferred because it is end-to-end: there is an explicit
+policy and a principled approach that directly optimizes the expected reward 
+\item \textbf{Trajectory} - is a sequence of state-action sequence: 
+$s_0,a_0,s_1,a_1,\dots, s_H, a_H, s_{H+1}$
+\item where $H$ is the horizon.
+\item The reward is now calculated as $R(\tau) = r_1 + r_2 + \dots + r_H + r_{H+1}$  
+\item We are using \textit{trajectories} over \textit{episodes} because maximizing expected return over trajectories (instead of episodes) lets us search for optimal policies for both episodic and \textbf{continuing} tasks
+\item Goal is to find the expectation: $U(\theta) = \sum_{\tau}\mathcal{P}(\tau;\theta)R(\tau)$
+\item $\theta$ are the weights
+\end{itemize}
+\end{frame}
+
+
+%\begin{frame}{Policy Gradient}
+%\begin{itemize}
+%\item The goal of reinforcement learning is to find an optimal behavior strategy for the agent to 
+%obtain optimal rewards
+%\item 
+%\end{itemize}
+%\end{frame}
+
+
+\begin{frame}{Reinforce}
+\begin{itemize}
+\item The goal is to find the values of the weights $\theta$ in the neural network that maximize the expected return $U$:
+\begin{align}
+U(\theta) = \sum_{\tau}\mathcal{P}(\tau;\theta)R(\tau)
+\end{align}
+\item One way to determine the value of $\theta$ that maximizes this function is through \textbf{gradient ascent}:
+\begin{itemize}
+\item gradient acent will find the maximum
+\item gradient acent steps in the direction of the gradient
+\end{itemize}
+\item The update step for gradient ascent appears as follows:
+\begin{align}
+\theta \leftarrow \theta  + \alpha \nabla_\theta U(\theta)
+\end{align}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Likelihood Ratio Policy Gradient}
+To derive the following $\nabla_\theta U(\theta) \approx \hat{g}=\frac{1}{m}\sum_{i=1}^m\sum_{t=0}^H\nabla_\theta
+log\pi_\theta(a_t^{(i)}|s_t^{(i)})R(\tau^{(i)})$. We have the following steps:
+\begin{itemize}
+\item \textbf{Likelihood Ratio Policy Gradient}
+\begin{align}
+\nabla_\theta U(\theta) &= \nabla_\theta \sum_{\tau} P(\tau;\theta)R(\theta) \\ \nonumber
+& = \sum_{\tau} \nabla_\theta P(\tau;\theta)R(\tau) = \sum_{\tau} \frac{P(\tau;\theta)}{P(\tau;\theta)}\nabla_\theta P(\tau;\theta)R(\tau) \\ \nonumber
+& = \sum P(\tau;\theta) \frac{\nabla_\theta P(\tau;\theta)}{ P(\tau;\theta)} R(\tau) \\ \nonumber
+& = \sum_\tau  P(\tau;\theta)\nabla_\theta \log  P(\tau;\theta)R(\tau)
+\end{align}
+where $\nabla_\theta P(\tau;\theta) =\frac{\nabla_\theta P(\tau;\theta)}{ P(\tau;\theta)}$
+\item \textbf{Sample-based estimate}
+\begin{align}
+\nabla_\theta U(\theta) \approx \frac{1}{m}\sum_{i=1}^m \nabla_\theta\log \mathbb{P}(\tau^{(i)};\theta)R(\tau^{(i)})
+\end{align}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{REINFORCE}
+There are 3 main problems with REINFORCE:
+\begin{itemize}
+\item The update process is very \textbf{inefficient}! We run the policy once, update once, and then throw
+away the trajectory
+\item The gradient estimate $g$ is very \textbf{noisy}. By chance the collected trajectory may not be represented
+by the policy
+\item There is no clear \textbf{credit assignment}. A trajectory may contain many good/bad actions and whether these actions are reinforced depends only on the final total output.
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{}
+\begin{itemize}
+\item State-of-the-art RL algorithms contain many important tweaks in addition to simple
+value-based or policy-based methods. 
+\item One of these key improvements is called Proximal Policy Optimization (PPO).
+\item PPO allows faster and more stable learning.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Beyond REINFORCE}
+\begin{itemize}
+\item REINFORCE works as follows: first, we initialize a random policy $\pi(a;s)$, and using
+the policy we collect a trajectory -- or a list of (state, actions, rewards) at each time 
+step: $s_1, a_1, r_1, s_2, a_2, r_2, \dots$
+\item Second, we compute the total reward of the trajectory $R = r_1 + r_2 + r_3 + \dots $,
+and compute an estimate the gradient of the expected reward, $g$:
+\begin{align}
+g = R\sum_t\nabla_\theta \log \pi_\theta(a_t |s_t)
+\end{align}
+\item Third, we update our policy using gradient acent with learning rate $\alpha$:
+\begin{align}
+\theta \leftarrow \theta + \alpha g
+\end{align}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Noise reduction}
+\begin{itemize}
+\item The way we optimize the policy is by maximizing the average rewards $U(\theta)$. To do
+this we use stochastic gradient ascent.
+\item Mathematically, the gradient is given by an average over all the possible trajectories
+\begin{align}
+\nabla_\theta U(\theta) = \sum_{\tau}P(\tau;\theta)\left(R_{\tau}\sum_{t}\nabla_\theta \log \pi_\theta (a_t^{(\tau)}|s_t^{(\tau)})\right)
+\end{align}
+\item There could easily be well over millions of trajectories for simple problems, and infinite for continuous problems
+\item If we simply take one trajectory to compute the gradient, and update our policy, the
+result of a sampled trajectory comes down to chance, and doesn't contain that much information about our policy
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Noise reduction - cont}
+\begin{itemize}
+\item The easiest option to reduce the noise in the gradient is to simply sample more
+trajectories
+\item Using distributed computing, we can collect multiple trajectories in parallel
+\item Then we can estimate the policy gradient by averaging across all the different trajectories
+\begin{align}
+g = \frac{1}{N}\sum_{i=1}^N R_i\sum_t \nabla_\theta \log \pi_\theta(a_t^{(i)}|s_t^{(i)})
+\end{align}
+\item There is another bonus for running multiple trajectories: we can collect all the total rewards and get a sense of how they are distributed
+\item Learning can be improved if we normalize the rewards, where $\mu$ is the mean and $\sigma$ is the standard deviation
+\begin{align}
+R_i \leftarrow \frac{R_i - \mu}{\sigma}; \; \mu = \frac{1}{N}\sum_{i=1}N; 
+\; \sigma = \sqrt{\frac{1}{N}\sum_i(R_i - \mu)^2}
+\end{align}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Importance Sampling}
+\begin{itemize}
+\item Let's go back to the REINFORCE algorithm. We start with a policy, $\pi_\theta$, then
+using that policy, we generate a trajectory (or multiple ones to reduce noise) 
+($s_t, a_t,r_t$).
+\item Afterward, we compute a policy gradient, $g$, and update $\theta ' \leftarrow \theta + \alpha g$
+\end{itemize}
+\end{frame}
+
+\end{document}

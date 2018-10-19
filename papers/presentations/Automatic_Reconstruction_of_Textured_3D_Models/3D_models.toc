@@ -1,0 +1,6 @@
+\beamer@endinputifotherversion {3.36pt}
+\beamer@sectionintoc {1}{Introduction}{2}{0}{1}
+\beamer@sectionintoc {2}{Matching and fitting}{8}{0}{2}
+\beamer@sectionintoc {3}{Probability}{25}{0}{3}
+\beamer@sectionintoc {4}{Numerical Computation}{30}{0}{4}
+\beamer@sectionintoc {5}{Machine Learning}{34}{0}{5}
